@@ -1,0 +1,587 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>StarDict Manual V3.0.6</title>
+<link rel="previous" href="index-info.html" title="">
+<link rel="next" href="stardict-introduction.html" title="Inleiding">
+<style type="text/css">
+
+html { height: 100%; }
+body {
+  margin: 0px; padding: 12px;
+  background-color: #f9f9f6;
+  min-height: 100%;
+  direction: ltr;
+}
+div, p, pre, blockquote { margin: 0; padding: 0; }
+p img { vertical-align: middle; }
+sub { font-size: 0.83em; }
+sub sub { font-size: 1em; }
+sup { font-size: 0.83em; }
+sup sup { font-size: 1em; }
+table { border-collapse: collapse; }
+table.table-pgwide { width: 100%; }
+td { vertical-align: top; }
+td { padding: 0.2em 0.83em 0.2em 0.83em; }
+th { padding: 0 0.83em 0 0.83em; }
+tr.tr-shade {
+  background-color: #f9f9f6;
+}
+td.td-colsep { border-right: solid 1px; }
+td.td-rowsep { border-bottom: solid 1px; }
+thead { border-top: solid 2px; border-bottom: solid 2px; }
+tfoot { border-top: solid 2px; border-bottom: solid 2px; }
+div.body {
+  padding: 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.body-sidebar {
+  margin-right: 13em;
+}
+div.division div.division { margin-top: 1.72em; }
+div.division div.division div.division { margin-top: 1.44em; }
+div.header {
+  margin: 0;
+  color: #3f3f3f;
+  border-bottom: solid 1px #e0e0df;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+  margin: 0; padding: 0;
+  color: #3f3f3f;
+}
+h1.title { font-size: 1.72em; }
+h2.title { font-size: 1.44em; }
+h3.title { font-size: 1.2em; }
+h4.title, h5.title, h6.title, h7.title { font-size: 1em; }
+.block { margin-top: 1em; }
+.block .block-first { margin-top: 0; }
+.block-indent {
+  margin-left left: 1.72em;
+  margin-: 1em;
+}
+.block-indent .block-indent { margin-left: 0em; margin-right: 0em; }
+td .block-indent  { margin-left: 0em; margin-right: 0em; }
+dd .block-indent  { margin-left: 0em; margin-right: 0em; }
+.block-verbatim { white-space: pre; }
+div.title {
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.title-formal { padding-left: 0.2em; padding-right: 0.2em; }
+div.title-formal .label { font-weight: normal; }
+a {
+  color: #1f609f;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+a:visited { color: #9f1f6f; }
+ul, ol, dl { margin: 0; padding: 0; }
+li {
+  margin-top: 1em;
+  margin-left: 2.4em;
+  padding: 0;
+}
+li.li-first { margin-top: 0; }
+dt { margin: 1em 0 0 0; }
+dt.dt-first { margin: 0; }
+dd {
+  margin-left: 1.72em;
+  margin-top: 0.5em;
+}
+dl.dl-compact dt { margin-top: 0; }
+dl.dl-compact dd { margin-top: 0; margin-bottom: 0; }
+
+
+ul.linktrail {
+  display: block;
+  margin: 0.2em 0 0 0;
+  text-align: right;
+}
+li.linktrail { display: inline; margin: 0; padding: 0; }
+
+li.linktrail::before {
+  content: '  /  ';
+  color: #3f3f3f;
+}
+
+li.linktrail-first::before, li.linktrail-only::before { content: ''; }
+
+
+div.navbar {
+  padding: 0.5em 1em 0.5em 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.navbar-top { margin-bottom: 1em; }
+div.navbar-bottom { margin-top: 1em; clear: both; }
+div.navbar img { border: 0; vertical-align: -0.4em; }
+table.navbar { width: 100%; margin: 0; border: none; }
+table.navbar td { padding: 0; border: none; }
+td.navbar-next {
+  text-align: right;
+}
+a.navbar-prev::before {
+  
+  content: '◀  ';
+  color: #3f3f3f;
+}
+a.navbar-next::after {
+  
+  content: '  ▶';
+  color: #3f3f3f;
+}
+
+
+div.sidebar {
+  float: right;
+  padding: 0; margin: 0; width: 12em;
+}
+div.sidenav {
+  padding: 0.5em 1em 0 1em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.sidenav div.autotoc {
+  background-color: #ffffff;
+  border: none; padding: 0; margin: 0;
+}
+div.sidenav div.autotoc div.autotoc { margin-top: 0.5em; }
+div.sidenav div.autotoc li { margin-bottom: 0.5em; }
+div.sidenav div.autotoc div.autotoc div.autotoc {
+  margin-left: 1em;
+  margin-top: 0;
+}
+div.sidenav div.autotoc div.autotoc div.autotoc li { margin-bottom: 0; }
+
+
+div.autotoc {
+  
+  display: table;
+  margin-top: 1em;
+  margin-left: 1.72em;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: #f0f9ff;
+  border: solid 1px #c0c9ff;
+}
+div.autotoc ul { margin: 0; padding: 0; }
+div.autotoc li { list-style-type: none; margin: 0; }
+div.autotoc div.autotoc-title { margin-bottom: 0.5em; }
+div.autotoc div.autotoc { border: none; padding: 0; margin-top: 0; margin-bottom: 0.5em; }
+div.autotoc div.autotoc div.autotoc { margin-bottom: 0; }
+
+
+span.bibliolabel {
+  color: #3f3f3f;
+}
+
+
+div.admonition {
+  padding: 0.5em 6px 0.5em 6px;
+  border: solid 1px #e0e0df;
+  background-color: #fffff0;
+}
+div.caution-inner, div.important-inner, div.note-inner, div.tip-inner, div.warning-inner {
+  padding-left: 60px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 48px;
+}
+div.caution-inner { background-image: url("icons/admon-caution.png"); }
+div.important-inner { background-image: url("icons/admon-important.png"); }
+div.note-inner { background-image: url("icons/admon-note.png"); }
+div.note-bug div.note-inner { background-image: url("icons/admon-bug.png"); }
+div.tip-inner { background-image: url("icons/admon-tip.png"); }
+div.warning-inner { background-image: url("icons/admon-warning.png"); }
+div.blockquote {
+  
+  background-image: url('watermark-blockquote-201C.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 0.5em;
+  padding-left: 4em;
+}
+div.attribution {
+  margin-top: 0.5em;
+  color: #3f3f3f;
+}
+div.attribution::before {
+  
+  content: '― ';
+}
+div.epigraph {
+  text-align: right;
+  margin-left: 20%;
+  margin-right: 0;
+  color: #3f3f3f;
+}
+div.figure, div.informalfigure {
+  
+  display: table;
+  padding: 0.5em;
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.figure-inner, div.informalfigure-inner {
+  padding: 0.5em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.caption { margin-top: 0.5em; }
+div.programlisting {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen .prompt {
+  color: #3f3f3f;
+}
+div.screen .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.programlisting .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+pre.linenumbering {
+  color: #3f3f3f;
+  margin: 0;
+  padding-right: 1em;
+  float: left;
+  text-align: right;
+}
+
+
+
+dl.index dt { margin-top: 0; }
+dl.index dd { margin-top: 0; margin-bottom: 0; }
+dl.indexdiv dt { margin-top: 0; }
+dl.indexdiv dd { margin-top: 0; margin-bottom: 0; }
+dl.setindex dt { margin-top: 0; }
+dl.setindex dd { margin-top: 0; margin-bottom: 0; }
+div.list div.title-formal span.title {
+  border-bottom: solid 1px #e0e0df;
+}
+div.simplelist {
+  margin-left: 1.72em;
+}
+div.simplelist table { margin-left: 0; border: none; }
+div.simplelist td {
+  padding: 0.5em;
+  border-left: solid 1px #e0e0df;
+}
+div.simplelist td.td-first {
+  padding-left: 0;
+  border-left: 0;
+}
+div.synopsis {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border-top: solid 2px #c0c9ff;
+  border-bottom: solid 2px #c0c9ff;
+}
+div.synopsis div.synopsis {
+  padding: 0;
+  border: none;
+}
+div.synopsis div.block { margin-top: 0.2em; }
+div.synopsis div.block-first { margin-top: 0; }
+div.cmdsynopsis { font-family: monospace; }
+
+span.accel { text-decoration: underline; }
+span.acronym { font-family: sans-serif; }
+span.application { font-style: italic; }
+span.classname, span.exceptionname, span.interfacename { font-family: monospace; }
+span.code {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.code { border: none; padding: 0; }
+span.command {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.command { border: none; padding: 0; }
+span.computeroutput { font-family: monospace; }
+
+span.constant { font-family: monospace; }
+span.database { font-family: monospace; }
+span.email { font-family: monospace; }
+span.emphasis { font-style: italic; }
+span.emphasis-bold { font-style: normal; font-weight: bold; }
+span.envar { font-family: monospace; }
+
+span.filename { font-family: monospace; }
+span.firstterm { font-style: italic; }
+span.foreignphrase { font-style: italic; }
+span.function { font-family: monospace; }
+
+dt.glossterm span.glossterm { font-style: normal; }
+
+
+span.glossterm { font-style: italic; }
+
+span.guibutton, span.guilabel, span.guimenu, span.guimenuitem, span.guisubmenu, span.interface {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.keycap {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.lineannotation { font-style: italic; }
+span.literal { font-family: monospace; }
+span.markup  { font-family: monospace; }
+span.medialabel { font-style: italic; }
+span.methodname { font-family: monospace; }
+span.ooclass, span.ooexception, span.oointerface { font-family: monospace; }
+span.option { font-family: monospace; }
+span.parameter { font-family: monospace; }
+span.paramdef span.parameter { font-style: italic; }
+span.prompt { font-family: monospace; }
+span.property { font-family: monospace; }
+span.replaceable  { font-style: italic; }
+span.returnvalue { font-family: monospace; }
+span.sgmltag { font-family: monospace; }
+span.structfield, span.structname { font-family: monospace; }
+span.symbol { font-family: monospace; }
+span.systemitem { font-family: monospace; }
+span.token { font-family: monospace; }
+span.type { font-family: monospace; }
+span.uri { font-family: monospace; }
+span.userinput { font-family: monospace; }
+span.varname { font-family: monospace; }
+span.wordasword { font-style: italic; }
+
+
+
+div.footnotes { font-style: italic; font-size: 0.8em; }
+div.footnote { margin-top: 1.44em; }
+span.footnote-number { display: inline; padding-right: 0.83em; }
+span.footnote-number + p { display: inline; }
+a.footnote { text-decoration: none; font-size: 0.8em; }
+a.footnote-ref { text-decoration: none; }
+
+span.co {
+  margin-left: 0.2em; margin-right: 0.2em;
+  padding-left: 0.4em; padding-right: 0.4em;
+  border: solid 1px #000000;
+  -moz-border-radius: 8px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 8px;
+}
+span.co:hover {
+  border-color: #333333;
+  background-color: #333333;
+  color: #FFFFFF;
+}
+span.co a { text-decoration: none; }
+span.co a:hover { text-decoration: none; }
+
+dt.question { margin-left: 0em; }
+dt.question div.label { float: left; }
+dd + dt.question { margin-top: 1em; }
+dd.answer {
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+dd.answer div.label { float: left; }
+</style>
+</head>
+<body>
+<div class="navbar navbar-top"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="index-info.html" title="Over dit document">Over dit document</a></td>
+<td class="navbar-next"><a class="navbar-next" href="stardict-introduction.html" title="Inleiding">Inleiding</a></td>
+</tr></table></div>
+<div class="sidebar"><div class="sidenav"><div class="autotoc"><ul>
+<li>Over dit document</li>
+<li>
+<a class="xref" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a><div class="autotoc"><ul>
+<li><a class="xref" href="stardict-introduction.html" title="Inleiding">Inleiding</a></li>
+<li><a class="xref" href="stardict-getting-started.html" title="Aan de slag">Aan de slag</a></li>
+<li><a class="xref" href="stardict-usage.html" title="Gebruik">Gebruik</a></li>
+<li><a class="xref" href="stardict-prefs.html" title="Voorkeuren">Voorkeuren</a></li>
+<li><a class="xref" href="manage-dicts.html" title="Manage dictionaries">Manage dictionaries</a></li>
+<li><a class="xref" href="manage-plugins.html" title="Manage Plugins">Manage Plugins</a></li>
+<li><a class="xref" href="stardict-details.html" title="Details">Details</a></li>
+<li><a class="xref" href="stardict-portable.html" title="StarDict Portable">StarDict Portable</a></li>
+<li><a class="xref" href="stardict-troubleshooting.html" title="Troubleshooting">Troubleshooting</a></li>
+<li><a class="xref" href="stardict-projects.html" title="Gerelateerde projecten">Gerelateerde projecten</a></li>
+<li><a class="xref" href="stardict-authors.html" title="Ontwikkelaars">Ontwikkelaars</a></li>
+</ul></div>
+</li>
+</ul></div></div></div>
+<div class="body body-sidebar"><div class="division articleinfo">
+<a name="articleinfo"></a><div class="header"><h1 class="title">StarDict Manual V3.0.6</h1></div>
+<div class="division">
+<h2 class="title author">Auteur</h2>
+<div class="block block-first"><dl class="dl-compact">
+<dt class="author">
+<span class="firstname">Hu</span> <span class="surname">Zheng</span>
+</dt>
+<dd class="affiliation">
+<i>Werkzaam bij: </i><span class="orgname">GNOME Documentatie Project</span>
+</dd>
+</dl></div>
+</div>
+<div class="division">
+<h2 class="title translator">Vertalers</h2>
+<div class="block block-first"><dl class="dl-compact">
+<dt class="translator">
+<span class="firstname">Will</span> <span class="surname">Robinson</span>
+</dt>
+<dd class="affiliation">
+<i>Werkzaam bij: </i><span class="orgname">Stanford University</span>
+</dd>
+<dt class="translator">
+<span class="firstname">Новица</span> <span class="surname">Наков</span>
+</dt>
+<dd class="affiliation">
+<i>Werkzaam bij: </i><span class="orgname">Слободен софтвер Македонија</span>
+</dd>
+<dt class="translator">
+<span class="firstname">Ruud</span> <span class="surname">Slaats</span>
+</dt>
+<dd class="affiliation">
+<i>Werkzaam bij: </i><span class="orgname">Eurotech Group</span>
+</dd>
+<dt class="translator">
+<span class="firstname">Александр</span> <span class="surname">Мурыгин</span>
+</dt>
+<dd class="affiliation">
+<i>Werkzaam bij: </i><span class="orgname">AITOC</span>
+</dd>
+<dt class="translator">
+<span class="firstname">Сергій</span> <span class="surname">Дубик</span>
+</dt>
+<dd class="affiliation">
+<i>Werkzaam bij: </i><span class="orgname">ЛНБ</span>
+</dd>
+</dl></div>
+</div>
+<div class="division">
+<h2 class="title publisher">Uitgever</h2>
+<div class="block block-first"><dl class="dl-compact"><dt class="publisher">
+		<span class="publishername">GNOME Documentatie Project</span>
+	</dt></dl></div>
+</div>
+<div class="division">
+<h2 class="title copyright">Auteursrecht</h2>
+<div class="block block-first"><dl class="dl-compact"><dt class="copyright">Auteursrecht © <span class="year">2003</span>, <span class="year">2004</span>, <span class="year">2005</span>, <span class="year">2006</span>, <span class="year">2007</span>, <span class="year">2008</span>, <span class="year">2009</span>, <span class="year">2010</span>  <span class="holder">Hu Zheng</span>
+</dt></dl></div>
+</div>
+<div class="division legalnotice">
+<a name="legalnotice"></a><h2 class="title legalnotice">Juridische opmerking</h2>
+         <p class="para block block-first">
+           Permission is granted to copy, distribute and/or modify this
+           document under the terms of the GNU Free Documentation
+           License (GFDL), Version 1.2 or any later version published
+           by the Free Software Foundation with no Invariant Sections,
+           no Front-Cover Texts, and no Back-Cover Texts.  You can find
+           a copy of the GFDL at this <a class="ulink" href="ghelp:fdl" title="ghelp:fdl">link</a> or in the file COPYING-DOCS
+           distributed with this manual.
+          </p>
+          <p class="para block"> This manual is part of a collection of GNOME manuals
+           distributed under the GFDL.  If you want to distribute this
+           manual separately from the collection, you can do so by
+           adding a copy of the license to the manual, as described in
+           section 6 of the license.
+         </p>
+ 
+         <p class="para block">
+           Many of the names used by companies to distinguish their
+           products and services are claimed as trademarks. Where those
+           names appear in any GNOME documentation, and the members of
+           the GNOME Documentation Project are made aware of those
+           trademarks, then the names are in capital letters or initial
+           capital letters.
+         </p>
+ 
+         <p class="para block">
+           DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED
+           UNDER  THE TERMS OF THE GNU FREE DOCUMENTATION LICENSE
+           WITH THE FURTHER UNDERSTANDING THAT:
+ 
+           <div class="block list orderedlist"><ol class="orderedlist">
+<li class="li-first">
+                   <span class="para">DOCUMENT IS PROVIDED ON AN "AS IS" BASIS,
+                     WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+                     IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES
+                     THAT THE DOCUMENT OR MODIFIED VERSION OF THE
+                     DOCUMENT IS FREE OF DEFECTS MERCHANTABLE, FIT FOR
+                     A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE
+                     RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE
+                     OF THE DOCUMENT OR MODIFIED VERSION OF THE
+                     DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR
+                     MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT,
+                     YOU (NOT THE INITIAL WRITER, AUTHOR OR ANY
+                     CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY
+                     SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER
+                     OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS
+                     LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED
+                     VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER
+                     EXCEPT UNDER THIS DISCLAIMER; AND
+                   </span>
+                 </li>
+<li>
+                   <span class="para">UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL
+                        THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE),
+                        CONTRACT, OR OTHERWISE, SHALL THE AUTHOR,
+                        INITIAL WRITER, ANY CONTRIBUTOR, OR ANY
+                        DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION
+                        OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH
+                        PARTIES, BE LIABLE TO ANY PERSON FOR ANY
+                        DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR
+                        CONSEQUENTIAL DAMAGES OF ANY CHARACTER
+                        INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
+                        OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR
+                        MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR
+                        LOSSES ARISING OUT OF OR RELATING TO USE OF THE
+                        DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT,
+                        EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF
+                        THE POSSIBILITY OF SUCH DAMAGES.
+                   </span>
+                 </li>
+</ol></div>
+         </p>
+   </div>
+<div class="division legalnotice"> 
+		<h2 class="title legalnotice">Feedback</h2>
+		<p class="para block block-first">Om een bug te rapporten of om een suggestie te maken betreffende de <span class="application">StarDict</span> aapplicatie of deze handleiding, volg hiervoor de aanwijzingen in de <a class="ulink" href="ghelp:gnome-feedback" title="ghelp:gnome-feedback">GNOME Feedback Page</a>.</p>
+
+	</div>
+<div class="division revhistory">
+<h2 class="title revhistory">Overzicht van herzieningen</h2>
+
+		<div class="block revision">
+<span class="date">Nov 2003</span>: <span class="revnumber">StarDict Manual V2.4.2</span> (Hu Zheng)</div>
+		<div class="block revision">
+<span class="date">Jan 2011</span>: <span class="revnumber">StarDict Manual V3.0.2</span>
+</div>
+	</div>
+</div></div>
+<div class="navbar navbar-bottom"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="index-info.html" title="Over dit document">Over dit document</a></td>
+<td class="navbar-next"><a class="navbar-next" href="stardict-introduction.html" title="Inleiding">Inleiding</a></td>
+</tr></table></div>
+</body>
+</html>

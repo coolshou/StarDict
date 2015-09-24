@@ -1,0 +1,1078 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Налаштування</title>
+<link rel="previous" href="stardict-usage.html" title="Використовування">
+<link rel="next" href="manage-dicts.html" title="Manage dictionaries">
+<link rel="top" href="index.html" title="StarDict Manual V3.0.6">
+<style type="text/css">
+
+html { height: 100%; }
+body {
+  margin: 0px; padding: 12px;
+  background-color: #f9f9f6;
+  min-height: 100%;
+  direction: ltr;
+}
+div, p, pre, blockquote { margin: 0; padding: 0; }
+p img { vertical-align: middle; }
+sub { font-size: 0.83em; }
+sub sub { font-size: 1em; }
+sup { font-size: 0.83em; }
+sup sup { font-size: 1em; }
+table { border-collapse: collapse; }
+table.table-pgwide { width: 100%; }
+td { vertical-align: top; }
+td { padding: 0.2em 0.83em 0.2em 0.83em; }
+th { padding: 0 0.83em 0 0.83em; }
+tr.tr-shade {
+  background-color: #f9f9f6;
+}
+td.td-colsep { border-right: solid 1px; }
+td.td-rowsep { border-bottom: solid 1px; }
+thead { border-top: solid 2px; border-bottom: solid 2px; }
+tfoot { border-top: solid 2px; border-bottom: solid 2px; }
+div.body {
+  padding: 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.body-sidebar {
+  margin-right: 13em;
+}
+div.division div.division { margin-top: 1.72em; }
+div.division div.division div.division { margin-top: 1.44em; }
+div.header {
+  margin: 0;
+  color: #3f3f3f;
+  border-bottom: solid 1px #e0e0df;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+  margin: 0; padding: 0;
+  color: #3f3f3f;
+}
+h1.title { font-size: 1.72em; }
+h2.title { font-size: 1.44em; }
+h3.title { font-size: 1.2em; }
+h4.title, h5.title, h6.title, h7.title { font-size: 1em; }
+.block { margin-top: 1em; }
+.block .block-first { margin-top: 0; }
+.block-indent {
+  margin-left left: 1.72em;
+  margin-: 1em;
+}
+.block-indent .block-indent { margin-left: 0em; margin-right: 0em; }
+td .block-indent  { margin-left: 0em; margin-right: 0em; }
+dd .block-indent  { margin-left: 0em; margin-right: 0em; }
+.block-verbatim { white-space: pre; }
+div.title {
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.title-formal { padding-left: 0.2em; padding-right: 0.2em; }
+div.title-formal .label { font-weight: normal; }
+a {
+  color: #1f609f;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+a:visited { color: #9f1f6f; }
+ul, ol, dl { margin: 0; padding: 0; }
+li {
+  margin-top: 1em;
+  margin-left: 2.4em;
+  padding: 0;
+}
+li.li-first { margin-top: 0; }
+dt { margin: 1em 0 0 0; }
+dt.dt-first { margin: 0; }
+dd {
+  margin-left: 1.72em;
+  margin-top: 0.5em;
+}
+dl.dl-compact dt { margin-top: 0; }
+dl.dl-compact dd { margin-top: 0; margin-bottom: 0; }
+
+
+ul.linktrail {
+  display: block;
+  margin: 0.2em 0 0 0;
+  text-align: right;
+}
+li.linktrail { display: inline; margin: 0; padding: 0; }
+
+li.linktrail::before {
+  content: '  /  ';
+  color: #3f3f3f;
+}
+
+li.linktrail-first::before, li.linktrail-only::before { content: ''; }
+
+
+div.navbar {
+  padding: 0.5em 1em 0.5em 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.navbar-top { margin-bottom: 1em; }
+div.navbar-bottom { margin-top: 1em; clear: both; }
+div.navbar img { border: 0; vertical-align: -0.4em; }
+table.navbar { width: 100%; margin: 0; border: none; }
+table.navbar td { padding: 0; border: none; }
+td.navbar-next {
+  text-align: right;
+}
+a.navbar-prev::before {
+  
+  content: '◀  ';
+  color: #3f3f3f;
+}
+a.navbar-next::after {
+  
+  content: '  ▶';
+  color: #3f3f3f;
+}
+
+
+div.sidebar {
+  float: right;
+  padding: 0; margin: 0; width: 12em;
+}
+div.sidenav {
+  padding: 0.5em 1em 0 1em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.sidenav div.autotoc {
+  background-color: #ffffff;
+  border: none; padding: 0; margin: 0;
+}
+div.sidenav div.autotoc div.autotoc { margin-top: 0.5em; }
+div.sidenav div.autotoc li { margin-bottom: 0.5em; }
+div.sidenav div.autotoc div.autotoc div.autotoc {
+  margin-left: 1em;
+  margin-top: 0;
+}
+div.sidenav div.autotoc div.autotoc div.autotoc li { margin-bottom: 0; }
+
+
+div.autotoc {
+  
+  display: table;
+  margin-top: 1em;
+  margin-left: 1.72em;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: #f0f9ff;
+  border: solid 1px #c0c9ff;
+}
+div.autotoc ul { margin: 0; padding: 0; }
+div.autotoc li { list-style-type: none; margin: 0; }
+div.autotoc div.autotoc-title { margin-bottom: 0.5em; }
+div.autotoc div.autotoc { border: none; padding: 0; margin-top: 0; margin-bottom: 0.5em; }
+div.autotoc div.autotoc div.autotoc { margin-bottom: 0; }
+
+
+span.bibliolabel {
+  color: #3f3f3f;
+}
+
+
+div.admonition {
+  padding: 0.5em 6px 0.5em 6px;
+  border: solid 1px #e0e0df;
+  background-color: #fffff0;
+}
+div.caution-inner, div.important-inner, div.note-inner, div.tip-inner, div.warning-inner {
+  padding-left: 60px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 48px;
+}
+div.caution-inner { background-image: url("icons/admon-caution.png"); }
+div.important-inner { background-image: url("icons/admon-important.png"); }
+div.note-inner { background-image: url("icons/admon-note.png"); }
+div.note-bug div.note-inner { background-image: url("icons/admon-bug.png"); }
+div.tip-inner { background-image: url("icons/admon-tip.png"); }
+div.warning-inner { background-image: url("icons/admon-warning.png"); }
+div.blockquote {
+  
+  background-image: url('watermark-blockquote-201C.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 0.5em;
+  padding-left: 4em;
+}
+div.attribution {
+  margin-top: 0.5em;
+  color: #3f3f3f;
+}
+div.attribution::before {
+  
+  content: '― ';
+}
+div.epigraph {
+  text-align: right;
+  margin-left: 20%;
+  margin-right: 0;
+  color: #3f3f3f;
+}
+div.figure, div.informalfigure {
+  
+  display: table;
+  padding: 0.5em;
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.figure-inner, div.informalfigure-inner {
+  padding: 0.5em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.caption { margin-top: 0.5em; }
+div.programlisting {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen .prompt {
+  color: #3f3f3f;
+}
+div.screen .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.programlisting .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+pre.linenumbering {
+  color: #3f3f3f;
+  margin: 0;
+  padding-right: 1em;
+  float: left;
+  text-align: right;
+}
+
+
+
+dl.index dt { margin-top: 0; }
+dl.index dd { margin-top: 0; margin-bottom: 0; }
+dl.indexdiv dt { margin-top: 0; }
+dl.indexdiv dd { margin-top: 0; margin-bottom: 0; }
+dl.setindex dt { margin-top: 0; }
+dl.setindex dd { margin-top: 0; margin-bottom: 0; }
+div.list div.title-formal span.title {
+  border-bottom: solid 1px #e0e0df;
+}
+div.simplelist {
+  margin-left: 1.72em;
+}
+div.simplelist table { margin-left: 0; border: none; }
+div.simplelist td {
+  padding: 0.5em;
+  border-left: solid 1px #e0e0df;
+}
+div.simplelist td.td-first {
+  padding-left: 0;
+  border-left: 0;
+}
+div.synopsis {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border-top: solid 2px #c0c9ff;
+  border-bottom: solid 2px #c0c9ff;
+}
+div.synopsis div.synopsis {
+  padding: 0;
+  border: none;
+}
+div.synopsis div.block { margin-top: 0.2em; }
+div.synopsis div.block-first { margin-top: 0; }
+div.cmdsynopsis { font-family: monospace; }
+
+span.accel { text-decoration: underline; }
+span.acronym { font-family: sans-serif; }
+span.application { font-style: italic; }
+span.classname, span.exceptionname, span.interfacename { font-family: monospace; }
+span.code {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.code { border: none; padding: 0; }
+span.command {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.command { border: none; padding: 0; }
+span.computeroutput { font-family: monospace; }
+
+span.constant { font-family: monospace; }
+span.database { font-family: monospace; }
+span.email { font-family: monospace; }
+span.emphasis { font-style: italic; }
+span.emphasis-bold { font-style: normal; font-weight: bold; }
+span.envar { font-family: monospace; }
+
+span.filename { font-family: monospace; }
+span.firstterm { font-style: italic; }
+span.foreignphrase { font-style: italic; }
+span.function { font-family: monospace; }
+
+dt.glossterm span.glossterm { font-style: normal; }
+
+
+span.glossterm { font-style: italic; }
+
+span.guibutton, span.guilabel, span.guimenu, span.guimenuitem, span.guisubmenu, span.interface {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.keycap {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.lineannotation { font-style: italic; }
+span.literal { font-family: monospace; }
+span.markup  { font-family: monospace; }
+span.medialabel { font-style: italic; }
+span.methodname { font-family: monospace; }
+span.ooclass, span.ooexception, span.oointerface { font-family: monospace; }
+span.option { font-family: monospace; }
+span.parameter { font-family: monospace; }
+span.paramdef span.parameter { font-style: italic; }
+span.prompt { font-family: monospace; }
+span.property { font-family: monospace; }
+span.replaceable  { font-style: italic; }
+span.returnvalue { font-family: monospace; }
+span.sgmltag { font-family: monospace; }
+span.structfield, span.structname { font-family: monospace; }
+span.symbol { font-family: monospace; }
+span.systemitem { font-family: monospace; }
+span.token { font-family: monospace; }
+span.type { font-family: monospace; }
+span.uri { font-family: monospace; }
+span.userinput { font-family: monospace; }
+span.varname { font-family: monospace; }
+span.wordasword { font-style: italic; }
+
+
+
+div.footnotes { font-style: italic; font-size: 0.8em; }
+div.footnote { margin-top: 1.44em; }
+span.footnote-number { display: inline; padding-right: 0.83em; }
+span.footnote-number + p { display: inline; }
+a.footnote { text-decoration: none; font-size: 0.8em; }
+a.footnote-ref { text-decoration: none; }
+
+span.co {
+  margin-left: 0.2em; margin-right: 0.2em;
+  padding-left: 0.4em; padding-right: 0.4em;
+  border: solid 1px #000000;
+  -moz-border-radius: 8px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 8px;
+}
+span.co:hover {
+  border-color: #333333;
+  background-color: #333333;
+  color: #FFFFFF;
+}
+span.co a { text-decoration: none; }
+span.co a:hover { text-decoration: none; }
+
+dt.question { margin-left: 0em; }
+dt.question div.label { float: left; }
+dd + dt.question { margin-top: 1em; }
+dd.answer {
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+dd.answer div.label { float: left; }
+</style>
+</head>
+<body>
+<div class="navbar navbar-top"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="stardict-usage.html" title="Використовування">Використовування</a></td>
+<td class="navbar-next"><a class="navbar-next" href="manage-dicts.html" title="Manage dictionaries">Manage dictionaries</a></td>
+</tr></table></div>
+<div class="sidebar"><div class="sidenav"><div class="autotoc"><ul>
+<li><a href="index-info.html" title="Про цей документ">Про цей документ</a></li>
+<li>
+<a class="xref" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a><div class="autotoc"><ul>
+<li><a class="xref" href="stardict-introduction.html" title="Вступ">Вступ</a></li>
+<li><a class="xref" href="stardict-getting-started.html" title="Початок">Початок</a></li>
+<li><a class="xref" href="stardict-usage.html" title="Використовування">Використовування</a></li>
+<li>Налаштування</li>
+<li><a class="xref" href="manage-dicts.html" title="Manage dictionaries">Manage dictionaries</a></li>
+<li><a class="xref" href="manage-plugins.html" title="Manage Plugins">Manage Plugins</a></li>
+<li><a class="xref" href="stardict-details.html" title="Details">Details</a></li>
+<li><a class="xref" href="stardict-portable.html" title="StarDict Portable">StarDict Portable</a></li>
+<li><a class="xref" href="stardict-troubleshooting.html" title="Troubleshooting">Troubleshooting</a></li>
+<li><a class="xref" href="stardict-projects.html" title="Зв'язані проекти">Зв'язані проекти</a></li>
+<li><a class="xref" href="stardict-authors.html" title="Розробники">Розробники</a></li>
+</ul></div>
+</li>
+</ul></div></div></div>
+<div class="body body-sidebar"><div class="division sect1">
+<a name="stardict-prefs"></a><div class="header"><h1 class="sect1 title"><span class="title">Налаштування</span></h1></div>
+<ul class="linktrail"><li class="linktrail linktrail-only"><a class="linktrail" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a></li></ul>
+<p class="para block block-first">To configure <span class="application">StarDict</span>, click the <span class="guibutton">Preferences</span> button at the 
+	right-bottom corner of the Main window or click the <span class="guibutton">Main menu</span> button and choose 
+	<span class="guimenuitem">Preferences</span>. </p>
+<div class="autotoc"><ul>
+<li>
+<span class="label">4.1. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary" title="Словник">Словник</a>
+</li>
+<li>
+<span class="label">4.2. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-network" title="Network">Network</a>
+</li>
+<li>
+<span class="label">4.3. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-main-window" title="Головне вікно">Головне вікно</a>
+</li>
+<li>
+<span class="label">4.4. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-notification-area-icon" title="Іконка області сповіщень">Іконка області сповіщень</a>
+</li>
+<li>
+<span class="label">4.5. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-floating-window" title="Спливаюче вікно">Спливаюче вікно</a>
+</li>
+</ul></div>
+<div class="division sect2">
+<a name="stardict-prefs-dictionary"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">4.1. </span>Словник</span></h2></div>
+<div class="autotoc"><ul>
+<li>
+<span class="label">4.1.1. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-scan" title="Слідкувати за виділеним текстом">Слідкувати за виділеним текстом</a>
+</li>
+<li>
+<span class="label">4.1.2. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-font" title="Шрифт">Шрифт</a>
+</li>
+<li>
+<span class="label">4.1.3. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-cache" title="Cache">Cache</a>
+</li>
+<li>
+<span class="label">4.1.4. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-export" title="Export">Export</a>
+</li>
+<li>
+<span class="label">4.1.5. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-sound" title="Звук">Звук</a>
+</li>
+<li>
+<span class="label">4.1.6. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-video" title="Video">Video</a>
+</li>
+<li>
+<span class="label">4.1.7. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-article-rendering" title="Article rendering">Article rendering</a>
+</li>
+<li>
+<span class="label">4.1.8. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-dict-management" title="Dict management">Dict management</a>
+</li>
+</ul></div>
+<div class="division sect3">
+<a name="stardict-prefs-dictionary-scan"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.1.1. </span>Слідкувати за виділеним текстом</span></h3></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first">
+					<span class="guilabel">Only scan while modifier key is being pressed.</span> </dt>
+<dd>
+				<p class="para block block-first">Only do scanning while the modifier key being pressed. The modifier key is set 
+				by the <a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-scan" title="Слідкувати за виділеним текстом"><span class="guilabel">Scan modifier key</span></a> option.</p>
+				<p class="para block">За умовчанням: вимкнено.</p>
+				</dd>
+<dt class="term">
+					<span class="guilabel">Hide floating window when modifier key released.</span>
+</dt>
+<dd>
+				<p class="para block block-first">When this option is set, the Floating window is hidden when user releases the modifier key.
+				Note: the window is hidden only if the pointer has the same position it had when the window was shown.
+				In addition to hiding the window, the last selected text is forgotten, which allow you to lookup
+				the same text again simply pressing the modifier key.
+				When this option is not set, releasing the modifier key has no effect on the Floating window.
+				</p>
+				<p class="para block">This option has effect only if <a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-scan" title="Слідкувати за виділеним текстом">
+					<span class="guilabel">Only scan while modifier key is being pressed.</span> </a>
+				is checked.</p>
+				<p class="para block">За умовчанням: включено.</p>
+				</dd>
+<dt class="term"><span class="guilabel">Scan modifier key</span></dt>
+<dd>
+				<p class="para block block-first">This option allows to choose a modifier keys or a key combination that enables scanning.</p>
+				<p class="para block">This option has effect only if <a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-scan" title="Слідкувати за виділеним текстом">
+					<span class="guilabel">Only scan while modifier key is being pressed.</span> </a>
+				is checked.</p>
+				<p class="para block">Default key: <span class="keycap">Win</span> (depends on <span class="application">StarDict</span> edition).</p>
+				</dd>
+<dt class="term"><span class="guilabel">Scan clipboard.</span></dt>
+<dd>
+				<p class="para block block-first">Enables Clipboard scanning. If enabled, when new text is copied into the clipboard,
+				<span class="application">StarDict</span> lookup the text into the Floating window.</p>
+				<p class="para block">This option is only available in <span class="emphasis">Windows edition</span> of <span class="application">StarDict</span>.</p>
+				<p class="para block">За умовчанням: вимкнено.</p>
+				</dd>
+<dt class="term">Scan mode shortcut</dt>
+<dd>
+				<p class="para block block-first">The Scan mode shortcut enables or disables the Scan mode.
+				Check the <span class="guilabel">Use scan hotkey</span> checkbox to enable this shortcut.
+				You may change the shortcut in the field to the right of the label.
+				Click inside the field and press the key combination you want to assign to this action.</p>
+				<p class="para block">Default: TRUE</p>
+				<p class="para block">Default shortcut: 
+				<span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">Alt</span>+<span class="keycap">x</span></span>.
+				</p>
+				</dd>
+</dl></div>
+</div>
+<div class="division sect3">
+<a name="stardict-prefs-dictionary-font"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.1.2. </span>Шрифт</span></h3></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first">
+<span class="guilabel">Використовувати користувацький шрифт.</span> </dt>
+<dd>
+				<p class="para block block-first">Allows you to override the system's default for <span class="application">StarDict</span>.
+				If this option is turned on, the font selelected in the <span class="guilabel">Dictionary font</span> option will be
+				used instead of the system font.</p>
+				<p class="para block">Font settings apply immediately.</p>
+				<p class="para block">За умовчанням: вимкнено.</p>
+				</dd>
+</dl></div>
+</div>
+<div class="division sect3">
+<a name="stardict-prefs-dictionary-cache"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.1.3. </span>Cache</span></h3></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="guilabel"><a name="stardict-prefs-dictionary-scan-create-cache-files"></a>Create cache files to speed up loading.</span></dt>
+<dd>
+				<p class="para block block-first">Opening a dictionary the first time, <span class="application">StarDict</span> does some calculations
+				to access dictionary contents speedily. 
+				<span class="application">StarDict</span> may save the results in special cache files that will be used the next time
+				<span class="application">StarDict</span> starts. With cache files <span class="application">StarDict</span> starts quicker, since it does not need to do
+				the same calculations again. It's highly recommended to enable caching.
+				In the first place, <span class="application">StarDict</span> tries to save a cache file along with the dictionary.
+				If it fails, for example, because the directory is write-protected,
+				<span class="application">StarDict</span> creates a file under the user home directory, in <span class="application">StarDict</span>'s directory.</p>
+				<p class="para block">За умовчанням: включено.</p>
+				</dd>
+<dt class="term"><span class="guilabel"><a name="stardict-prefs-dictionary-scan-use-collation"></a>Sort word list by collation function.</span></dt>
+<dd>
+				<p class="para block block-first">Normally, <span class="application">StarDict</span> uses an index of words to look up a word in a dictionary.
+				When the word is present in the index, the corresponding article is shown.
+				Otherwise adjacent words will be checked and may be used as result.
+				<span class="application">StarDict</span> uses heuristic algorithms to decide whether the particular word may be suggested as
+				result of the search or not.
+				The order of words in an index is very important and
+				it would be handy if index items were sorted by alphabet or according to other rules.
+				Collation functions allows you to specify a number of predefined sorting orders,
+				that may be helpful when working with particular languages.
+				</p>
+				<p class="para block">
+				To use a collation function check the
+				<span class="guilabel">Sort word list by collation function</span>
+				checkbox and select the desired function from the
+				<span class="guilabel">Collation function</span> list.
+				The collation function will be applied as soon as you close the Preferences dialog.
+				It may take a considerable amount of time to apply the new collation function,
+				please, be patient.
+				</p>
+				<p class="para block">It's highly recommended to enable the 
+				<a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-cache" title="Cache">Create cache files to speed up loading.</a>
+				option, otherwise <span class="application">StarDict</span> will do sorting each time the application starts.
+				</p>
+				<p class="para block">За умовчанням: вимкнено.</p>
+				</dd>
+<dt class="term"><span class="guilabel">Clean all cache files</span></dt>
+<dd>
+				<p class="para block block-first">Remove all <span class="application">StarDict</span> cache files.
+				</p>
+				</dd>
+</dl></div>
+</div>
+<div class="division sect3">
+<a name="stardict-prefs-dictionary-export"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.1.4. </span>Export</span></h3></div>
+<p class="para block block-first"><span class="application">StarDict</span> may export search results into a file.
+			You have two options: export only the found word or export the entire search result, the contents of the Definition area.
+			</p>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="guilabel">Only export words.</span></dt>
+<dd>
+				<p class="para block block-first">When this option is set, <span class="application">StarDict</span> exports only the found word,
+				otherwise exports the complete article.</p>
+				<p class="para block">За умовчанням: включено.</p>
+				</dd>
+<dt class="term"><span class="guilabel">File name</span></dt>
+<dd>
+				<p class="para block block-first">
+				Name of the file where to export data.
+				</p>
+				</dd>
+</dl></div>
+</div>
+<div class="division sect3">
+<a name="stardict-prefs-dictionary-sound"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.1.5. </span>Звук</span></h3></div>
+<p class="para block block-first">There are a number of cases when <span class="application">StarDict</span> needs to play sound files.
+			<span class="application">StarDict</span> may accompany GUI actions with sounds.
+			<span class="application">StarDict</span> may pronounce the words you search in the dictionary.
+			Some articles may contain linked sound files you can play.
+			</p>
+<p class="para block">
+			To play sound files <span class="application">StarDict</span> may harness platform-specific services or use commands you specify on this page.
+			</p>
+<p class="para block">
+			This page allows to configure some aspects of the TTS subsystem.
+			The TTS subsystem is used to pronounce words by computer.
+			</p>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first">
+<span class="guilabel">Використовувати звуки для подій.</span> </dt>
+<dd>
+				<p class="para block block-first">Whether to enable sound events. <span class="application">StarDict</span> will play sound event when button is 
+	active, released, and when a menu pops up.</p>
+				<p class="para block">За умовчанням: включено.</p>
+				</dd>
+<dt class="term"><span class="guilabel">Command for playing sound files:</span></dt>
+<dd>
+				<p class="para block block-first">Specifies a command for playing sound files.
+				You may specify a program name (with or without full path) accompaned with any options required. The file name to play will be appended to this command at run time.
+				</p>
+				</dd>
+<dt class="term"><span class="guilabel">Always use sound play command</span></dt>
+<dd>
+				<p class="para block block-first">On some platforms <span class="application">StarDict</span> use platform-specific services to play sound files first, then retreats to the custom command provided by the user if the service is unable to play the file. You may specify to always use the custom command selecting this option.
+				</p>
+				<p class="para block">За умовчанням: вимкнено.</p>
+				</dd>
+<dt class="term"><span class="guilabel">RealPeopleTTS search path:</span></dt>
+<dd>
+				<p class="para block block-first">
+				Allows to specify locations of RealPeopleTTS bundles.
+				RealPeopleTTS bundle is a collection of sound files containing speech samples performed by real people. Normally, one file contains one recoded word, the file is named after that word. Sound files are organized into a number of directories. In the text field you must specify a path to the top level directory of the bundle. The order of paths in the text field is important. <span class="application">StarDict</span> checks directories from top to bottom, the first found file will be used.
+				</p>
+					<div class="block list variablelist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Default:</span></div>
+<dl class="variablelist">
+<dt class="term dt-first">In Windows edition of <span class="application">StarDict</span>
+</dt>
+<dd>
+						<p class="para block block-first">
+						<span class="filename" dir="ltr">C:\Program Files\WyabdcRealPeopleTTS</span>,
+						<span class="filename" dir="ltr">C:\Program Files\OtdRealPeopleTTS</span>,
+						<span class="filename" dir="ltr">WyabdcRealPeopleTTS</span>,
+						<span class="filename" dir="ltr">OtdRealPeopleTTS</span>
+						</p>
+						</dd>
+<dt class="term">In other editions of <span class="application">StarDict</span>
+</dt>
+<dd>
+						<p class="para block block-first">
+						<span class="filename" dir="ltr">/usr/share/WyabdcRealPeopleTTS</span>,
+						<span class="filename" dir="ltr">/usr/share/OtdRealPeopleTTS</span>
+						</p>
+						</dd>
+</dl>
+</div>
+				</dd>
+<dt class="term"><span class="guilabel">Enable TTS program.</span></dt>
+<dd>
+				<p class="para block block-first">
+				Allows to use the command below to read words.
+				You need to restart <span class="application">StarDict</span> for changes to take effect.
+				</p>
+				<p class="para block">За умовчанням: вимкнено.</p>
+				</dd>
+<dt class="term">TTS <span class="guilabel">Command line:</span>
+</dt>
+<dd>
+				<p class="para block block-first">
+				This field allows to specify a command to use to pronounce words.
+				You need to provide a print-like string, with "%s" specifing the place where the word (or phrase) to pronounce will be inserted.
+				You need to restart <span class="application">StarDict</span> for changes to take effect.
+				Do not forget to check the checkbox above if you want to use this command.
+				</p>
+				<p class="para block">Default: <span class="emphasis">nothing</span>.</p>
+				</dd>
+</dl></div>
+</div>
+<div class="division sect3">
+<a name="stardict-prefs-dictionary-video"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.1.6. </span>Video</span></h3></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="guilabel">Command for playing video files:</span></dt>
+<dd>
+				<p class="para block block-first">
+				Specifies a command for playing video files.
+				You may specify a program name (with or without full path) accompaned with any options required. The file name to play will be appended to this command at run time.
+				Video files may be linked with dictionary articles.
+				</p>
+			</dd>
+</dl></div>
+</div>
+<div class="division sect3">
+<a name="stardict-prefs-dictionary-article-rendering"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.1.7. </span>Article rendering</span></h3></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="guilabel">Highlight search term</span></dt>
+<dd>
+				<p class="para block block-first">
+				Whether to highlight the search term in the Definition area.
+				A search term is a word that was found in dictionaries, a head word of an article.
+				</p>
+				<p class="para block">За умовчанням: вимкнено.</p>
+			</dd>
+</dl></div>
+</div>
+<div class="division sect3">
+<a name="stardict-prefs-dictionary-dict-management"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.1.8. </span>Dict management</span></h3></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="guilabel">Add new dictionaries to active dictionary group</span></dt>
+<dd>
+        <p class="para block block-first">
+        At start time <span class="application">StarDict</span> scans known directories for dictionary files.
+        This options specifies what to do with new dictionaries.
+        When this option is on, new dictionaries are added to the active dictionary group.
+        Otherwise you have to add new dictionaries to a group manually.
+        </p>
+        <p class="para block">Disabling this option may be useful if you have multiple groups and you want to control precisely what each group contains. Often the last active dictionary group is not appropriate for new dictionaries.
+        </p>
+        <p class="para block">За умовчанням: включено.</p>
+      </dd>
+<dt class="term"><span class="guilabel">Add new plug-ins to active dictionary group</span></dt>
+<dd>
+        <p class="para block block-first">
+        At start time <span class="application">StarDict</span> scans known directories for plug-in files.
+        This options specifies what to do with new plug-ins (belonging to Virtual Dictionary and Network dictionary plug-in categories).
+        When this option is on, new plug-ins are added to the active dictionary group.
+        Otherwise you have to add new plug-ins to a group manually.
+        </p>
+        <p class="para block">Disabling this option may be useful if you have multiple groups and you want to control precisely what each group contains. Often the last active dictionary group is not appropriate for new plug-ins.
+        </p>
+        <p class="para block">За умовчанням: включено.</p>
+      </dd>
+</dl></div>
+</div>
+</div>
+<div class="division sect2">
+<a name="stardict-prefs-network"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">4.2. </span>Network</span></h2></div>
+<div class="autotoc"><ul>
+<li>
+<span class="label">4.2.1. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-network-net-dict" title="Net Dict">Net Dict</a>
+</li>
+<li>
+<span class="label">4.2.2. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-network-web-browser" title="Web browser">Web browser</a>
+</li>
+</ul></div>
+<div class="division sect3">
+<a name="stardict-prefs-network-net-dict"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.2.1. </span>Net Dict</span></h3></div>
+<p class="para block block-first"><span class="application">StarDict</span> may look up words in network dictionaries using a custom <span class="application">StarDict</span> network protocol.
+		This configuration page allows you to register an account, select a server to use, and specify other related parameters. 
+		</p>
+<p class="para block">
+		At the present time <span class="application">StarDict</span> may be configured to query only one server. When network dictionaries are enabled, each time you ask <span class="application">StarDict</span> to lookup a word or phrase, the application sends a request to the configured server. Note that network dictionaries are enabled globally, they are used in both Main and Floating windows, they do not depend on the dictionary group selected.
+		</p>
+<p class="para block">To configure the list of dictionaries on the server, use the Manage Dictionaries dialog, Network dictionaries tab.
+		</p>
+<p class="para block">You need to register on the server to use this feature. Click <span class="guilabel">Register an account</span> button on this page to register an account.
+		</p>
+<div class="admonition block caution block-indent"><div class="caution-inner">
+		<p class="para block block-first">Enabling network dictionaries poses a security risk.
+    Your text will be sent to remote servers.
+    Additionally, since network requests do not use any encryption, 
+    anyone able to sniff communication can see that text.
+		</p>
+		</div></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="guilabel">Enable network dictionaries</span></dt>
+<dd>
+				<p class="para block block-first">Enables network dictionaries.
+				</p>
+				<p class="para block">За умовчанням: вимкнено.</p>
+				</dd>
+</dl></div>
+</div>
+<div class="division sect3">
+<a name="stardict-prefs-network-web-browser"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.2.2. </span>Web browser</span></h3></div>
+<p class="para block block-first">
+		<span class="application">StarDict</span> may need to open a web link to start Internet search, show <span class="application">StarDict</span> project website, show a web page to download new dictionaries, new version of the application and for other reasons. This configuration page allows to specify how a web link should be opened.
+		</p>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="guilabel">Command for opening URLs</span></dt>
+<dd>
+				<p class="para block block-first">
+				This option allows you to specify a command to use for opening <span class="acronym">URL</span>s.
+				Some editions of <span class="application">StarDict</span> use platform-specific services for opening <span class="acronym">URL</span>s by default. To use the custom command you need to check the checkbox below. For other editions of <span class="application">StarDict</span> the custom command is the only way to open a web link.
+				</p>
+				<p class="para block">
+				You may specify a program name (with or without full path) accompaned with any options required. The <span class="acronym">URL</span> to open will be appended to this command at run time.
+				</p>
+				<p class="para block">Default: <span class="command" dir="ltr">firefox</span> (depends on edition).</p>
+				</dd>
+<dt class="term"><span class="guilabel">Always use this command for opening URLs.</span></dt>
+<dd>
+				<p class="para block block-first">
+				This option is only available in editions of <span class="application">StarDict</span> that can use other ways to open a web link.
+				</p>
+				<p class="para block">
+				Check this option to use the custom command to open web links instead of platform-specific services.
+				</p>
+				<p class="para block">За умовчанням: вимкнено.</p>
+				</dd>
+</dl></div>
+</div>
+</div>
+<div class="division sect2">
+<a name="stardict-prefs-main-window"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">4.3. </span>Головне вікно</span></h2></div>
+<div class="autotoc"><ul>
+<li>
+<span class="label">4.3.1. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-main-window-input" title="Input">Input</a>
+</li>
+<li>
+<span class="label">4.3.2. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-main-window-options" title="Опції">Опції</a>
+</li>
+<li>
+<span class="label">4.3.3. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-main-window-searchwebsite" title="Search website">Search website</a>
+</li>
+</ul></div>
+<div class="division sect3">
+<a name="stardict-prefs-main-window-input"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.3.1. </span>Input</span></h3></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="guilabel">Search while typing</span></dt>
+<dd>
+				<p class="para block block-first">
+				When this option is checked, <span class="application">StarDict</span> search for the word you are typing in the search field automatically. <span class="application">StarDict</span> monitors key-press events, it starts searching the word entered as soon as there is no activity for more than a specified amount of time. The time span can be changed in the field below. If the time span is 0, search is started immediately after you change the search field.
+				</p>
+				<p class="para block">
+				When this option is not checked, you need to press 
+				<span class="keycombo"><span class="keycap">Enter</span></span>
+				in order for <span class="application">StarDict</span> to start searching the word.
+				</p>
+				<p class="para block">Default: TRUE</p>
+				</dd>
+<dt class="term"><span class="guilabel">Word change timeout</span></dt>
+<dd>
+				<p class="para block block-first">
+				A word change timeout in milliseconds. See the option above for details.
+				</p>
+				<p class="para block">Default: 300 ms</p>
+				</dd>
+<dt class="term"><span class="guilabel">Show the first word when not found.</span></dt>
+<dd>
+				<p class="para block block-first">
+				When <span class="application">StarDict</span> is unable to find the exact word requested, the application may propose another word that is close to the original. When this option is checked, the closest word will be shown in the Definition area, otherwise, <span class="application">StarDict</span> tells that the original word is not found. Note, that this option applies to simple queries only, that is the queries that do not use regular expressions, patterns, fuzzy matchs and so on.
+				</p>
+				<p class="para block">Default: TRUE</p>
+				</dd>
+</dl></div>
+</div>
+<div class="division sect3">
+<a name="stardict-prefs-main-window-options"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.3.2. </span>Опції</span></h3></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="guilabel">Skin</span></dt>
+<dd>
+				<p class="para block block-first">
+				Allows to customize graphical appearance of the application.
+				Select the <span class="emphasis">Default</span> item to restore the original appearance of <span class="application">StarDict</span>,
+				no skins applied.
+				You need to restart the application in order for changes to take effect.
+				For instructions on how to prepare a custom skin see the <span class="filename" dir="ltr">doc/Skins</span> file in <span class="application">StarDict</span> sources.
+				</p>
+				<p class="para block">Default: <span class="emphasis">Default</span>.</p>
+				</dd>
+<dt class="term"><span class="guilabel">Ховати головне вікно при запуску StarDict.</span></dt>
+<dd>
+				<p class="para block block-first">Controls whether the Main window appears when you first start the program.
+                If you select this option, you will only see the Notification area icon
+				after starting <span class="application">StarDict</span>.  You may still get to the Main
+                window by clicking on this icon.</p>
+				<p class="para block">За умовчанням: вимкнено.</p>
+				</dd>
+<dt class="term"><span class="guilabel">Use open main window hotkey</span></dt>
+<dd>
+				<p class="para block block-first">This option enable the hotkey that opens the Main window, and allows to change that hotkey.
+				When enabled, when user presses the hotkey, the Main window is presented to the user.
+				</p>
+				<p class="para block">За умовчанням: включено.</p>
+				<p class="para block">Default hotkey: 
+				<span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">Alt</span>+<span class="keycap">z</span></span>
+				</p>
+				</dd>
+<dt class="term"><span class="guilabel">Transparency</span></dt>
+<dd>
+				<p class="para block block-first">
+				Allows to make the Main window transparent.
+				Moving the slider you may change transparency degree.
+				Transparency is measured in percents, it can range from 0 to 80,
+				where 0 ‒ fully opaque, 80 ‒ almost fully transparent.
+				Moving the slider has an immediate effect on the window.
+				</p>
+				<p class="para block">
+				On X11 this has any effect only on X screens with a compositing manager running.
+				On Windows it should work always.
+				</p>
+				<p class="para block">Default: 0 ‒ fully opaque.</p>
+				</dd>
+</dl></div>
+</div>
+<div class="division sect3">
+<a name="stardict-prefs-main-window-searchwebsite"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.3.3. </span>Search website</span></h3></div>
+<p class="para block block-first"><span class="application">StarDict</span> may use Web search engines, Web dictionaries, databases providing web-based interface and other web sites providing information by request.
+			The text to search is incorporated into <span class="acronym">URL</span>. 
+			Normally, the text is assigned to a GET request parameter.
+			For example, to search for word <span class="emphasis">stardict</span> in 
+			<a class="ulink" href="http://www.google.com" title="http://www.google.com">Google search engine</a> you may use the following
+			<span class="acronym">URL</span>
+			<span class="uri" dir="ltr">http://www.google.com/search?q=<span class="replaceable">stardict</span></span>.
+			You can search websites in <span class="application">StarDict</span>
+			right-clicking the <span class="guibutton">Internet search</span> button in the Main window.
+			</p>
+<p class="para block">
+			<span class="application">StarDict</span> does not handle the web request itself, it only composes a <span class="acronym">URL</span> and invokes an external program like a web browser or use platform-specific services to open the <span class="acronym">URL</span>.
+			</p>
+<p class="para block">
+			On this page you may see a list of websites. Use <span class="guilabel">Add</span> and 
+			<span class="guilabel">Remove</span> buttons to add new sites and remove existing records.
+			Use <span class="guilabel">Up</span> and <span class="guilabel">Down</span> arrow buttons to reorder records in the list. Each record consists of three items:
+			</p>
+<div class="block list variablelist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Website record</span></div>
+<dl class="variablelist">
+<dt class="term dt-first"><span class="guilabel">Website name</span></dt>
+<dd>
+				<p class="para block block-first">This is a label you see in menu. Use a meaningful name.
+				</p>
+				</dd>
+<dt class="term"><span class="guilabel">Website link</span></dt>
+<dd>
+				<p class="para block block-first">Link to the main page of the website.
+				This link is opened when there is nothing to search for, the Search field is empty.
+				</p>
+				</dd>
+<dt class="term"><span class="guilabel">Website search link</span></dt>
+<dd>
+				<p class="para block block-first">Link to perform request. 
+				<span class="emphasis">%s</span> identifies the place where to insert the search text.
+				For example, <span class="uri" dir="ltr">http://www.google.com/search?q=<span class="replaceable">%s</span></span>.
+				</p>
+				</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="division sect2">
+<a name="stardict-prefs-notification-area-icon"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">4.4. </span>Іконка області сповіщень</span></h2></div>
+<div class="autotoc"><ul><li>
+<span class="label">4.4.1. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-notification-area-icon-options" title="Опції">Опції</a>
+</li></ul></div>
+<div class="division sect3">
+<a name="stardict-prefs-notification-area-icon-options"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.4.1. </span>Опції</span></h3></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first">
+<span class="guilabel">When middle mouse button is clicked:</span> </dt>
+<dd>
+				<p class="para block block-first">Specifies an action to perform when user clicks the middle mouse button on the Notification
+				area icon. There are the following choices:</p>
+				<div class="block list itemizedlist"><ul class="itemizedlist">
+<li class="li-first">
+					<span class="para"><span class="guilabel">Query selection in floating window</span></span>
+					</li>
+<li>
+					<span class="para"><span class="guilabel">Query selection in main window</span></span>
+					</li>
+<li>
+					<span class="para"><span class="guilabel">Do nothing</span></span>
+					</li>
+</ul></div>
+				<p class="para block">In the <span class="guilabel">Do nothing</span> case <span class="application">StarDict</span> simply ignores middle button clicks,
+				otherwise <span class="application">StarDict</span> get text of the current selection, search for it and displays
+				the results either in the Floating window or in the Main window.
+				</p>
+				<p class="para block">In case there are a number of windows on desktop having text selected,
+				there might be a confusion what text will be used.
+				<span class="application">StarDict</span> works with the <span class="emphasis">X</span> <span class="emphasis">Primary</span> selection.
+				Only one application can own a selection at a time, so when you select something in 
+				an application that application becomes the selection owner, the previous owner loses
+				selection ownership. Now back to the question. <span class="application">StarDict</span> will use the text that was selected last.
+				</p>
+				<p class="para block">Default: <span class="guilabel">Query selection in floating window</span>.</p>
+				</dd>
+</dl></div>
+</div>
+</div>
+<div class="division sect2">
+<a name="stardict-prefs-floating-window"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">4.5. </span>Спливаюче вікно</span></h2></div>
+<div class="autotoc"><ul>
+<li>
+<span class="label">4.5.1. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-floating-options" title="Опції">Опції</a>
+</li>
+<li>
+<span class="label">4.5.2. </span><a class="xref" href="stardict-prefs.html#stardict-prefs-floating-settings" title="Settings">Settings</a>
+</li>
+</ul></div>
+<div class="division sect3">
+<a name="stardict-prefs-floating-options"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.5.1. </span>Опції</span></h3></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first">
+<span class="guilabel">Pronounce the word when it pops up.</span> </dt>
+<dd>
+				<p class="para block block-first">When set, pronounce the word when the Floating window shows translation.</p>
+				<p class="para block">За умовчанням: вимкнено.</p>
+				</dd>
+<dt class="term"><span class="guilabel">Show floating window if word not found.</span></dt>
+<dd>
+				<p class="para block block-first">This option allows to configure what to do if the word to be shown in the Floating window is not found. You have two choices: 1) do not show the Floating window at all ‒ this option is unset, 2) show the Floating window with text indicating that the word was not found ‒ this option is set.</p>
+				<p class="para block">За умовчанням: включено.</p>
+				</dd>
+</dl></div>
+</div>
+<div class="division sect3">
+<a name="stardict-prefs-floating-settings"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">4.5.2. </span>Settings</span></h3></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first">
+<span class="guilabel">Максимальна ширина вікна.</span> </dt>
+<dd>
+				<p class="para block block-first">Sets the Floating window's max width.</p>
+				<p class="para block">За умовчанням: 320.</p>
+				</dd>
+<dt class="term">
+<span class="guilabel">Максимальна висота вікна.</span> </dt>
+<dd>
+				<p class="para block block-first">Sets the Floating window's max height.</p>
+				<p class="para block">За умовчанням: 240.</p>
+				</dd>
+<dt class="term"><span class="guilabel">Use custom background color:</span></dt>
+<dd>
+				<p class="para block block-first">Enables to use custom color for background in the Floating window and select that color.</p>
+				<p class="para block">За умовчанням: вимкнено.</p>
+				</dd>
+<dt class="term"><span class="guilabel">Transparency</span></dt>
+<dd>
+				<p class="para block block-first">
+				Allows to make the Floating window transparent.
+				Moving the slider you may change transparency degree.
+				Transparency is measured in percents, it can range from 0 to 80,
+				where 0 ‒ fully opaque, 80 ‒ almost fully transparent.
+				Moving the slider has an immediate effect on the window.
+				</p>
+				<p class="para block">
+				On X11 this has any effect only on X screens with a compositing manager running.
+				On Windows it should work always.
+				</p>
+				<p class="para block">Default: 0 ‒ fully opaque.</p>
+				</dd>
+</dl></div>
+</div>
+</div>
+</div></div>
+<div class="navbar navbar-bottom"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="stardict-usage.html" title="Використовування">Використовування</a></td>
+<td class="navbar-next"><a class="navbar-next" href="manage-dicts.html" title="Manage dictionaries">Manage dictionaries</a></td>
+</tr></table></div>
+</body>
+</html>

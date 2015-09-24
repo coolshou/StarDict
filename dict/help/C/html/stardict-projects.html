@@ -1,0 +1,558 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Related Projects</title>
+<link rel="previous" href="stardict-troubleshooting.html" title="Troubleshooting">
+<link rel="next" href="stardict-authors.html" title="Developers">
+<link rel="top" href="index.html" title="StarDict Manual V3.0.6">
+<style type="text/css">
+
+html { height: 100%; }
+body {
+  margin: 0px; padding: 12px;
+  background-color: #f9f9f6;
+  min-height: 100%;
+  direction: ltr;
+}
+div, p, pre, blockquote { margin: 0; padding: 0; }
+p img { vertical-align: middle; }
+sub { font-size: 0.83em; }
+sub sub { font-size: 1em; }
+sup { font-size: 0.83em; }
+sup sup { font-size: 1em; }
+table { border-collapse: collapse; }
+table.table-pgwide { width: 100%; }
+td { vertical-align: top; }
+td { padding: 0.2em 0.83em 0.2em 0.83em; }
+th { padding: 0 0.83em 0 0.83em; }
+tr.tr-shade {
+  background-color: #f9f9f6;
+}
+td.td-colsep { border-right: solid 1px; }
+td.td-rowsep { border-bottom: solid 1px; }
+thead { border-top: solid 2px; border-bottom: solid 2px; }
+tfoot { border-top: solid 2px; border-bottom: solid 2px; }
+div.body {
+  padding: 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.body-sidebar {
+  margin-right: 13em;
+}
+div.division div.division { margin-top: 1.72em; }
+div.division div.division div.division { margin-top: 1.44em; }
+div.header {
+  margin: 0;
+  color: #3f3f3f;
+  border-bottom: solid 1px #e0e0df;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+  margin: 0; padding: 0;
+  color: #3f3f3f;
+}
+h1.title { font-size: 1.72em; }
+h2.title { font-size: 1.44em; }
+h3.title { font-size: 1.2em; }
+h4.title, h5.title, h6.title, h7.title { font-size: 1em; }
+.block { margin-top: 1em; }
+.block .block-first { margin-top: 0; }
+.block-indent {
+  margin-left left: 1.72em;
+  margin-: 1em;
+}
+.block-indent .block-indent { margin-left: 0em; margin-right: 0em; }
+td .block-indent  { margin-left: 0em; margin-right: 0em; }
+dd .block-indent  { margin-left: 0em; margin-right: 0em; }
+.block-verbatim { white-space: pre; }
+div.title {
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.title-formal { padding-left: 0.2em; padding-right: 0.2em; }
+div.title-formal .label { font-weight: normal; }
+a {
+  color: #1f609f;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+a:visited { color: #9f1f6f; }
+ul, ol, dl { margin: 0; padding: 0; }
+li {
+  margin-top: 1em;
+  margin-left: 2.4em;
+  padding: 0;
+}
+li.li-first { margin-top: 0; }
+dt { margin: 1em 0 0 0; }
+dt.dt-first { margin: 0; }
+dd {
+  margin-left: 1.72em;
+  margin-top: 0.5em;
+}
+dl.dl-compact dt { margin-top: 0; }
+dl.dl-compact dd { margin-top: 0; margin-bottom: 0; }
+
+
+ul.linktrail {
+  display: block;
+  margin: 0.2em 0 0 0;
+  text-align: right;
+}
+li.linktrail { display: inline; margin: 0; padding: 0; }
+
+li.linktrail::before {
+  content: '  /  ';
+  color: #3f3f3f;
+}
+
+li.linktrail-first::before, li.linktrail-only::before { content: ''; }
+
+
+div.navbar {
+  padding: 0.5em 1em 0.5em 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.navbar-top { margin-bottom: 1em; }
+div.navbar-bottom { margin-top: 1em; clear: both; }
+div.navbar img { border: 0; vertical-align: -0.4em; }
+table.navbar { width: 100%; margin: 0; border: none; }
+table.navbar td { padding: 0; border: none; }
+td.navbar-next {
+  text-align: right;
+}
+a.navbar-prev::before {
+  
+  content: '◀  ';
+  color: #3f3f3f;
+}
+a.navbar-next::after {
+  
+  content: '  ▶';
+  color: #3f3f3f;
+}
+
+
+div.sidebar {
+  float: right;
+  padding: 0; margin: 0; width: 12em;
+}
+div.sidenav {
+  padding: 0.5em 1em 0 1em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.sidenav div.autotoc {
+  background-color: #ffffff;
+  border: none; padding: 0; margin: 0;
+}
+div.sidenav div.autotoc div.autotoc { margin-top: 0.5em; }
+div.sidenav div.autotoc li { margin-bottom: 0.5em; }
+div.sidenav div.autotoc div.autotoc div.autotoc {
+  margin-left: 1em;
+  margin-top: 0;
+}
+div.sidenav div.autotoc div.autotoc div.autotoc li { margin-bottom: 0; }
+
+
+div.autotoc {
+  
+  display: table;
+  margin-top: 1em;
+  margin-left: 1.72em;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: #f0f9ff;
+  border: solid 1px #c0c9ff;
+}
+div.autotoc ul { margin: 0; padding: 0; }
+div.autotoc li { list-style-type: none; margin: 0; }
+div.autotoc div.autotoc-title { margin-bottom: 0.5em; }
+div.autotoc div.autotoc { border: none; padding: 0; margin-top: 0; margin-bottom: 0.5em; }
+div.autotoc div.autotoc div.autotoc { margin-bottom: 0; }
+
+
+span.bibliolabel {
+  color: #3f3f3f;
+}
+
+
+div.admonition {
+  padding: 0.5em 6px 0.5em 6px;
+  border: solid 1px #e0e0df;
+  background-color: #fffff0;
+}
+div.caution-inner, div.important-inner, div.note-inner, div.tip-inner, div.warning-inner {
+  padding-left: 60px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 48px;
+}
+div.caution-inner { background-image: url("icons/admon-caution.png"); }
+div.important-inner { background-image: url("icons/admon-important.png"); }
+div.note-inner { background-image: url("icons/admon-note.png"); }
+div.note-bug div.note-inner { background-image: url("icons/admon-bug.png"); }
+div.tip-inner { background-image: url("icons/admon-tip.png"); }
+div.warning-inner { background-image: url("icons/admon-warning.png"); }
+div.blockquote {
+  
+  background-image: url('watermark-blockquote-201C.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 0.5em;
+  padding-left: 4em;
+}
+div.attribution {
+  margin-top: 0.5em;
+  color: #3f3f3f;
+}
+div.attribution::before {
+  
+  content: '― ';
+}
+div.epigraph {
+  text-align: right;
+  margin-left: 20%;
+  margin-right: 0;
+  color: #3f3f3f;
+}
+div.figure, div.informalfigure {
+  
+  display: table;
+  padding: 0.5em;
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.figure-inner, div.informalfigure-inner {
+  padding: 0.5em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.caption { margin-top: 0.5em; }
+div.programlisting {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen .prompt {
+  color: #3f3f3f;
+}
+div.screen .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.programlisting .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+pre.linenumbering {
+  color: #3f3f3f;
+  margin: 0;
+  padding-right: 1em;
+  float: left;
+  text-align: right;
+}
+
+
+
+dl.index dt { margin-top: 0; }
+dl.index dd { margin-top: 0; margin-bottom: 0; }
+dl.indexdiv dt { margin-top: 0; }
+dl.indexdiv dd { margin-top: 0; margin-bottom: 0; }
+dl.setindex dt { margin-top: 0; }
+dl.setindex dd { margin-top: 0; margin-bottom: 0; }
+div.list div.title-formal span.title {
+  border-bottom: solid 1px #e0e0df;
+}
+div.simplelist {
+  margin-left: 1.72em;
+}
+div.simplelist table { margin-left: 0; border: none; }
+div.simplelist td {
+  padding: 0.5em;
+  border-left: solid 1px #e0e0df;
+}
+div.simplelist td.td-first {
+  padding-left: 0;
+  border-left: 0;
+}
+div.synopsis {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border-top: solid 2px #c0c9ff;
+  border-bottom: solid 2px #c0c9ff;
+}
+div.synopsis div.synopsis {
+  padding: 0;
+  border: none;
+}
+div.synopsis div.block { margin-top: 0.2em; }
+div.synopsis div.block-first { margin-top: 0; }
+div.cmdsynopsis { font-family: monospace; }
+
+span.accel { text-decoration: underline; }
+span.acronym { font-family: sans-serif; }
+span.application { font-style: italic; }
+span.classname, span.exceptionname, span.interfacename { font-family: monospace; }
+span.code {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.code { border: none; padding: 0; }
+span.command {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.command { border: none; padding: 0; }
+span.computeroutput { font-family: monospace; }
+
+span.constant { font-family: monospace; }
+span.database { font-family: monospace; }
+span.email { font-family: monospace; }
+span.emphasis { font-style: italic; }
+span.emphasis-bold { font-style: normal; font-weight: bold; }
+span.envar { font-family: monospace; }
+
+span.filename { font-family: monospace; }
+span.firstterm { font-style: italic; }
+span.foreignphrase { font-style: italic; }
+span.function { font-family: monospace; }
+
+dt.glossterm span.glossterm { font-style: normal; }
+
+
+span.glossterm { font-style: italic; }
+
+span.guibutton, span.guilabel, span.guimenu, span.guimenuitem, span.guisubmenu, span.interface {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.keycap {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.lineannotation { font-style: italic; }
+span.literal { font-family: monospace; }
+span.markup  { font-family: monospace; }
+span.medialabel { font-style: italic; }
+span.methodname { font-family: monospace; }
+span.ooclass, span.ooexception, span.oointerface { font-family: monospace; }
+span.option { font-family: monospace; }
+span.parameter { font-family: monospace; }
+span.paramdef span.parameter { font-style: italic; }
+span.prompt { font-family: monospace; }
+span.property { font-family: monospace; }
+span.replaceable  { font-style: italic; }
+span.returnvalue { font-family: monospace; }
+span.sgmltag { font-family: monospace; }
+span.structfield, span.structname { font-family: monospace; }
+span.symbol { font-family: monospace; }
+span.systemitem { font-family: monospace; }
+span.token { font-family: monospace; }
+span.type { font-family: monospace; }
+span.uri { font-family: monospace; }
+span.userinput { font-family: monospace; }
+span.varname { font-family: monospace; }
+span.wordasword { font-style: italic; }
+
+
+
+div.footnotes { font-style: italic; font-size: 0.8em; }
+div.footnote { margin-top: 1.44em; }
+span.footnote-number { display: inline; padding-right: 0.83em; }
+span.footnote-number + p { display: inline; }
+a.footnote { text-decoration: none; font-size: 0.8em; }
+a.footnote-ref { text-decoration: none; }
+
+span.co {
+  margin-left: 0.2em; margin-right: 0.2em;
+  padding-left: 0.4em; padding-right: 0.4em;
+  border: solid 1px #000000;
+  -moz-border-radius: 8px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 8px;
+}
+span.co:hover {
+  border-color: #333333;
+  background-color: #333333;
+  color: #FFFFFF;
+}
+span.co a { text-decoration: none; }
+span.co a:hover { text-decoration: none; }
+
+dt.question { margin-left: 0em; }
+dt.question div.label { float: left; }
+dd + dt.question { margin-top: 1em; }
+dd.answer {
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+dd.answer div.label { float: left; }
+</style>
+</head>
+<body>
+<div class="navbar navbar-top"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="stardict-troubleshooting.html" title="Troubleshooting">Troubleshooting</a></td>
+<td class="navbar-next"><a class="navbar-next" href="stardict-authors.html" title="Developers">Developers</a></td>
+</tr></table></div>
+<div class="sidebar"><div class="sidenav"><div class="autotoc"><ul>
+<li><a href="index-info.html" title="About This Document">About This Document</a></li>
+<li>
+<a class="xref" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a><div class="autotoc"><ul>
+<li><a class="xref" href="stardict-introduction.html" title="Introduction">Introduction</a></li>
+<li><a class="xref" href="stardict-getting-started.html" title="Getting Started">Getting Started</a></li>
+<li><a class="xref" href="stardict-usage.html" title="Usage">Usage</a></li>
+<li><a class="xref" href="stardict-prefs.html" title="Preferences">Preferences</a></li>
+<li><a class="xref" href="manage-dicts.html" title="Manage dictionaries">Manage dictionaries</a></li>
+<li><a class="xref" href="manage-plugins.html" title="Manage Plugins">Manage Plugins</a></li>
+<li><a class="xref" href="stardict-details.html" title="Details">Details</a></li>
+<li><a class="xref" href="stardict-portable.html" title="StarDict Portable">StarDict Portable</a></li>
+<li><a class="xref" href="stardict-troubleshooting.html" title="Troubleshooting">Troubleshooting</a></li>
+<li>Related Projects</li>
+<li><a class="xref" href="stardict-authors.html" title="Developers">Developers</a></li>
+</ul></div>
+</li>
+</ul></div></div></div>
+<div class="body body-sidebar"><div class="division sect1">
+<a name="stardict-projects"></a><div class="header"><h1 class="sect1 title"><span class="title">Related Projects</span></h1></div>
+<ul class="linktrail"><li class="linktrail linktrail-only"><a class="linktrail" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a></li></ul>
+<p class="para block block-first">
+     <span class="application">StarDict</span> would not be possible without many other projects' contributions. Here is a short list of
+     projects that helped <span class="application">StarDict</span>.
+   </p>
+<div class="autotoc"><ul>
+<li>
+<span class="label">10.1. </span><a class="xref" href="stardict-projects.html#stardict-projects-stardict1.3" title="StarDict 1.31">StarDict 1.31</a>
+</li>
+<li>
+<span class="label">10.2. </span><a class="xref" href="stardict-projects.html#stardict-projects-stardict1.33-plus" title="StarDict 1.33+">StarDict 1.33+</a>
+</li>
+<li>
+<span class="label">10.3. </span><a class="xref" href="stardict-projects.html#stardict-projects-dictd" title="The DICT Project">The DICT Project</a>
+</li>
+<li>
+<span class="label">10.4. </span><a class="xref" href="stardict-projects.html#stardict-projects-quick" title="*Quick">*Quick</a>
+</li>
+<li>
+<span class="label">10.5. </span><a class="xref" href="stardict-projects.html#stardict-projects-blowfish" title="The Blowfish Project">The Blowfish Project</a>
+</li>
+<li>
+<span class="label">10.6. </span><a class="xref" href="stardict-projects.html#stardict-projects-xdict" title="XDICT">XDICT</a>
+</li>
+<li>
+<span class="label">10.7. </span><a class="xref" href="stardict-projects.html#stardict-projects-cdict" title="cdict5">cdict5</a>
+</li>
+<li>
+<span class="label">10.8. </span><a class="xref" href="stardict-projects.html#stardict-projects-cedict" title="CEDICT">CEDICT</a>
+</li>
+<li>
+<span class="label">10.9. </span><a class="xref" href="stardict-projects.html#stardict-projects-cffd" title="CFFD">CFFD</a>
+</li>
+</ul></div>
+<div class="division sect2">
+<a name="stardict-projects-stardict1.3"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">10.1. </span>StarDict 1.31</span></h2></div>
+<p class="para block">The original Motif/LessTif-based StarDict 1.31 written in 1999. <span class="application">StarDict</span> 2 got many 
+		good ideas from StarDict1.31 such as "Scan selection." Many of <span class="application">StarDict</span> 2's features, like
+		"Fuzzy query," come from StarDict1.31.</p>
+</div>
+<div class="division sect2">
+<a name="stardict-projects-stardict1.33-plus"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">10.2. </span>StarDict 1.33+</span></h2></div>
+<p class="para block">StarDict1.33+ is a big enhancement of StarDict1.31. It added many dictionaries, and so it made me realize that dictionary
+		data was not a barrier to a new, GTK2-based dictionary program.  If there had been no StarDict1.33+, I would not have
+		started the <span class="application">StarDict</span> 2 project. The author also helped me to port the StarDict 1.3 dictionary
+		data files to <span class="application">StarDict</span> 2.</p>
+</div>
+<div class="division sect2">
+<a name="stardict-projects-dictd"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">10.3. </span>The DICT Project</span></h2></div>
+<p class="para block block-first">Many dictd dictionaries have been ported to <span class="application">StarDict</span>. 
+		dictzip, which came from dictd, is also used by <span class="application">StarDict</span>.</p>
+<p class="para block">
+     	To find more information about the DICT Project, please visit 
+		<a class="ulink" href="http://www.dict.org" title="http://www.dict.org">www.dict.org</a>.  
+   		</p>
+</div>
+<div class="division sect2">
+<a name="stardict-projects-quick"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">10.4. </span>*Quick</span></h2></div>
+<p class="para block block-first">Many wquick dictionaries have been ported to <span class="application">StarDict</span>.</p>
+<p class="para block">
+     	To find more information about *Quick, please visit 
+		<a class="ulink" href="http://www.futureware.at/quick.htm" title="http://www.futureware.at/quick.htm">*Quick</a>.  
+   		</p>
+</div>
+<div class="division sect2">
+<a name="stardict-projects-blowfish"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">10.5. </span>The Blowfish Project</span></h2></div>
+<p class="para block">The Blowfish Project provided the Oxford English-Chinese dictionary.</p>
+<p class="para block">
+		To find more information about the Blowfish Project, please visit the
+		<a class="ulink" href="http://igloo.its.unimelb.edu.au/Blowfish/" title="http://igloo.its.unimelb.edu.au/Blowfish/">Blowfish Project Web site</a>.  
+		</p>
+</div>
+<div class="division sect2">
+<a name="stardict-projects-xdict"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">10.6. </span>XDICT</span></h2></div>
+<p class="para block">XDICT's dictionary has been ported to <span class="application">StarDict</span>.</p>
+</div>
+<div class="division sect2">
+<a name="stardict-projects-cdict"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">10.7. </span>cdict5</span></h2></div>
+<p class="para block block-first">cdict5's dictionary has been ported to <span class="application">StarDict</span>.</p>
+<div class="autotoc"><ul>
+<li>
+<span class="label">10.7.1. </span><a class="xref" href="stardict-projects.html#stardict-projects-cdict-xcdict-tcltk" title="xcdict-tcltk">xcdict-tcltk</a>
+</li>
+<li>
+<span class="label">10.7.2. </span><a class="xref" href="stardict-projects.html#stardict-projects-cdict-cdict5-v1.3" title="cdict5 v1.3">cdict5 v1.3</a>
+</li>
+</ul></div>
+<div class="division sect3">
+<a name="stardict-projects-cdict-xcdict-tcltk"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">10.7.1. </span>xcdict-tcltk</span></h3></div>
+<p class="para block"><a class="ulink" href="http://luliang.dhs.org/" title="http://luliang.dhs.org/">xcdict-tcltk Web site</a></p>
+</div>
+<div class="division sect3">
+<a name="stardict-projects-cdict-cdict5-v1.3"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">10.7.2. </span>cdict5 v1.3</span></h3></div>
+<p class="para block">
+		To find more information about the cdict5 Project, please visit the
+		<a class="ulink" href="http://www.freshports.org/chinese/cdict5/" title="http://www.freshports.org/chinese/cdict5/">cdict5 on freshports</a>.  
+		</p>
+</div>
+</div>
+<div class="division sect2">
+<a name="stardict-projects-cedict"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">10.8. </span>CEDICT</span></h2></div>
+<p class="para block">CEDICT's dictionary has been ported to <span class="application">StarDict</span>.</p>
+<p class="para block">
+		To find more information about the CEDICT Project, please visit the
+		<a class="ulink" href="http://www.mandarintools.com/cedict.html" title="http://www.mandarintools.com/cedict.html">CEDICT Project Web site</a>.  
+		</p>
+</div>
+<div class="division sect2">
+<a name="stardict-projects-cffd"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">10.9. </span>CFFD</span></h2></div>
+<p class="para block"><span class="application">StarDict</span>'s icon was created with this software.  CFFD also provided some useful 
+		information to me. </p>
+<p class="para block">
+		To find more information about the CFFD Project, please visit the
+		<a class="ulink" href="http://cffd.cosoft.org.cn" title="http://cffd.cosoft.org.cn">CFFD Project Web site</a>.  
+		</p>
+</div>
+</div></div>
+<div class="navbar navbar-bottom"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="stardict-troubleshooting.html" title="Troubleshooting">Troubleshooting</a></td>
+<td class="navbar-next"><a class="navbar-next" href="stardict-authors.html" title="Developers">Developers</a></td>
+</tr></table></div>
+</body>
+</html>

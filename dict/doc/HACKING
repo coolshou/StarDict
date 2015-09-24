@@ -1,0 +1,80 @@
+Stardict's Coding Style:
+
+By definition:
+indentation - tab
+style K&R, examples:
+if () {
+} else {
+}
+while () {
+}
+class foo {
+}
+switch () {
+}
+namespace {
+}
+
+exception function body:
+void f()
+{
+}
+
+naming like STD C++ libraries,
+class the_class;
+NOT class TheClass
+void the_function()
+NOT void TheFunction()
+
+By good sense:
+1)Use operation with spaces, 
+NO a=b+c
+YES a = b + c;
+
+NOT for(i=0;i<10;++i)
+YES for (i = 0; i < 10; ++i)
+
+Reason: the second variant is more simple to read,
+compare:
+((long)p+(alg-1))&~(alg-1);
+
+((long)p + (alg - 1)) & ~(alg - 1);
+
+2)Functions should be short and sweet, and do just one thing.  They
+should fit on one or two screenfuls of text (the ISO/ANSI screen size is 80x24,
+as we all know), and do one thing and do that well.
+
+Reason: see details in /usr/src/linux/Documentation/CodingStyle
+
+3)length of one line should be <=80 characters
+Reason: it's too hard read long lines of code.
+
+*****
+When update to a new version, you need to change the version number in these files:
+configure.ac
+dict/configure.ac
+lib/configure.ac
+tools/configure.ac
+dict/README
+dict/src/mainwin.cpp
+dict/src/lib/plugin.h
+dict/stardict-plugins/stardict-update-info-plugin/stardict_update_info.cpp
+dict/help/C/stardict.xml
+dict/stardict-installer.nsi
+dict/src/win32/nsis/StarDictPortable.nsi
+dict/src/win32/nsis/StarDictEditorPortable.nsi
+dict/src/win32/PortableApps.com/appinfo.ini
+dict/msvc_2008/stardict-editorrc.rc
+dict/msvc_2008/stardictrc.rc
+dict/debian-upstream/copyright
+
+*****
+Run this to create the "configure" file:
+./autogen.sh
+
+Run this to create the source tarball:
+make dist-bzip2
+
+Run this to update the po files:
+cd dict/po
+make update-po

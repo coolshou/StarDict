@@ -1,0 +1,1 @@
+You must invoke configure script in the top level project directory, configure script in this directory will be called automatically. If you run configure in this directory, the project will not be properly configured and fail to build. See ../README for more information.

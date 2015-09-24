@@ -1,0 +1,853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Gebruik</title>
+<link rel="previous" href="stardict-getting-started.html" title="Aan de slag">
+<link rel="next" href="stardict-prefs.html" title="Voorkeuren">
+<link rel="top" href="index.html" title="StarDict Manual V3.0.6">
+<style type="text/css">
+
+html { height: 100%; }
+body {
+  margin: 0px; padding: 12px;
+  background-color: #f9f9f6;
+  min-height: 100%;
+  direction: ltr;
+}
+div, p, pre, blockquote { margin: 0; padding: 0; }
+p img { vertical-align: middle; }
+sub { font-size: 0.83em; }
+sub sub { font-size: 1em; }
+sup { font-size: 0.83em; }
+sup sup { font-size: 1em; }
+table { border-collapse: collapse; }
+table.table-pgwide { width: 100%; }
+td { vertical-align: top; }
+td { padding: 0.2em 0.83em 0.2em 0.83em; }
+th { padding: 0 0.83em 0 0.83em; }
+tr.tr-shade {
+  background-color: #f9f9f6;
+}
+td.td-colsep { border-right: solid 1px; }
+td.td-rowsep { border-bottom: solid 1px; }
+thead { border-top: solid 2px; border-bottom: solid 2px; }
+tfoot { border-top: solid 2px; border-bottom: solid 2px; }
+div.body {
+  padding: 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.body-sidebar {
+  margin-right: 13em;
+}
+div.division div.division { margin-top: 1.72em; }
+div.division div.division div.division { margin-top: 1.44em; }
+div.header {
+  margin: 0;
+  color: #3f3f3f;
+  border-bottom: solid 1px #e0e0df;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+  margin: 0; padding: 0;
+  color: #3f3f3f;
+}
+h1.title { font-size: 1.72em; }
+h2.title { font-size: 1.44em; }
+h3.title { font-size: 1.2em; }
+h4.title, h5.title, h6.title, h7.title { font-size: 1em; }
+.block { margin-top: 1em; }
+.block .block-first { margin-top: 0; }
+.block-indent {
+  margin-left left: 1.72em;
+  margin-: 1em;
+}
+.block-indent .block-indent { margin-left: 0em; margin-right: 0em; }
+td .block-indent  { margin-left: 0em; margin-right: 0em; }
+dd .block-indent  { margin-left: 0em; margin-right: 0em; }
+.block-verbatim { white-space: pre; }
+div.title {
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.title-formal { padding-left: 0.2em; padding-right: 0.2em; }
+div.title-formal .label { font-weight: normal; }
+a {
+  color: #1f609f;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+a:visited { color: #9f1f6f; }
+ul, ol, dl { margin: 0; padding: 0; }
+li {
+  margin-top: 1em;
+  margin-left: 2.4em;
+  padding: 0;
+}
+li.li-first { margin-top: 0; }
+dt { margin: 1em 0 0 0; }
+dt.dt-first { margin: 0; }
+dd {
+  margin-left: 1.72em;
+  margin-top: 0.5em;
+}
+dl.dl-compact dt { margin-top: 0; }
+dl.dl-compact dd { margin-top: 0; margin-bottom: 0; }
+
+
+ul.linktrail {
+  display: block;
+  margin: 0.2em 0 0 0;
+  text-align: right;
+}
+li.linktrail { display: inline; margin: 0; padding: 0; }
+
+li.linktrail::before {
+  content: '  /  ';
+  color: #3f3f3f;
+}
+
+li.linktrail-first::before, li.linktrail-only::before { content: ''; }
+
+
+div.navbar {
+  padding: 0.5em 1em 0.5em 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.navbar-top { margin-bottom: 1em; }
+div.navbar-bottom { margin-top: 1em; clear: both; }
+div.navbar img { border: 0; vertical-align: -0.4em; }
+table.navbar { width: 100%; margin: 0; border: none; }
+table.navbar td { padding: 0; border: none; }
+td.navbar-next {
+  text-align: right;
+}
+a.navbar-prev::before {
+  
+  content: '◀  ';
+  color: #3f3f3f;
+}
+a.navbar-next::after {
+  
+  content: '  ▶';
+  color: #3f3f3f;
+}
+
+
+div.sidebar {
+  float: right;
+  padding: 0; margin: 0; width: 12em;
+}
+div.sidenav {
+  padding: 0.5em 1em 0 1em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.sidenav div.autotoc {
+  background-color: #ffffff;
+  border: none; padding: 0; margin: 0;
+}
+div.sidenav div.autotoc div.autotoc { margin-top: 0.5em; }
+div.sidenav div.autotoc li { margin-bottom: 0.5em; }
+div.sidenav div.autotoc div.autotoc div.autotoc {
+  margin-left: 1em;
+  margin-top: 0;
+}
+div.sidenav div.autotoc div.autotoc div.autotoc li { margin-bottom: 0; }
+
+
+div.autotoc {
+  
+  display: table;
+  margin-top: 1em;
+  margin-left: 1.72em;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: #f0f9ff;
+  border: solid 1px #c0c9ff;
+}
+div.autotoc ul { margin: 0; padding: 0; }
+div.autotoc li { list-style-type: none; margin: 0; }
+div.autotoc div.autotoc-title { margin-bottom: 0.5em; }
+div.autotoc div.autotoc { border: none; padding: 0; margin-top: 0; margin-bottom: 0.5em; }
+div.autotoc div.autotoc div.autotoc { margin-bottom: 0; }
+
+
+span.bibliolabel {
+  color: #3f3f3f;
+}
+
+
+div.admonition {
+  padding: 0.5em 6px 0.5em 6px;
+  border: solid 1px #e0e0df;
+  background-color: #fffff0;
+}
+div.caution-inner, div.important-inner, div.note-inner, div.tip-inner, div.warning-inner {
+  padding-left: 60px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 48px;
+}
+div.caution-inner { background-image: url("icons/admon-caution.png"); }
+div.important-inner { background-image: url("icons/admon-important.png"); }
+div.note-inner { background-image: url("icons/admon-note.png"); }
+div.note-bug div.note-inner { background-image: url("icons/admon-bug.png"); }
+div.tip-inner { background-image: url("icons/admon-tip.png"); }
+div.warning-inner { background-image: url("icons/admon-warning.png"); }
+div.blockquote {
+  
+  background-image: url('watermark-blockquote-201C.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 0.5em;
+  padding-left: 4em;
+}
+div.attribution {
+  margin-top: 0.5em;
+  color: #3f3f3f;
+}
+div.attribution::before {
+  
+  content: '― ';
+}
+div.epigraph {
+  text-align: right;
+  margin-left: 20%;
+  margin-right: 0;
+  color: #3f3f3f;
+}
+div.figure, div.informalfigure {
+  
+  display: table;
+  padding: 0.5em;
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.figure-inner, div.informalfigure-inner {
+  padding: 0.5em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.caption { margin-top: 0.5em; }
+div.programlisting {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen .prompt {
+  color: #3f3f3f;
+}
+div.screen .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.programlisting .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+pre.linenumbering {
+  color: #3f3f3f;
+  margin: 0;
+  padding-right: 1em;
+  float: left;
+  text-align: right;
+}
+
+
+
+dl.index dt { margin-top: 0; }
+dl.index dd { margin-top: 0; margin-bottom: 0; }
+dl.indexdiv dt { margin-top: 0; }
+dl.indexdiv dd { margin-top: 0; margin-bottom: 0; }
+dl.setindex dt { margin-top: 0; }
+dl.setindex dd { margin-top: 0; margin-bottom: 0; }
+div.list div.title-formal span.title {
+  border-bottom: solid 1px #e0e0df;
+}
+div.simplelist {
+  margin-left: 1.72em;
+}
+div.simplelist table { margin-left: 0; border: none; }
+div.simplelist td {
+  padding: 0.5em;
+  border-left: solid 1px #e0e0df;
+}
+div.simplelist td.td-first {
+  padding-left: 0;
+  border-left: 0;
+}
+div.synopsis {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border-top: solid 2px #c0c9ff;
+  border-bottom: solid 2px #c0c9ff;
+}
+div.synopsis div.synopsis {
+  padding: 0;
+  border: none;
+}
+div.synopsis div.block { margin-top: 0.2em; }
+div.synopsis div.block-first { margin-top: 0; }
+div.cmdsynopsis { font-family: monospace; }
+
+span.accel { text-decoration: underline; }
+span.acronym { font-family: sans-serif; }
+span.application { font-style: italic; }
+span.classname, span.exceptionname, span.interfacename { font-family: monospace; }
+span.code {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.code { border: none; padding: 0; }
+span.command {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.command { border: none; padding: 0; }
+span.computeroutput { font-family: monospace; }
+
+span.constant { font-family: monospace; }
+span.database { font-family: monospace; }
+span.email { font-family: monospace; }
+span.emphasis { font-style: italic; }
+span.emphasis-bold { font-style: normal; font-weight: bold; }
+span.envar { font-family: monospace; }
+
+span.filename { font-family: monospace; }
+span.firstterm { font-style: italic; }
+span.foreignphrase { font-style: italic; }
+span.function { font-family: monospace; }
+
+dt.glossterm span.glossterm { font-style: normal; }
+
+
+span.glossterm { font-style: italic; }
+
+span.guibutton, span.guilabel, span.guimenu, span.guimenuitem, span.guisubmenu, span.interface {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.keycap {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.lineannotation { font-style: italic; }
+span.literal { font-family: monospace; }
+span.markup  { font-family: monospace; }
+span.medialabel { font-style: italic; }
+span.methodname { font-family: monospace; }
+span.ooclass, span.ooexception, span.oointerface { font-family: monospace; }
+span.option { font-family: monospace; }
+span.parameter { font-family: monospace; }
+span.paramdef span.parameter { font-style: italic; }
+span.prompt { font-family: monospace; }
+span.property { font-family: monospace; }
+span.replaceable  { font-style: italic; }
+span.returnvalue { font-family: monospace; }
+span.sgmltag { font-family: monospace; }
+span.structfield, span.structname { font-family: monospace; }
+span.symbol { font-family: monospace; }
+span.systemitem { font-family: monospace; }
+span.token { font-family: monospace; }
+span.type { font-family: monospace; }
+span.uri { font-family: monospace; }
+span.userinput { font-family: monospace; }
+span.varname { font-family: monospace; }
+span.wordasword { font-style: italic; }
+
+
+
+div.footnotes { font-style: italic; font-size: 0.8em; }
+div.footnote { margin-top: 1.44em; }
+span.footnote-number { display: inline; padding-right: 0.83em; }
+span.footnote-number + p { display: inline; }
+a.footnote { text-decoration: none; font-size: 0.8em; }
+a.footnote-ref { text-decoration: none; }
+
+span.co {
+  margin-left: 0.2em; margin-right: 0.2em;
+  padding-left: 0.4em; padding-right: 0.4em;
+  border: solid 1px #000000;
+  -moz-border-radius: 8px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 8px;
+}
+span.co:hover {
+  border-color: #333333;
+  background-color: #333333;
+  color: #FFFFFF;
+}
+span.co a { text-decoration: none; }
+span.co a:hover { text-decoration: none; }
+
+dt.question { margin-left: 0em; }
+dt.question div.label { float: left; }
+dd + dt.question { margin-top: 1em; }
+dd.answer {
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+dd.answer div.label { float: left; }
+</style>
+</head>
+<body>
+<div class="navbar navbar-top"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="stardict-getting-started.html" title="Aan de slag">Aan de slag</a></td>
+<td class="navbar-next"><a class="navbar-next" href="stardict-prefs.html" title="Voorkeuren">Voorkeuren</a></td>
+</tr></table></div>
+<div class="sidebar"><div class="sidenav"><div class="autotoc"><ul>
+<li><a href="index-info.html" title="Over dit document">Over dit document</a></li>
+<li>
+<a class="xref" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a><div class="autotoc"><ul>
+<li><a class="xref" href="stardict-introduction.html" title="Inleiding">Inleiding</a></li>
+<li><a class="xref" href="stardict-getting-started.html" title="Aan de slag">Aan de slag</a></li>
+<li>Gebruik</li>
+<li><a class="xref" href="stardict-prefs.html" title="Voorkeuren">Voorkeuren</a></li>
+<li><a class="xref" href="manage-dicts.html" title="Manage dictionaries">Manage dictionaries</a></li>
+<li><a class="xref" href="manage-plugins.html" title="Manage Plugins">Manage Plugins</a></li>
+<li><a class="xref" href="stardict-details.html" title="Details">Details</a></li>
+<li><a class="xref" href="stardict-portable.html" title="StarDict Portable">StarDict Portable</a></li>
+<li><a class="xref" href="stardict-troubleshooting.html" title="Troubleshooting">Troubleshooting</a></li>
+<li><a class="xref" href="stardict-projects.html" title="Gerelateerde projecten">Gerelateerde projecten</a></li>
+<li><a class="xref" href="stardict-authors.html" title="Ontwikkelaars">Ontwikkelaars</a></li>
+</ul></div>
+</li>
+</ul></div></div></div>
+<div class="body body-sidebar"><div class="division sect1">
+<a name="stardict-usage"></a><div class="header"><h1 class="sect1 title"><span class="title">Gebruik</span></h1></div>
+<ul class="linktrail"><li class="linktrail linktrail-only"><a class="linktrail" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a></li></ul>
+<div class="autotoc"><ul>
+<li>
+<span class="label">3.1. </span><a class="xref" href="stardict-usage.html#stardict-usage-lookup" title="Zoeken naar een woord">Zoeken naar een woord</a>
+</li>
+<li>
+<span class="label">3.2. </span><a class="xref" href="stardict-usage.html#stardict-usage-clear" title="Wissen van het weergave gebied">Wissen van het weergave gebied</a>
+</li>
+<li>
+<span class="label">3.3. </span><a class="xref" href="stardict-usage.html#stardict-usage-select" title="Tekst kopiren naar een andere applicatie">Tekst kopiren naar een andere applicatie</a>
+</li>
+<li>
+<span class="label">3.4. </span><a class="xref" href="stardict-usage.html#stardict-usage-find" title="To Find Text in the Definition Area">To Find Text in the Definition Area</a>
+</li>
+<li>
+<span class="label">3.5. </span><a class="xref" href="stardict-usage.html#stardict-usage-scanning" title="Scanning: operation guide">Scanning: operation guide</a>
+</li>
+<li>
+<span class="label">3.6. </span><a class="xref" href="stardict-usage.html#stardict-usage-scan-mode" title="Toggle Scan Mode">Toggle Scan Mode</a>
+</li>
+<li>
+<span class="label">3.7. </span><a class="xref" href="stardict-usage.html#stardict-usage-hotkeys" title="Main window hotkeys">Main window hotkeys</a>
+</li>
+<li>
+<span class="label">3.8. </span><a class="xref" href="stardict-usage.html#stardict-usage-add-dicts" title="Installing new dictionaries">Installing new dictionaries</a>
+</li>
+<li>
+<span class="label">3.9. </span><a class="xref" href="stardict-usage.html#stardict-usage-remove-dicts" title="Removing dictionaries">Removing dictionaries</a>
+</li>
+</ul></div>
+<div class="division sect2">
+<a name="stardict-usage-lookup"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">3.1. </span>Zoeken naar een woord</span></h2></div>
+<p class="para block block-first">Om de vertaling van een woord te verkrijgen dient u de volgende stappen uit te voeren:</p>
+<div class="block list orderedlist"><ol class="orderedlist">
+<li class="li-first"><span class="para">Type the word that you want to look up in the Search
+    		field.</span></li>
+<li><span class="para"><span class="application">StarDict</span> laat meteen alle vertalingen zien. Als er niets gevonden is kunt u op <span class="keycap">Enter</span> drukken om een 'vaag zoeken' opdracht te starten of klikken op de <span class="guibutton">'Vaag zoeken'</span> knop.</span></li>
+<li><span class="para">Use the scrollbar to scroll through the definition. Select the words in the Word list to view the 
+			related words. </span></li>
+</ol></div>
+</div>
+<div class="division sect2">
+<a name="stardict-usage-clear"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">3.2. </span>Wissen van het weergave gebied</span></h2></div>
+<p class="para block block-first">To clear the text of the Search field, click the <span class="guibutton">Clear</span> button on the 
+		left, or just press <span class="keycap">Alt-C</span> or <span class="keycap">ESC</span>.</p>
+</div>
+<div class="division sect2">
+<a name="stardict-usage-select"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">3.3. </span>Tekst kopiren naar een andere applicatie</span></h2></div>
+<p class="para block block-first">There are two ways to copy the text in the Definition area to another application:</p>
+<div class="block list itemizedlist"><ul class="itemizedlist">
+<li class="li-first"><span class="para">To copy all of the text, click the <span class="guibutton">Copy</span> button by the top of the <span class="guilabel">Definition area</span>.</span></li>
+<li><span class="para">Om een bepaalde tekst te kopieren, dient u de tekst te selecteren die u wilt kopieren. Hierna klikt u met de rechtermuisknop en kiest u voor de optie <span class="guimenuitem">Kopieer</span>.</span></li>
+</ul></div>
+</div>
+<div class="division sect2">
+<a name="stardict-usage-find"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">3.4. </span>To Find Text in the Definition Area</span></h2></div>
+<p class="para block block-first">To find text in the Definition area, perform the following steps:</p>
+<div class="block list orderedlist"><ol class="orderedlist">
+<li class="li-first">
+<span class="para">cKlik op de <span class="guibutton">In de definitie zoeken </span> knop welke bovenin het <span class="guilabel">Definitie gebied</span> staat.</span> </li>
+<li><span class="para">Type de tekst waar u naar wilt zoeken en klik op <span class="guilabel">Zoeken</span> of u drukt op <span class="keycap">Enter</span>. U kunt geen wildcards gebruiken.</span></li>
+<li><span class="para">Om de volgende overeenkomst te vinden drukt u weer op <span class="keycap">Enter</span>.</span></li>
+</ol></div>
+</div>
+<div class="division sect2">
+<a name="stardict-usage-scanning"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">3.5. </span>Scanning: operation guide</span></h2></div>
+<div class="block list itemizedlist"><ul class="itemizedlist">
+<li class="li-first">
+	<span class="para">Scenarios below assume that you make selection with mouse.
+	</span>
+	</li>
+<li>
+	<span class="para">Scan key is the modifier set by the "Scan modifier key" option,
+	see <a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-scan" title="Zoek Selectie">Paragraaf 4.1.1 ― Zoek Selectie</a>.
+	</span>
+	</li>
+</ul></div>
+<div class="autotoc"><ul>
+<li>
+<span class="label">3.5.1. </span><a class="xref" href="stardict-usage.html#stardict-usage-scanning-linux" title="Scanning in Linux and Unix">Scanning in Linux and Unix</a>
+</li>
+<li>
+<span class="label">3.5.2. </span><a class="xref" href="stardict-usage.html#stardict-usage-scanning-windows" title="Scanning in Windows">Scanning in Windows</a>
+</li>
+</ul></div>
+<div class="division sect3">
+<a name="stardict-usage-scanning-linux"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">3.5.1. </span>Scanning in Linux and Unix</span></h3></div>
+<div class="block list orderedlist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Case 1. "Only scan while modifier key is being pressed" option is off</span></div>
+<ol class="orderedlist">
+<li class="li-first">
+	<span class="para">Select text to translate.
+	</span>
+	</li>
+<li>
+	<span class="para">Wait for a few seconds. The Floating Window pops up.
+	</span>
+	</li>
+</ol>
+</div>
+<div class="block list orderedlist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Case 2. "Only scan while modifier key is being pressed" option is on</span></div>
+<ol class="orderedlist">
+<li class="li-first">
+	<span class="para">Press and hold the Scan key.
+	</span>
+	</li>
+<li>
+	<span class="para">Select the text.
+	</span>
+	</li>
+<li>
+	<span class="para">Wait for a few seconds. The Floating Window pops up.
+	</span>
+	</li>
+<li>
+	<span class="para">Release the Scan key.
+	</span>
+	</li>
+</ol>
+</div>
+<div class="block list orderedlist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Case 2.1. "Only scan while modifier key is being pressed" option is on. A variation</span></div>
+<ol class="orderedlist">
+<li class="li-first">
+	<span class="para">Select the text and do not release the mouse button yet.
+	</span>
+	</li>
+<li>
+	<span class="para">Press and hold the Scan key.
+	</span>
+	</li>
+<li>
+	<span class="para">Release the mouse button.
+	</span>
+	</li>
+<li>
+	<span class="para">Wait for a few seconds. The Floating Window pops up.
+	</span>
+	</li>
+<li>
+	<span class="para">Release the Scan key.
+	</span>
+	</li>
+</ol>
+</div>
+<p class="para block">
+	Selection is made when you release mouse button. 
+	This is the time when the Scan key must be pressed down. It takes some time for StarDict to inspect selection, you must hold the Scan key all this time. What is why you need to hold the key for a few seconds after selection.
+	</p>
+</div>
+<div class="division sect3">
+<a name="stardict-usage-scanning-windows"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">3.5.2. </span>Scanning in Windows</span></h3></div>
+<div class="block list orderedlist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Case 1. "Only scan while modifier key is being pressed" option is off</span></div>
+<ol class="orderedlist">
+<li class="li-first">
+	<span class="para">Place the mouse pointer over the word you want to traslate.
+	</span>
+	</li>
+<li>
+	<span class="para">Do not move the mouse for a few seconds. The Floating Window pops up.
+	</span>
+	</li>
+</ol>
+</div>
+<div class="block list orderedlist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Case 2. "Only scan while modifier key is being pressed" option is on</span></div>
+<ol class="orderedlist">
+<li class="li-first">
+	<span class="para">Place the mouse pointer over the word you want to traslate.
+	</span>
+	</li>
+<li>
+	<span class="para">Press and hold the Scan key.
+	</span>
+	</li>
+<li>
+	<span class="para">Do not move the mouse for a few seconds. The Floating Window pops up.
+	</span>
+	</li>
+<li>
+	<span class="para">Release the Scan key.
+	</span>
+	</li>
+</ol>
+</div>
+<p class="para block">For scanning in PDF documents see <a class="xref" href="stardict-getting-started.html#stardict-acrobat-plugin" title="WordPick Adobe Acrobat plugin">Paragraaf 2.6 ― WordPick Adobe Acrobat plugin</a>.
+	</p>
+</div>
+</div>
+<div class="division sect2">
+<a name="stardict-usage-scan-mode"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">3.6. </span>Toggle Scan Mode</span></h2></div>
+<p class="para block block-first">There are a number of ways to enable or disable the Scan selection mode.
+		When in Scan mode, <span class="application">StarDict</span> shows translation of the text you select in different windows. See <a class="xref" href="stardict-getting-started.html#stardict-scan-selection" title="Zoek selectie">Paragraaf 2.5 ― Zoek selectie</a>.</p>
+<div class="block list itemizedlist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Ways to enable the Scan mode</span></div>
+<ul class="itemizedlist">
+<li class="li-first"><span class="para">Toggle the <span class="guilabel">Scan selection</span> checkbox at the bottom left corner of the <span class="application">StarDict</span> Main window.</span></li>
+<li><span class="para">Right-click the Notification area icon and check <span class="guimenuitem">Scan</span> 
+			in the pop-up menu.</span></li>
+<li><span class="para">Press 
+		<span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">Alt</span>+<span class="keycap">x</span></span>
+		shortcut (it toggles the Scan mode). To configure the shortcut see 
+		<a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-scan" title="Zoek Selectie">Paragraaf 4.1.1 ― Zoek Selectie</a>.</span></li>
+</ul>
+</div>
+</div>
+<div class="division sect2">
+<a name="stardict-usage-hotkeys"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">3.7. </span>Main window hotkeys</span></h2></div>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first">
+<span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">q</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Quit <span class="application">StarDict</span>.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Alt</span>+<span class="keycap">x</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Minimize to tray. <span class="application">StarDict</span> Main window is closed, taskbar item disappears, but the application continues to run. You may open the Main window again clicking on the Notification area icon.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Alt</span>+<span class="keycap">z</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Iconify the application. The Main window is hidden, the taskbar item remains.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Alt</span>+<span class="keycap">e</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Save word definition to a file. See <a class="xref" href="stardict-getting-started.html#stardict-definition-aria-toolbar" title="Definition area toolbar">Paragraaf 2.3 ― <span class="firstterm">Definition area toolbar</span></a> for more details.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">F1</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Show help.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">f</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Search in the Definition area. See <a class="xref" href="stardict-getting-started.html#stardict-definition-aria-toolbar" title="Definition area toolbar">Paragraaf 2.3 ― <span class="firstterm">Definition area toolbar</span></a> for more details.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Alt</span>+<span class="keycap">Left</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Go Back. Return to the word that was queried before.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Alt</span>+<span class="keycap">Up</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Previous word. Query the previous word in the Word index.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Alt</span>+<span class="keycap">Down</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Next word. Query the next word in the Word index.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Alt</span>+<span class="keycap">m</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Menu. Show the Main menu.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">v</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Query clipboard text in <span class="application">StarDict</span>.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">u</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Clear the Search field and focus it.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">BackSpace</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">The same as <span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">u</span></span>.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Enter</span></span>
+			</dt>
+<dd>
+				<div class="block list orderedlist"><ol class="orderedlist">
+<li class="li-first">
+				<p class="para block block-first">The focus is in the Word list.</p>
+				<p class="para block">If the selected index item has children, expand or collapse the item.
+				If the selected index item has no children, query the item in the main window.</p>
+				</li>
+<li>
+				<p class="para block block-first">The focus is in the Definition area.</p>
+				<p class="para block">Requery the text in the Search field.</p>
+				</li>
+</ol></div>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Space</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Focus the Search field.</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Escape</span></span>
+			</dt>
+<dd>
+				<div class="block list orderedlist"><ol class="orderedlist">
+<li class="li-first">
+				<p class="para block block-first">The focus is in Definition area Search bar.</p>
+				<p class="para block">Hide the search bar.</p>
+				</li>
+<li>
+				<p class="para block block-first">Otherwise, this hotkey has the same effect as 
+				<span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">u</span></span>.</p>
+				</li>
+</ol></div>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">Alt</span>+<span class="keycap">z</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Open the Main window of <span class="application">StarDict</span>. 
+			The Main window may be iconified, or <span class="application">StarDict</span> may only exist as a Notification area icon.
+			In all the cases pressing this hotkey presents the Main window to the user.
+			You may change the hotkey in the Preferences dialog, see 
+			<a class="xref" href="stardict-prefs.html#stardict-prefs-main-window-options" title="Opties">Paragraaf 4.3.2 ― Opties</a>.
+			</p>
+			</dd>
+<dt class="term">
+<span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">Alt</span>+<span class="keycap">x</span></span>
+			</dt>
+<dd>
+			<p class="para block block-first">Toggle the Scan mode.
+			You may change the hotkey in the Preferences dialog, see 
+			<a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-scan" title="Zoek Selectie">Paragraaf 4.1.1 ― Zoek Selectie</a>.
+			</p>
+			</dd>
+</dl></div>
+</div>
+<div class="division sect2">
+<a name="stardict-usage-add-dicts"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">3.8. </span>Installing new dictionaries</span></h2></div>
+<p class="para block block-first">Dictionaries for <span class="application">StarDict</span> you download are normally packed in archives. 
+    You must unpack them and copy into one of the <span class="application">StarDict</span> dictionary directories.
+    If you simply copy an archive file into the dictionary directory, <span class="application">StarDict</span> will not find the dictionary. It is recommended to place each dictionary in its own directory. 
+    You may build a hierarchy of directories to organize your dictionary collection.
+    <span class="application">StarDict</span> search directories recursively. See also <a class="xref" href="stardict-details.html#stardict-details-dictionaries" title="StarDict dictionaries">Paragraaf 7.7 ― StarDict dictionaries</a>.
+    </p>
+<div class="block list orderedlist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Installing a dictionary</span></div>
+<ol class="orderedlist">
+<li class="li-first">
+  <p class="para block block-first">Download a dictionary. Normally a dictionary is packed in an archive file, for example, <span class="filename" dir="ltr">WineEnRu.zip</span>.
+  </p>
+  </li>
+<li>
+  <p class="para block block-first">Unpack the archive in a new directory. You may name the directory after the archive name, though that is not required.
+  </p>
+    <div dir="ltr" class=" block screen block-indent"><pre class="screen">WineEnRu/WineEnRu.dict
+WineEnRu/WineEnRu.idx
+WineEnRu/WineEnRu.ifo</pre></div>
+  </li>
+<li>
+  <p class="para block block-first">Copy the dictionary directory into one of <span class="application">StarDict</span> dictionary directories, see <a class="xref" href="stardict-details.html#stardict-details-dictionaries-dirs" title="Directories">Paragraaf 7.7.1 ― Directories</a>.
+  </p>
+  </li>
+<li>
+  <p class="para block block-first">Restart <span class="application">StarDict</span>. The new dictionary will be added into the default dictionary group.
+  </p>
+  </li>
+</ol>
+</div>
+<div class="admonition block caution block-indent"><div class="caution-inner">
+  <div class="block block-first title title-formal"><span class="title"><span class="label"></span>Broken dictionaries</span></div>
+  <p class="para block block-first">Some dictionaries you may find on Internet violate restrictions of <span class="application">StarDict</span> dictionary file format. Using such a dictionary may result in <span class="application">StarDict</span> crash. If <span class="application">StarDict</span> becomes unstable, check your dictionaries, especially new ones, with <span class="application">StarDict Editor</span> or <span class="application">stardict-verify</span> command line tool.
+  </p>
+  </div></div>
+</div>
+<div class="division sect2">
+<a name="stardict-usage-remove-dicts"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">3.9. </span>Removing dictionaries</span></h2></div>
+<p class="para block block-first">To remove a dictionary it's enough to remove all files belonging to that dictionary.
+    All files of a dictionary share the same base name, for example.
+    </p>
+<div dir="ltr" class=" block screen block-indent"><pre class="screen">WineEnRu.dict
+WineEnRu.idx
+WineEnRu.idx.oft
+WineEnRu.ifo</pre></div>
+<p class="para block">Some dictionaries may include resource database that is named differently. For complete list of file see <a class="xref" href="stardict-details.html#stardict-details-dictionaries" title="StarDict dictionaries">Paragraaf 7.7 ― StarDict dictionaries</a>. If you follow the rule "one dictionary ‒ one directory", removing a dictionary will be easer.
+    </p>
+<div class="block list orderedlist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Removing a dictionary</span></div>
+<ol class="orderedlist">
+<li class="li-first">
+  <span class="para">Quit <span class="application">StarDict</span>. Make sure that <span class="application">StarDict</span> has really terminated, not just minimized into tray icon!
+  </span>
+  </li>
+<li>
+  <span class="para">Remove dictionary files.
+  </span>
+  </li>
+</ol>
+</div>
+</div>
+</div></div>
+<div class="navbar navbar-bottom"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="stardict-getting-started.html" title="Aan de slag">Aan de slag</a></td>
+<td class="navbar-next"><a class="navbar-next" href="stardict-prefs.html" title="Voorkeuren">Voorkeuren</a></td>
+</tr></table></div>
+</body>
+</html>

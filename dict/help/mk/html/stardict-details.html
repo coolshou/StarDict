@@ -1,0 +1,886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Details</title>
+<link rel="previous" href="manage-plugins.html" title="Manage Plugins">
+<link rel="next" href="stardict-portable.html" title="StarDict Portable">
+<link rel="top" href="index.html" title="StarDict Manual V3.0.6">
+<style type="text/css">
+
+html { height: 100%; }
+body {
+  margin: 0px; padding: 12px;
+  background-color: #f9f9f6;
+  min-height: 100%;
+  direction: ltr;
+}
+div, p, pre, blockquote { margin: 0; padding: 0; }
+p img { vertical-align: middle; }
+sub { font-size: 0.83em; }
+sub sub { font-size: 1em; }
+sup { font-size: 0.83em; }
+sup sup { font-size: 1em; }
+table { border-collapse: collapse; }
+table.table-pgwide { width: 100%; }
+td { vertical-align: top; }
+td { padding: 0.2em 0.83em 0.2em 0.83em; }
+th { padding: 0 0.83em 0 0.83em; }
+tr.tr-shade {
+  background-color: #f9f9f6;
+}
+td.td-colsep { border-right: solid 1px; }
+td.td-rowsep { border-bottom: solid 1px; }
+thead { border-top: solid 2px; border-bottom: solid 2px; }
+tfoot { border-top: solid 2px; border-bottom: solid 2px; }
+div.body {
+  padding: 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.body-sidebar {
+  margin-right: 13em;
+}
+div.division div.division { margin-top: 1.72em; }
+div.division div.division div.division { margin-top: 1.44em; }
+div.header {
+  margin: 0;
+  color: #3f3f3f;
+  border-bottom: solid 1px #e0e0df;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+  margin: 0; padding: 0;
+  color: #3f3f3f;
+}
+h1.title { font-size: 1.72em; }
+h2.title { font-size: 1.44em; }
+h3.title { font-size: 1.2em; }
+h4.title, h5.title, h6.title, h7.title { font-size: 1em; }
+.block { margin-top: 1em; }
+.block .block-first { margin-top: 0; }
+.block-indent {
+  margin-left left: 1.72em;
+  margin-: 1em;
+}
+.block-indent .block-indent { margin-left: 0em; margin-right: 0em; }
+td .block-indent  { margin-left: 0em; margin-right: 0em; }
+dd .block-indent  { margin-left: 0em; margin-right: 0em; }
+.block-verbatim { white-space: pre; }
+div.title {
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.title-formal { padding-left: 0.2em; padding-right: 0.2em; }
+div.title-formal .label { font-weight: normal; }
+a {
+  color: #1f609f;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+a:visited { color: #9f1f6f; }
+ul, ol, dl { margin: 0; padding: 0; }
+li {
+  margin-top: 1em;
+  margin-left: 2.4em;
+  padding: 0;
+}
+li.li-first { margin-top: 0; }
+dt { margin: 1em 0 0 0; }
+dt.dt-first { margin: 0; }
+dd {
+  margin-left: 1.72em;
+  margin-top: 0.5em;
+}
+dl.dl-compact dt { margin-top: 0; }
+dl.dl-compact dd { margin-top: 0; margin-bottom: 0; }
+
+
+ul.linktrail {
+  display: block;
+  margin: 0.2em 0 0 0;
+  text-align: right;
+}
+li.linktrail { display: inline; margin: 0; padding: 0; }
+
+li.linktrail::before {
+  content: '  /  ';
+  color: #3f3f3f;
+}
+
+li.linktrail-first::before, li.linktrail-only::before { content: ''; }
+
+
+div.navbar {
+  padding: 0.5em 1em 0.5em 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.navbar-top { margin-bottom: 1em; }
+div.navbar-bottom { margin-top: 1em; clear: both; }
+div.navbar img { border: 0; vertical-align: -0.4em; }
+table.navbar { width: 100%; margin: 0; border: none; }
+table.navbar td { padding: 0; border: none; }
+td.navbar-next {
+  text-align: right;
+}
+a.navbar-prev::before {
+  
+  content: '◀  ';
+  color: #3f3f3f;
+}
+a.navbar-next::after {
+  
+  content: '  ▶';
+  color: #3f3f3f;
+}
+
+
+div.sidebar {
+  float: right;
+  padding: 0; margin: 0; width: 12em;
+}
+div.sidenav {
+  padding: 0.5em 1em 0 1em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.sidenav div.autotoc {
+  background-color: #ffffff;
+  border: none; padding: 0; margin: 0;
+}
+div.sidenav div.autotoc div.autotoc { margin-top: 0.5em; }
+div.sidenav div.autotoc li { margin-bottom: 0.5em; }
+div.sidenav div.autotoc div.autotoc div.autotoc {
+  margin-left: 1em;
+  margin-top: 0;
+}
+div.sidenav div.autotoc div.autotoc div.autotoc li { margin-bottom: 0; }
+
+
+div.autotoc {
+  
+  display: table;
+  margin-top: 1em;
+  margin-left: 1.72em;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: #f0f9ff;
+  border: solid 1px #c0c9ff;
+}
+div.autotoc ul { margin: 0; padding: 0; }
+div.autotoc li { list-style-type: none; margin: 0; }
+div.autotoc div.autotoc-title { margin-bottom: 0.5em; }
+div.autotoc div.autotoc { border: none; padding: 0; margin-top: 0; margin-bottom: 0.5em; }
+div.autotoc div.autotoc div.autotoc { margin-bottom: 0; }
+
+
+span.bibliolabel {
+  color: #3f3f3f;
+}
+
+
+div.admonition {
+  padding: 0.5em 6px 0.5em 6px;
+  border: solid 1px #e0e0df;
+  background-color: #fffff0;
+}
+div.caution-inner, div.important-inner, div.note-inner, div.tip-inner, div.warning-inner {
+  padding-left: 60px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 48px;
+}
+div.caution-inner { background-image: url("icons/admon-caution.png"); }
+div.important-inner { background-image: url("icons/admon-important.png"); }
+div.note-inner { background-image: url("icons/admon-note.png"); }
+div.note-bug div.note-inner { background-image: url("icons/admon-bug.png"); }
+div.tip-inner { background-image: url("icons/admon-tip.png"); }
+div.warning-inner { background-image: url("icons/admon-warning.png"); }
+div.blockquote {
+  
+  background-image: url('watermark-blockquote-201C.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 0.5em;
+  padding-left: 4em;
+}
+div.attribution {
+  margin-top: 0.5em;
+  color: #3f3f3f;
+}
+div.attribution::before {
+  
+  content: '― ';
+}
+div.epigraph {
+  text-align: right;
+  margin-left: 20%;
+  margin-right: 0;
+  color: #3f3f3f;
+}
+div.figure, div.informalfigure {
+  
+  display: table;
+  padding: 0.5em;
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.figure-inner, div.informalfigure-inner {
+  padding: 0.5em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.caption { margin-top: 0.5em; }
+div.programlisting {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen .prompt {
+  color: #3f3f3f;
+}
+div.screen .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.programlisting .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+pre.linenumbering {
+  color: #3f3f3f;
+  margin: 0;
+  padding-right: 1em;
+  float: left;
+  text-align: right;
+}
+
+
+
+dl.index dt { margin-top: 0; }
+dl.index dd { margin-top: 0; margin-bottom: 0; }
+dl.indexdiv dt { margin-top: 0; }
+dl.indexdiv dd { margin-top: 0; margin-bottom: 0; }
+dl.setindex dt { margin-top: 0; }
+dl.setindex dd { margin-top: 0; margin-bottom: 0; }
+div.list div.title-formal span.title {
+  border-bottom: solid 1px #e0e0df;
+}
+div.simplelist {
+  margin-left: 1.72em;
+}
+div.simplelist table { margin-left: 0; border: none; }
+div.simplelist td {
+  padding: 0.5em;
+  border-left: solid 1px #e0e0df;
+}
+div.simplelist td.td-first {
+  padding-left: 0;
+  border-left: 0;
+}
+div.synopsis {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border-top: solid 2px #c0c9ff;
+  border-bottom: solid 2px #c0c9ff;
+}
+div.synopsis div.synopsis {
+  padding: 0;
+  border: none;
+}
+div.synopsis div.block { margin-top: 0.2em; }
+div.synopsis div.block-first { margin-top: 0; }
+div.cmdsynopsis { font-family: monospace; }
+
+span.accel { text-decoration: underline; }
+span.acronym { font-family: sans-serif; }
+span.application { font-style: italic; }
+span.classname, span.exceptionname, span.interfacename { font-family: monospace; }
+span.code {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.code { border: none; padding: 0; }
+span.command {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.command { border: none; padding: 0; }
+span.computeroutput { font-family: monospace; }
+
+span.constant { font-family: monospace; }
+span.database { font-family: monospace; }
+span.email { font-family: monospace; }
+span.emphasis { font-style: italic; }
+span.emphasis-bold { font-style: normal; font-weight: bold; }
+span.envar { font-family: monospace; }
+
+span.filename { font-family: monospace; }
+span.firstterm { font-style: italic; }
+span.foreignphrase { font-style: italic; }
+span.function { font-family: monospace; }
+
+dt.glossterm span.glossterm { font-style: normal; }
+
+
+span.glossterm { font-style: italic; }
+
+span.guibutton, span.guilabel, span.guimenu, span.guimenuitem, span.guisubmenu, span.interface {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.keycap {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.lineannotation { font-style: italic; }
+span.literal { font-family: monospace; }
+span.markup  { font-family: monospace; }
+span.medialabel { font-style: italic; }
+span.methodname { font-family: monospace; }
+span.ooclass, span.ooexception, span.oointerface { font-family: monospace; }
+span.option { font-family: monospace; }
+span.parameter { font-family: monospace; }
+span.paramdef span.parameter { font-style: italic; }
+span.prompt { font-family: monospace; }
+span.property { font-family: monospace; }
+span.replaceable  { font-style: italic; }
+span.returnvalue { font-family: monospace; }
+span.sgmltag { font-family: monospace; }
+span.structfield, span.structname { font-family: monospace; }
+span.symbol { font-family: monospace; }
+span.systemitem { font-family: monospace; }
+span.token { font-family: monospace; }
+span.type { font-family: monospace; }
+span.uri { font-family: monospace; }
+span.userinput { font-family: monospace; }
+span.varname { font-family: monospace; }
+span.wordasword { font-style: italic; }
+
+
+
+div.footnotes { font-style: italic; font-size: 0.8em; }
+div.footnote { margin-top: 1.44em; }
+span.footnote-number { display: inline; padding-right: 0.83em; }
+span.footnote-number + p { display: inline; }
+a.footnote { text-decoration: none; font-size: 0.8em; }
+a.footnote-ref { text-decoration: none; }
+
+span.co {
+  margin-left: 0.2em; margin-right: 0.2em;
+  padding-left: 0.4em; padding-right: 0.4em;
+  border: solid 1px #000000;
+  -moz-border-radius: 8px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 8px;
+}
+span.co:hover {
+  border-color: #333333;
+  background-color: #333333;
+  color: #FFFFFF;
+}
+span.co a { text-decoration: none; }
+span.co a:hover { text-decoration: none; }
+
+dt.question { margin-left: 0em; }
+dt.question div.label { float: left; }
+dd + dt.question { margin-top: 1em; }
+dd.answer {
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+dd.answer div.label { float: left; }
+</style>
+</head>
+<body>
+<div class="navbar navbar-top"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="manage-plugins.html" title="Manage Plugins">Manage Plugins</a></td>
+<td class="navbar-next"><a class="navbar-next" href="stardict-portable.html" title="StarDict Portable">StarDict Portable</a></td>
+</tr></table></div>
+<div class="sidebar"><div class="sidenav"><div class="autotoc"><ul>
+<li><a href="index-info.html" title="За овој документ">За овој документ</a></li>
+<li>
+<a class="xref" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a><div class="autotoc"><ul>
+<li><a class="xref" href="stardict-introduction.html" title="Вовед">Вовед</a></li>
+<li><a class="xref" href="stardict-getting-started.html" title="Започнување со работа">Започнување со работа</a></li>
+<li><a class="xref" href="stardict-usage.html" title="Употреба">Употреба</a></li>
+<li><a class="xref" href="stardict-prefs.html" title="Преференции">Преференции</a></li>
+<li><a class="xref" href="manage-dicts.html" title="Manage dictionaries">Manage dictionaries</a></li>
+<li><a class="xref" href="manage-plugins.html" title="Manage Plugins">Manage Plugins</a></li>
+<li>Details</li>
+<li><a class="xref" href="stardict-portable.html" title="StarDict Portable">StarDict Portable</a></li>
+<li><a class="xref" href="stardict-troubleshooting.html" title="Troubleshooting">Troubleshooting</a></li>
+<li><a class="xref" href="stardict-projects.html" title="Проекти кои се поврзани со овој">Проекти кои се поврзани со овој</a></li>
+<li><a class="xref" href="stardict-authors.html" title="Developers">Developers</a></li>
+</ul></div>
+</li>
+</ul></div></div></div>
+<div class="body body-sidebar"><div class="division sect1">
+<a name="stardict-details"></a><div class="header"><h1 class="sect1 title"><span class="title">Details</span></h1></div>
+<ul class="linktrail"><li class="linktrail linktrail-only"><a class="linktrail" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a></li></ul>
+<div class="autotoc"><ul>
+<li>
+<span class="label">7.1. </span><a class="xref" href="stardict-details.html#stardict-details-command-line" title="Command line options">Command line options</a>
+</li>
+<li>
+<span class="label">7.2. </span><a class="xref" href="stardict-details.html#stardict-details-dictmanage" title="Уредување на речниците">Уредување на речниците</a>
+</li>
+<li>
+<span class="label">7.3. </span><a class="xref" href="stardict-details.html#stardict-details-help" title="Help">Help</a>
+</li>
+<li>
+<span class="label">7.4. </span><a class="xref" href="stardict-details.html#stardict-details-dirs" title="StarDict directories">StarDict directories</a>
+</li>
+<li>
+<span class="label">7.5. </span><a class="xref" href="stardict-details.html#stardict-details-logging" title="Logging">Logging</a>
+</li>
+<li>
+<span class="label">7.6. </span><a class="xref" href="stardict-details.html#stardict-details-GUI-lang" title="Interface language">Interface language</a>
+</li>
+<li>
+<span class="label">7.7. </span><a class="xref" href="stardict-details.html#stardict-details-dictionaries" title="StarDict dictionaries">StarDict dictionaries</a>
+</li>
+</ul></div>
+<div class="division sect2">
+<a name="stardict-details-command-line"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">7.1. </span>Command line options</span></h2></div>
+<p class="para block block-first"><span class="application">StarDict</span> usage:
+	</p>
+<p class="para block"><span class="command" dir="ltr">stardict <span class="replaceable">options</span> <span class="replaceable">query_word</span></span>
+	</p>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first">query_word</dt>
+<dd>
+		<p class="para block block-first">With <span class="replaceable">query_word</span> you request <span class="application">StarDict</span> to look up the specified word just after startup. It has the same effect as if you had typed that word in the Search field. You may use pattens, fuzzy query and other supported modes.
+		</p>
+		</dd>
+<dt class="term">-m, --message-level=<span class="replaceable">integer</span>
+</dt>
+<dd>
+		<p class="para block block-first">This option specifies the minimum severity level of message that should be printed on console. The value may range from 0 to 6, where 0 means to suppress all output, 6 ‒ print all produced messages, including debug ones. Default value is 4 which passes informational messages, like what dictionaries are loaded during startup.
+		</p>
+		</dd>
+<dt class="term">-l, --log-level=<span class="replaceable">integer</span>
+</dt>
+<dd>
+		<p class="para block block-first">This option specifies the minimum severity level of message that should be logged. The value may range from 0 to 6, where 0 means to suppress all output, 6 ‒ print all produced messages, including debug ones. Default value is 0, that is log file is not used. See <a class="xref" href="stardict-details.html#stardict-details-logging" title="Logging">Section 7.5 ― Logging</a> for details about <span class="application">StarDict</span> log.
+		</p>
+		</dd>
+<dt class="term">-h, --hide</dt>
+<dd>
+		<p class="para block block-first">Do not show splash screen during startup and hide the Main window. Only notification area icon will be visible.
+		</p>
+		</dd>
+<dt class="term">-n, --new</dt>
+<dd>
+		<p class="para block block-first">Start a new instance of <span class="application">StarDict</span>.
+		By default <span class="application">StarDict</span> checks if the application is already running and prevents starting the second instance.
+		</p>
+		<p class="para block">This option is only available in Windows edition and Gnome edition of <span class="application">StarDict</span>.
+		</p>
+		</dd>
+<dt class="term">-q, --quit</dt>
+<dd>
+		<p class="para block block-first">Quit an existing instance of <span class="application">StarDict</span>.
+		</p>
+		<p class="para block">This option is only available in Gnome edition of <span class="application">StarDict</span>.
+		</p>
+		</dd>
+<dt class="term">--dirs-config</dt>
+<dd>
+		<p class="para block block-first">Specifies path to the <span class="application">StarDict</span> directory configuration file. See <a class="xref" href="stardict-details.html#stardict-details-dirs" title="StarDict directories">Section 7.4 ― StarDict directories</a> for details about <span class="application">StarDict</span> directories and configuration file.
+		</p>
+		<p class="para block">This option is only available in Windows edition of <span class="application">StarDict</span>.
+		</p>
+		</dd>
+<dt class="term">--portable-mode</dt>
+<dd>
+		<p class="para block block-first">Activate portable mode, see <a class="xref" href="stardict-portable.html" title="StarDict Portable">Section 8 ― StarDict Portable</a>. Specifying the option is not enough to make <span class="application">StarDict</span> to be <span class="application">StarDict Portable</span>. You should avoid using this option unless you know what you are doing.
+		</p>
+		<p class="para block">This option is only available in Windows edition of <span class="application">StarDict</span>.
+		</p>
+		</dd>
+</dl></div>
+</div>
+<div class="division sect2">
+<a name="stardict-details-dictmanage"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">7.2. </span>Уредување на речниците</span></h2></div>
+<p class="para block block-first">To manage the dictionaries, click the <span class="guibutton">Manage dictionaries</span> button at the bottom-right corner of the Main window, or click 
+	the <span class="guibutton">Main menu</span> button and choose <span class="guimenuitem">Dict manage</span>. 
+	</p>
+<p class="para block">Во дијалогот за уредување на речниците, можеш да ги оневозможиш речниците кои не ти требаат, и можеш да го подесиш редоследот по кој се пребарува во речниците.</p>
+<p class="para block"><span class="application">StarDict</span> ќе бара датотеки со речници во "~/.stardict/dic" и "/usr/share/stardict/dic", и датотеки со дрво речници во "~/.stardict/treedict" и "/usr/share/stardict/treedict"</p>
+</div>
+<div class="division sect2">
+<a name="stardict-details-help"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">7.3. </span>Help</span></h2></div>
+<p class="para block block-first">Inside <span class="application">StarDict</span> you may open documentation either by pressing the <span class="keycombo"><span class="keycap">F1</span></span> key or by clicking the <span class="guibutton">Main menu</span> button, then the <span class="guimenuitem">Help</span> item in the popup menu. <span class="application">StarDict</span> documentation has different formats depending on application edition. The primary documentation format is DocBook. <span class="application">StarDict</span> installs documentation in DocBook format only in Gnome edition. In this edition documentation seamlessly integrates with Gnome documentation system. It can be read through <span class="application">Help Browser</span>. Documentation was translated into a number of languages. You are presented with localized version if it's available. Gnome allows to configure the prefered language.
+	</p>
+<p class="para block">In other editions of <span class="application">StarDict</span> documentation is available in html format. You need to configure Web browser to view documentation, see <a class="xref" href="stardict-prefs.html#stardict-prefs-network-web-browser" title="Web browser">Section 4.2.2 ― Web browser</a>. Choosing documentation language, <span class="application">StarDict</span> roughly follows gettext package locale selection algorithm. The LANGUAGE enviroment variable is checked first. It's expected to contain a list of language codes in the order of preference. If the LANGUAGE variable is not set, the current locale is inspected. Finally, if documentation in prefered languages is not available, the english documentation is shown.
+	</p>
+<p class="para block">
+	In Windows edition of <span class="application">StarDict</span> the default language corresponds to the language selected in the <span class="guilabel">Regional and Language Options</span> dialog. 
+	</p>
+<div class="admonition block tip block-indent"><div class="tip-inner">
+	<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Changing default language</span></div>
+	<p class="para block block-first">Open <span class="guilabel">Control Panel</span>, <span class="guilabel">Regional and Language Options</span>.
+	<span class="guilabel">Regional and Language Options</span> dialog pops up. On the <span class="guilabel">Regional Options</span> tab select a language in the <span class="guilabel">Stardards and formats</span> group.
+	</p>
+	</div></div>
+<p class="para block">
+	You may override the default language with the LANGUAGE environment variable. 
+	</p>
+<p class="para block">
+	Normally, help files can be found in the <span class="filename" dir="ltr">C:\Program Files\StarDict\help</span> directory. Each directory corresponds to one language. Directories are named after language codes.
+	</p>
+</div>
+<div class="division sect2">
+<a name="stardict-details-dirs"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">7.4. </span>StarDict directories</span></h2></div>
+<p class="para block block-first"><span class="application">StarDict</span> uses a number of directories to store application data, load and save configuration settings.
+	Default directories are assigned at build time, but some of them 
+	can be overriden with <span class="filename" dir="ltr">stardict-dirs.cfg</span> file.
+	Overriding StarDict directories is useful for debugging,
+	preparing special configurations like StarDict-portable for Windows,
+	an ordinary user does not need this.
+	</p>
+<p class="para block">
+	<span class="application">StarDict</span> searches for the <span class="filename" dir="ltr">stardict-dirs.cfg</span> file in the <span class="varname" dir="ltr">user_config_dir</span> directory. You may override location of the <span class="filename" dir="ltr">stardict-dirs.cfg</span> file with <span class="varname" dir="ltr">STARDICT_DIRS_CONFIG_FILE</span> environment variable or with <span class="parameter" dir="ltr">--dirs-config</span> command line option. Command line option takes the highest precedence, then the environment variable is inspected, and finally the file in the <span class="varname" dir="ltr">user_config_dir</span> directory. The first specified file wins, it will be probed as a configuration file. If load fails, no other files will be tried.
+	</p>
+<p class="para block">The <span class="filename" dir="ltr">stardict-dirs.cfg</span> file is a .ini-like config file. The syntax of .ini files is described in detail in the <a class="ulink" href="http://freedesktop.org/wiki/Specifications/desktop-entry-spec" title="http://freedesktop.org/wiki/Specifications/desktop-entry-spec">Desktop Entry Specification</a>.
+	All keys must belong to <span class="quote">“general”</span> group. 
+	</p>
+<div class="admonition block tip block-indent"><div class="tip-inner">
+	<p class="para block block-first">Do not forget to double backslash characters in values. Backslash is used as path separator in Windows.
+	</p>
+	</div></div>
+<p class="para block">Example of <span class="filename" dir="ltr">stardict-dirs.cfg</span> file for Windows:
+	<div dir="ltr" class=" block programlisting block-indent"><pre class="programlisting">
+[general]
+data_dir=C:\\Program Files\\StarDict
+dll_dir=C:\\StarDict\\msvc_2008\\Debug
+plugin_dir=C:\\StarDict\\msvc_2008\\Debug
+
+	</pre></div>
+	</p>
+<div class="block list variablelist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>StarDict directories</span></div>
+<dl class="variablelist">
+<dt class="term dt-first">user_config_dir
+		</dt>
+<dd>
+		<p class="para block block-first">A directory of configuration files.</p>
+		<p class="para block">Windows default: <span class="filename" dir="ltr">C:\Documents and Settings\%USERNAME%\Application Data\StarDict</span>.
+		</p>
+		<p class="para block">Other default: <span class="filename" dir="ltr">~/.stardict</span>.
+		</p>
+		<p class="para block">Environment variable: <span class="varname" dir="ltr">STARDICT_CONFIG_PATH</span>.
+		</p>
+		<p class="para block"><span class="filename" dir="ltr">stardict-dirs.cfg</span> key: user_config_dir.
+		</p>
+		</dd>
+<dt class="term">user_cache_dir
+		</dt>
+<dd>
+		<p class="para block block-first">User cache directory.</p>
+		<p class="para block">Windows default: <span class="filename" dir="ltr">C:\Documents and Settings\%USERNAME%\Temporary Internet Files\stardict</span>.
+		</p>
+		<p class="para block">Other default: <span class="filename" dir="ltr">~/.cache/stardict</span>.
+		</p>
+		<p class="para block"><span class="filename" dir="ltr">stardict-dirs.cfg</span> key: user_cache_dir.
+		</p>
+		</dd>
+<dt class="term">data_dir
+		</dt>
+<dd>
+		<p class="para block block-first">Data directory.
+		</p>
+		<p class="para block">Windows default: <span class="filename" dir="ltr">C:\Program Files\StarDict</span>.
+		</p>
+		<p class="para block">Other default: <span class="filename" dir="ltr">/usr/share/stardict</span>.
+		</p>
+		<p class="para block"><span class="filename" dir="ltr">stardict-dirs.cfg</span> key: data_dir.
+		</p>
+		</dd>
+<dt class="term">dll_dir
+		</dt>
+<dd>
+		<p class="para block block-first">A directory of hook dlls, in Windows edition only.
+		</p>
+		<p class="para block">Windows default: <span class="varname" dir="ltr">data_dir</span>.
+		</p>
+		<p class="para block"><span class="filename" dir="ltr">stardict-dirs.cfg</span> key: dll_dir.
+		</p>
+		</dd>
+<dt class="term">plugin_dir
+		</dt>
+<dd>
+		<p class="para block block-first">A directory of StarDict plugins.
+		</p>
+		<p class="para block">Windows default: <span class="varname" dir="ltr">data_dir</span> + <span class="filename" dir="ltr">"/plugins"</span>.
+		</p>
+		<p class="para block">Other default: <span class="filename" dir="ltr">/usr/lib/stardict/plugins</span>.
+		</p>
+		<p class="para block"><span class="filename" dir="ltr">stardict-dirs.cfg</span> key: plugins_dir.
+		</p>
+		</dd>
+<dt class="term">help_dir
+		</dt>
+<dd>
+		<p class="para block block-first">A directory of help files, in all editions except Gnome edition.
+		</p>
+		<p class="para block">Default: <span class="varname" dir="ltr">data_dir</span> + <span class="filename" dir="ltr">"/help"</span>.
+		</p>
+		<p class="para block"><span class="filename" dir="ltr">stardict-dirs.cfg</span> key: help_dir.
+		</p>
+		</dd>
+<dt class="term">log_dir
+		</dt>
+<dd>
+		<p class="para block block-first">A directory for log files.
+		</p>
+		<p class="para block">Windows default: <span class="filename" dir="ltr">C:\Documents and Settings\%USERNAME%\Local Settings\Temp\StarDict</span>.
+		</p>
+		<p class="para block">Other default: <span class="filename" dir="ltr">/var/tmp/stardict</span>.
+		</p>
+		<p class="para block"><span class="filename" dir="ltr">stardict-dirs.cfg</span> key: log_dir.
+		</p>
+		</dd>
+</dl>
+</div>
+<div class="admonition block note block-indent"><div class="note-inner">
+	<p class="para block block-first">Default values in the list above are given for the purpose of illustrating possible values of variables. Actual default value depends on a number of factors and cannot be computed easily. See AppDirs class in the <span class="filename" dir="ltr">conf.h</span> file for details on how the default value is calculated.
+	</p>
+	</div></div>
+</div>
+<div class="division sect2">
+<a name="stardict-details-logging"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">7.5. </span>Logging</span></h2></div>
+<p class="para block block-first"><span class="application">StarDict</span> may log messages into a file. By default logging is turned off, you may enable it specifing non-zero log level with <span class="parameter" dir="ltr">--log-level</span> command line option, see <a class="xref" href="stardict-details.html#stardict-details-command-line" title="Command line options">Section 7.1 ― Command line options</a>. 
+	</p>
+<p class="para block">
+	By default messages are printed on to console, log file may be useful if console is not available like in Windows. Log may be useful in troubleshooting startup problems. 
+	</p>
+<p class="para block">
+	For default location of the log directory see <a class="xref" href="stardict-details.html#stardict-details-dirs" title="StarDict directories">Section 7.4 ― StarDict directories</a>, log_dir parameter. <span class="application">StarDict</span> log files are named like <span class="filename" dir="ltr">stardict-<span class="replaceable">process_number</span>.log</span>. We need to use process numbers to create unique log files, since multiple <span class="application">StarDict</span> instances may run at the same time. To find the log file belonging to the most recently started instance of <span class="application">StarDict</span>, consider file creation time.
+	</p>
+</div>
+<div class="division sect2">
+<a name="stardict-details-GUI-lang"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">7.6. </span>Interface language</span></h2></div>
+<p class="para block block-first">
+	This section describes the algorithm used to select interface language in <span class="application">StarDict</span>.
+	</p>
+<div class="block list orderedlist"><ol class="orderedlist">
+<li class="li-first">
+	<a name="GUILangStarDictLoader"></a>
+	<p class="para block">
+	Retrieve <span class="varname" dir="ltr">STARDICTLANG</span> environment variable. Goto <a class="xref" href="stardict-details.html#GUILangSetLANG" title="Details">3</a> if the variable is defined.
+	</p>
+	</li>
+<li>
+	<a name="GUILangUserDefLocale"></a>
+	<p class="para block">
+	Retrieve the user default locale
+	(to set the default locale:
+	<span class="menuchoice"><span class="guibutton">Control Panel</span> ▸ <span class="guibutton">Regional and Language Options</span> ▸ <span class="guibutton">Regional Options</span> ▸ <span class="guilabel">Standards and formats</span> ▸ <span class="guilabel">Language</span></span>).
+	If locale is not defined, use "en".
+	</p>
+	</li>
+<li>
+	<a name="GUILangSetLANG"></a>
+	<p class="para block">
+	Assign the language code to the <span class="varname" dir="ltr">LANG</span> environment variable.
+	</p>
+	</li>
+<li>
+	<a name="GUILangGetLANGUAGE"></a>
+	<p class="para block">
+	Retrieve the value of the environment variable <span class="varname" dir="ltr">LANGUAGE</span>.
+	This is a GNU extension.  Its value can be a colon-separated list of locale names.
+	If defined, goto <a class="xref" href="stardict-details.html#GUILangAvailableTransl" title="Details">8</a>.
+	</p>
+	</li>
+<li>
+	<a name="GUILangGetPOSIXVars"></a>
+	<p class="para block">
+	The value of the environment variable <span class="varname" dir="ltr">LC_ALL</span>, <span class="varname" dir="ltr">LC_xxx</span>, or <span class="varname" dir="ltr">LANG</span>.
+	More precisely, the first among these that is set to a non-empty value.
+	This is how POSIX specifies it.  The value is a single locale name.
+	If defined, goto <a class="xref" href="stardict-details.html#GUILangAvailableTransl" title="Details">8</a>.
+	</p>
+	</li>
+<li>
+	<a name="GUILangGetSystemLangs"></a>
+	<p class="para block">
+	A system-dependent preference list of languages.  Its value can be a
+	colon-separated list of locale names.
+	If defined, goto <a class="xref" href="stardict-details.html#GUILangAvailableTransl" title="Details">8</a>.
+	</p>
+	</li>
+<li>
+	<a name="GUILangGetDefaultLocale"></a>
+	<p class="para block">
+	A system-dependent default locale name.
+	If defined, goto <a class="xref" href="stardict-details.html#GUILangAvailableTransl" title="Details">8</a>.
+	</p>
+	</li>
+<li>
+	<a name="GUILangAvailableTransl"></a>
+	<p class="para block">
+	Processes the found value as a colon-separated list of language codes. Select the first available language. If none is available, select no translation.
+	</p>
+	</li>
+</ol></div>
+<div class="admonition block warning block-indent"><div class="warning-inner">
+	<p class="para block block-first">Steps <a class="xref" href="stardict-details.html#GUILangGetLANGUAGE" title="Details">4</a> through <a class="xref" href="stardict-details.html#GUILangAvailableTransl" title="Details">8</a> describe translation selection algorithm of the gettext package. The actual procedure may be different.
+	</p>
+	</div></div>
+<p class="para block">
+	The best way to specify interface language of <span class="application">StarDict</span> is to define <span class="varname" dir="ltr">STARDICTLANG</span> environment variable. It should contain language code. See <span class="filename" dir="ltr">$StarDictDataDir/locale</span> for the list of supported languages.
+	</p>
+</div>
+<div class="division sect2">
+<a name="stardict-details-dictionaries"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">7.7. </span>StarDict dictionaries</span></h2></div>
+<p class="para block block-first">
+    <span class="application">StarDict</span> supports two types of dictionaries: index (normal) dictionaries and tree dictionaries.
+    The vast majority of dictionaries for <span class="application">StarDict</span> you may find on Internet are of the index type.
+    In fact, you hardly find a tree dictionary for <span class="application">StarDict</span>. 
+    An index dictionary contain a list of words in one file and corresponding definitions in other file.
+    That index of words is the reason we call it an index dictionary.
+    An index dictionary may contain other data as well. 
+    In a tree dictionary data are organized in a tree that is why it name.
+    <span class="application">StarDict</span> searches index and tree dictionaries in different directories.
+    </p>
+<div class="admonition block note block-indent"><div class="note-inner">
+    <p class="para block block-first">Almost all files constituting a dictionary are binary. It does not make sense to open them in a text editor. A notable exception is <span class="filename" dir="ltr">.ifo</span> file, it contains dictionary description.
+    </p>
+    </div></div>
+<div class="block list variablelist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Index dictionary files and directories</span></div>
+<dl class="variablelist">
+<dt class="term dt-first">
+<span class="replaceable">dictname</span>.ifo
+      </dt>
+<dd>
+      <p class="para block block-first">Information about the dictionary. This a text file, you may open it in a text editor. You may found useful information here like dictionary description, author name and e-mail.</p>
+      </dd>
+<dt class="term">
+<span class="replaceable">dictname</span>.idx or <span class="replaceable">dictname</span>.idx.gz
+      </dt>
+<dd>
+      <p class="para block block-first">Index of words available in the dictionary.</p>
+      </dd>
+<dt class="term">
+<span class="replaceable">dictname</span>.dict or <span class="replaceable">dictname</span>.dict.dz
+      </dt>
+<dd>
+      <p class="para block block-first">Main content of the dictionary ‒ articles.</p>
+      </dd>
+<dt class="term">
+<span class="replaceable">dictname</span>.syn
+      </dt>
+<dd>
+      <p class="para block block-first">Index of synonyms. Optional.</p>
+      </dd>
+<dt class="term">
+<span class="replaceable">dictname</span>.ind.oft
+      </dt>
+<dd>
+      <p class="para block block-first">Cache for the index file. This file is created by <span class="application">StarDict</span> to speedup dictionaries loading. You should not redistribute this file.</p>
+      </dd>
+<dt class="term">
+<span class="replaceable">dictname</span>.syn.oft
+      </dt>
+<dd>
+      <p class="para block block-first">Cache for the synonyms file. This file is created by <span class="application">StarDict</span> to speedup dictionaries loading. You should not redistribute this file.</p>
+      </dd>
+<dt class="term">
+<span class="replaceable">dictname</span>.ind.clt
+      </dt>
+<dd>
+      <p class="para block block-first">Collation file for the index file. This file is created by <span class="application">StarDict</span> when you use collations to modify sorting order of words. You should not redistribute this file.</p>
+      </dd>
+<dt class="term">
+<span class="replaceable">dictname</span>.syn.clt
+      </dt>
+<dd>
+      <p class="para block block-first">Collation file for the synonyms file. This file is created by <span class="application">StarDict</span> when you use collations to modify sorting order of words. You should not redistribute this file.</p>
+      </dd>
+<dt class="term">res.rifo, res.ridx, res.rdic
+      </dt>
+<dd>
+      <p class="para block block-first">Files of resource database. It contains resources like images, sound and video files used in the dictionary. Optional.</p>
+      </dd>
+<dt class="term">res.ridx.oft
+      </dt>
+<dd>
+      <p class="para block block-first">Cache for the resource index file. This file is created by <span class="application">StarDict</span> to speedup resource database loading. You should not redistribute this file.</p>
+      </dd>
+<dt class="term">res
+      </dt>
+<dd>
+      <p class="para block block-first">A directory containing dictionary resources. This is alternative to <span class="filename" dir="ltr">res.rifo</span>, <span class="filename" dir="ltr">res.ridx</span>, <span class="filename" dir="ltr">res.rdic</span> collection of files. Optional.</p>
+      </dd>
+</dl>
+</div>
+<div class="block list variablelist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Tree dictionary files</span></div>
+<dl class="variablelist">
+<dt class="term dt-first">
+<span class="replaceable">dictname</span>.ifo
+      </dt>
+<dd>
+      <p class="para block block-first">Information about the dictionary. This a text file, you may open it in a text editor. You may found useful information here like dictionary description, author name and e-mail.</p>
+      </dd>
+<dt class="term">
+<span class="replaceable">dictname</span>.tdx or <span class="replaceable">dictname</span>.tdx.gz
+      </dt>
+<dd>
+      <p class="para block block-first">A word list forming a tree.</p>
+      </dd>
+<dt class="term">
+<span class="replaceable">dictname</span>.dict or <span class="replaceable">dictname</span>.dict.dz
+      </dt>
+<dd>
+      <p class="para block block-first">Main content of the dictionary ‒ articles.</p>
+      </dd>
+</dl>
+</div>
+<div class="autotoc"><ul><li>
+<span class="label">7.7.1. </span><a class="xref" href="stardict-details.html#stardict-details-dictionaries-dirs" title="Directories">Directories</a>
+</li></ul></div>
+<div class="division sect3">
+<a name="stardict-details-dictionaries-dirs"></a><div class="header"><h3 class="sect3 title"><span class="title"><span class="label">7.7.1. </span>Directories</span></h3></div>
+<p class="para block block-first">This section describes directories where <span class="application">StarDict</span> searches dictionaries.
+    </p>
+<p class="para block">Under <span class="productname">Unix™</span>, <span class="application">StarDict</span> searches <span class="filename" dir="ltr">~/.stardict/dic</span> and <span class="filename" dir="ltr">/usr/share/stardict/dic</span> directories for index dictionaries and <span class="filename" dir="ltr">~/.stardict/treedict</span> and <span class="filename" dir="ltr">/usr/share/stardict/treedict</span> directories for tree dictionaries. If you build <span class="application">StarDict</span> with non-standard prefix, the application searches a pair of additional directories for dictionaries. It checks <span class="filename" dir="ltr"><span class="varname" dir="ltr">$(datadir)</span>/dic</span> for index dictionaries and <span class="filename" dir="ltr"><span class="varname" dir="ltr">$(datadir)</span>/treedict</span> for tree dictionaries. Here <span class="varname" dir="ltr">$(datadir)</span> is an <span class="application">autoconf</span> directory variable.
+    
+    </p>
+<p class="para block">Under <span class="productname">Windows™</span>, <span class="application">StarDict</span> searches <span class="filename" dir="ltr">C:\Program Files\StarDict\dic</span> for index dictionaries and <span class="filename" dir="ltr">C:\Program Files\StarDict\treedict</span> for tree dictionaries, assuming that <span class="application">StarDict</span> was installed into <span class="filename" dir="ltr">C:\Program Files\StarDict</span>. If you've install <span class="application">StarDict</span> into a different directory, replace <span class="filename" dir="ltr">C:\Program Files\StarDict</span> with real installation path.
+    </p>
+<p class="para block">Under <span class="productname">Windows™</span>, you may overwrite <span class="varname" dir="ltr">$data_dir</span> variable, see <a class="xref" href="stardict-details.html#stardict-details-dirs" title="StarDict directories">Section 7.4 ― StarDict directories</a>. By default it matches the <span class="application">StarDict</span> installation directory. In this case <span class="application">StarDict</span> will search <span class="filename" dir="ltr"><span class="varname" dir="ltr">$data_dir</span>\dic</span> for index dictionaries and <span class="filename" dir="ltr"><span class="varname" dir="ltr">$data_dir</span>\treedict</span> for tree dictionaries.
+    </p>
+<div class="admonition block note block-indent"><div class="note-inner">
+    <p class="para block block-first">All directories are processed recusively.
+    </p>
+    </div></div>
+</div>
+</div>
+</div></div>
+<div class="navbar navbar-bottom"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="manage-plugins.html" title="Manage Plugins">Manage Plugins</a></td>
+<td class="navbar-next"><a class="navbar-next" href="stardict-portable.html" title="StarDict Portable">StarDict Portable</a></td>
+</tr></table></div>
+</body>
+</html>

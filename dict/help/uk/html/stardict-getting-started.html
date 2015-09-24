@@ -1,0 +1,955 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Початок</title>
+<link rel="previous" href="stardict-introduction.html" title="Вступ">
+<link rel="next" href="stardict-usage.html" title="Використовування">
+<link rel="top" href="index.html" title="StarDict Manual V3.0.6">
+<style type="text/css">
+
+html { height: 100%; }
+body {
+  margin: 0px; padding: 12px;
+  background-color: #f9f9f6;
+  min-height: 100%;
+  direction: ltr;
+}
+div, p, pre, blockquote { margin: 0; padding: 0; }
+p img { vertical-align: middle; }
+sub { font-size: 0.83em; }
+sub sub { font-size: 1em; }
+sup { font-size: 0.83em; }
+sup sup { font-size: 1em; }
+table { border-collapse: collapse; }
+table.table-pgwide { width: 100%; }
+td { vertical-align: top; }
+td { padding: 0.2em 0.83em 0.2em 0.83em; }
+th { padding: 0 0.83em 0 0.83em; }
+tr.tr-shade {
+  background-color: #f9f9f6;
+}
+td.td-colsep { border-right: solid 1px; }
+td.td-rowsep { border-bottom: solid 1px; }
+thead { border-top: solid 2px; border-bottom: solid 2px; }
+tfoot { border-top: solid 2px; border-bottom: solid 2px; }
+div.body {
+  padding: 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.body-sidebar {
+  margin-right: 13em;
+}
+div.division div.division { margin-top: 1.72em; }
+div.division div.division div.division { margin-top: 1.44em; }
+div.header {
+  margin: 0;
+  color: #3f3f3f;
+  border-bottom: solid 1px #e0e0df;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+  margin: 0; padding: 0;
+  color: #3f3f3f;
+}
+h1.title { font-size: 1.72em; }
+h2.title { font-size: 1.44em; }
+h3.title { font-size: 1.2em; }
+h4.title, h5.title, h6.title, h7.title { font-size: 1em; }
+.block { margin-top: 1em; }
+.block .block-first { margin-top: 0; }
+.block-indent {
+  margin-left left: 1.72em;
+  margin-: 1em;
+}
+.block-indent .block-indent { margin-left: 0em; margin-right: 0em; }
+td .block-indent  { margin-left: 0em; margin-right: 0em; }
+dd .block-indent  { margin-left: 0em; margin-right: 0em; }
+.block-verbatim { white-space: pre; }
+div.title {
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.title-formal { padding-left: 0.2em; padding-right: 0.2em; }
+div.title-formal .label { font-weight: normal; }
+a {
+  color: #1f609f;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+a:visited { color: #9f1f6f; }
+ul, ol, dl { margin: 0; padding: 0; }
+li {
+  margin-top: 1em;
+  margin-left: 2.4em;
+  padding: 0;
+}
+li.li-first { margin-top: 0; }
+dt { margin: 1em 0 0 0; }
+dt.dt-first { margin: 0; }
+dd {
+  margin-left: 1.72em;
+  margin-top: 0.5em;
+}
+dl.dl-compact dt { margin-top: 0; }
+dl.dl-compact dd { margin-top: 0; margin-bottom: 0; }
+
+
+ul.linktrail {
+  display: block;
+  margin: 0.2em 0 0 0;
+  text-align: right;
+}
+li.linktrail { display: inline; margin: 0; padding: 0; }
+
+li.linktrail::before {
+  content: '  /  ';
+  color: #3f3f3f;
+}
+
+li.linktrail-first::before, li.linktrail-only::before { content: ''; }
+
+
+div.navbar {
+  padding: 0.5em 1em 0.5em 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.navbar-top { margin-bottom: 1em; }
+div.navbar-bottom { margin-top: 1em; clear: both; }
+div.navbar img { border: 0; vertical-align: -0.4em; }
+table.navbar { width: 100%; margin: 0; border: none; }
+table.navbar td { padding: 0; border: none; }
+td.navbar-next {
+  text-align: right;
+}
+a.navbar-prev::before {
+  
+  content: '◀  ';
+  color: #3f3f3f;
+}
+a.navbar-next::after {
+  
+  content: '  ▶';
+  color: #3f3f3f;
+}
+
+
+div.sidebar {
+  float: right;
+  padding: 0; margin: 0; width: 12em;
+}
+div.sidenav {
+  padding: 0.5em 1em 0 1em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.sidenav div.autotoc {
+  background-color: #ffffff;
+  border: none; padding: 0; margin: 0;
+}
+div.sidenav div.autotoc div.autotoc { margin-top: 0.5em; }
+div.sidenav div.autotoc li { margin-bottom: 0.5em; }
+div.sidenav div.autotoc div.autotoc div.autotoc {
+  margin-left: 1em;
+  margin-top: 0;
+}
+div.sidenav div.autotoc div.autotoc div.autotoc li { margin-bottom: 0; }
+
+
+div.autotoc {
+  
+  display: table;
+  margin-top: 1em;
+  margin-left: 1.72em;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: #f0f9ff;
+  border: solid 1px #c0c9ff;
+}
+div.autotoc ul { margin: 0; padding: 0; }
+div.autotoc li { list-style-type: none; margin: 0; }
+div.autotoc div.autotoc-title { margin-bottom: 0.5em; }
+div.autotoc div.autotoc { border: none; padding: 0; margin-top: 0; margin-bottom: 0.5em; }
+div.autotoc div.autotoc div.autotoc { margin-bottom: 0; }
+
+
+span.bibliolabel {
+  color: #3f3f3f;
+}
+
+
+div.admonition {
+  padding: 0.5em 6px 0.5em 6px;
+  border: solid 1px #e0e0df;
+  background-color: #fffff0;
+}
+div.caution-inner, div.important-inner, div.note-inner, div.tip-inner, div.warning-inner {
+  padding-left: 60px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 48px;
+}
+div.caution-inner { background-image: url("icons/admon-caution.png"); }
+div.important-inner { background-image: url("icons/admon-important.png"); }
+div.note-inner { background-image: url("icons/admon-note.png"); }
+div.note-bug div.note-inner { background-image: url("icons/admon-bug.png"); }
+div.tip-inner { background-image: url("icons/admon-tip.png"); }
+div.warning-inner { background-image: url("icons/admon-warning.png"); }
+div.blockquote {
+  
+  background-image: url('watermark-blockquote-201C.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 0.5em;
+  padding-left: 4em;
+}
+div.attribution {
+  margin-top: 0.5em;
+  color: #3f3f3f;
+}
+div.attribution::before {
+  
+  content: '― ';
+}
+div.epigraph {
+  text-align: right;
+  margin-left: 20%;
+  margin-right: 0;
+  color: #3f3f3f;
+}
+div.figure, div.informalfigure {
+  
+  display: table;
+  padding: 0.5em;
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.figure-inner, div.informalfigure-inner {
+  padding: 0.5em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.caption { margin-top: 0.5em; }
+div.programlisting {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen .prompt {
+  color: #3f3f3f;
+}
+div.screen .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.programlisting .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+pre.linenumbering {
+  color: #3f3f3f;
+  margin: 0;
+  padding-right: 1em;
+  float: left;
+  text-align: right;
+}
+
+
+
+dl.index dt { margin-top: 0; }
+dl.index dd { margin-top: 0; margin-bottom: 0; }
+dl.indexdiv dt { margin-top: 0; }
+dl.indexdiv dd { margin-top: 0; margin-bottom: 0; }
+dl.setindex dt { margin-top: 0; }
+dl.setindex dd { margin-top: 0; margin-bottom: 0; }
+div.list div.title-formal span.title {
+  border-bottom: solid 1px #e0e0df;
+}
+div.simplelist {
+  margin-left: 1.72em;
+}
+div.simplelist table { margin-left: 0; border: none; }
+div.simplelist td {
+  padding: 0.5em;
+  border-left: solid 1px #e0e0df;
+}
+div.simplelist td.td-first {
+  padding-left: 0;
+  border-left: 0;
+}
+div.synopsis {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border-top: solid 2px #c0c9ff;
+  border-bottom: solid 2px #c0c9ff;
+}
+div.synopsis div.synopsis {
+  padding: 0;
+  border: none;
+}
+div.synopsis div.block { margin-top: 0.2em; }
+div.synopsis div.block-first { margin-top: 0; }
+div.cmdsynopsis { font-family: monospace; }
+
+span.accel { text-decoration: underline; }
+span.acronym { font-family: sans-serif; }
+span.application { font-style: italic; }
+span.classname, span.exceptionname, span.interfacename { font-family: monospace; }
+span.code {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.code { border: none; padding: 0; }
+span.command {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.command { border: none; padding: 0; }
+span.computeroutput { font-family: monospace; }
+
+span.constant { font-family: monospace; }
+span.database { font-family: monospace; }
+span.email { font-family: monospace; }
+span.emphasis { font-style: italic; }
+span.emphasis-bold { font-style: normal; font-weight: bold; }
+span.envar { font-family: monospace; }
+
+span.filename { font-family: monospace; }
+span.firstterm { font-style: italic; }
+span.foreignphrase { font-style: italic; }
+span.function { font-family: monospace; }
+
+dt.glossterm span.glossterm { font-style: normal; }
+
+
+span.glossterm { font-style: italic; }
+
+span.guibutton, span.guilabel, span.guimenu, span.guimenuitem, span.guisubmenu, span.interface {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.keycap {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.lineannotation { font-style: italic; }
+span.literal { font-family: monospace; }
+span.markup  { font-family: monospace; }
+span.medialabel { font-style: italic; }
+span.methodname { font-family: monospace; }
+span.ooclass, span.ooexception, span.oointerface { font-family: monospace; }
+span.option { font-family: monospace; }
+span.parameter { font-family: monospace; }
+span.paramdef span.parameter { font-style: italic; }
+span.prompt { font-family: monospace; }
+span.property { font-family: monospace; }
+span.replaceable  { font-style: italic; }
+span.returnvalue { font-family: monospace; }
+span.sgmltag { font-family: monospace; }
+span.structfield, span.structname { font-family: monospace; }
+span.symbol { font-family: monospace; }
+span.systemitem { font-family: monospace; }
+span.token { font-family: monospace; }
+span.type { font-family: monospace; }
+span.uri { font-family: monospace; }
+span.userinput { font-family: monospace; }
+span.varname { font-family: monospace; }
+span.wordasword { font-style: italic; }
+
+
+
+div.footnotes { font-style: italic; font-size: 0.8em; }
+div.footnote { margin-top: 1.44em; }
+span.footnote-number { display: inline; padding-right: 0.83em; }
+span.footnote-number + p { display: inline; }
+a.footnote { text-decoration: none; font-size: 0.8em; }
+a.footnote-ref { text-decoration: none; }
+
+span.co {
+  margin-left: 0.2em; margin-right: 0.2em;
+  padding-left: 0.4em; padding-right: 0.4em;
+  border: solid 1px #000000;
+  -moz-border-radius: 8px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 8px;
+}
+span.co:hover {
+  border-color: #333333;
+  background-color: #333333;
+  color: #FFFFFF;
+}
+span.co a { text-decoration: none; }
+span.co a:hover { text-decoration: none; }
+
+dt.question { margin-left: 0em; }
+dt.question div.label { float: left; }
+dd + dt.question { margin-top: 1em; }
+dd.answer {
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+dd.answer div.label { float: left; }
+</style>
+</head>
+<body>
+<div class="navbar navbar-top"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="stardict-introduction.html" title="Вступ">Вступ</a></td>
+<td class="navbar-next"><a class="navbar-next" href="stardict-usage.html" title="Використовування">Використовування</a></td>
+</tr></table></div>
+<div class="sidebar"><div class="sidenav"><div class="autotoc"><ul>
+<li><a href="index-info.html" title="Про цей документ">Про цей документ</a></li>
+<li>
+<a class="xref" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a><div class="autotoc"><ul>
+<li><a class="xref" href="stardict-introduction.html" title="Вступ">Вступ</a></li>
+<li>Початок</li>
+<li><a class="xref" href="stardict-usage.html" title="Використовування">Використовування</a></li>
+<li><a class="xref" href="stardict-prefs.html" title="Налаштування">Налаштування</a></li>
+<li><a class="xref" href="manage-dicts.html" title="Manage dictionaries">Manage dictionaries</a></li>
+<li><a class="xref" href="manage-plugins.html" title="Manage Plugins">Manage Plugins</a></li>
+<li><a class="xref" href="stardict-details.html" title="Details">Details</a></li>
+<li><a class="xref" href="stardict-portable.html" title="StarDict Portable">StarDict Portable</a></li>
+<li><a class="xref" href="stardict-troubleshooting.html" title="Troubleshooting">Troubleshooting</a></li>
+<li><a class="xref" href="stardict-projects.html" title="Зв'язані проекти">Зв'язані проекти</a></li>
+<li><a class="xref" href="stardict-authors.html" title="Розробники">Розробники</a></li>
+</ul></div>
+</li>
+</ul></div></div></div>
+<div class="body body-sidebar"><div class="division sect1">
+<a name="stardict-getting-started"></a><div class="header"><h1 class="sect1 title"><span class="title">Початок</span></h1></div>
+<ul class="linktrail"><li class="linktrail linktrail-only"><a class="linktrail" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a></li></ul>
+<div class="autotoc"><ul>
+<li>
+<span class="label">2.1. </span><a class="xref" href="stardict-getting-started.html#stardict-to-start" title="Starting StarDict">Starting <span class="application">StarDict</span></a>
+</li>
+<li>
+<span class="label">2.2. </span><a class="xref" href="stardict-getting-started.html#stardict-main-window" title="StarDict Main window"><span class="application">StarDict</span> Main window</a>
+</li>
+<li>
+<span class="label">2.3. </span><a class="xref" href="stardict-getting-started.html#stardict-definition-aria-toolbar" title="Definition area toolbar"><span class="firstterm">Definition area toolbar</span></a>
+</li>
+<li>
+<span class="label">2.4. </span><a class="xref" href="stardict-getting-started.html#stardict-notification-area" title="Іконка області сповіщень">Іконка області сповіщень</a>
+</li>
+<li>
+<span class="label">2.5. </span><a class="xref" href="stardict-getting-started.html#stardict-scan-selection" title="Слідкувати за виділеним">Слідкувати за виділеним</a>
+</li>
+<li>
+<span class="label">2.6. </span><a class="xref" href="stardict-getting-started.html#stardict-acrobat-plugin" title="WordPick Adobe Acrobat plugin">WordPick Adobe Acrobat plugin</a>
+</li>
+<li>
+<span class="label">2.7. </span><a class="xref" href="stardict-getting-started.html#stardict-translation" title="Full-Text Translation">Full-Text Translation</a>
+</li>
+</ul></div>
+<div class="division sect2">
+<a name="stardict-to-start"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">2.1. </span>Starting <span class="application">StarDict</span></span></h2></div>
+<p class="para block block-first"><span class="application">StarDict</span> можна запустити таким чином:</p>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first">
+<span class="guimenu">Applications</span> menu</dt>
+<dd>
+    		<p class="para block block-first">Вибрати <span class="menuchoice"><span class="guisubmenu">Accessories</span> ▸ <span class="guimenuitem">StarDict</span></span>.</p>
+    		</dd>
+<dt class="term">Командний рядок</dt>
+<dd>
+    		<p class="para block block-first">Надрукуйте <span class="command" dir="ltr">stardict</span>, потім натисніть <span class="keycap">Return</span>.</p>
+            <p class="para block">
+            You can specify a word to query too: 
+	        </p>
+	        <p class="para block">
+            <span class="command" dir="ltr">stardict <span class="replaceable">word</span></span>
+            </p>
+            <p class="para block">  
+            or a Glob-style pattern matching string: 
+            </p>  
+            <p class="para block">
+            <span class="command" dir="ltr">stardict <span class="replaceable">wo?d*</span></span>
+            </p>
+            <p class="para block">  
+            or do a fuzzy query: 
+            </p>  
+            <p class="para block">
+            <span class="command" dir="ltr">stardict <span class="replaceable">/word</span></span>
+            </p>
+    		</dd>
+</dl></div>
+<div class="admonition block note block-indent"><div class="note-inner">
+      <p class="para block block-first">
+      If <span class="application">StarDict</span> is already running.
+      In Windows edition <span class="application">StarDict</span> activates the first instance of <span class="application">StarDict</span>, then terminates. In Gnome edition <span class="application">StarDict</span> actives the first instance of <span class="application">StarDict</span>, queries the word in that instance if one was supplied on the command line, then terminates.
+      </p>
+    </div></div>
+<p class="para block">See <a class="xref" href="stardict-details.html#stardict-details-command-line" title="Command line options">Розділ 7.1 ― Command line options</a> for complete description of command line options.
+	</p>
+</div>
+<div class="division sect2">
+<a name="stardict-main-window"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">2.2. </span><span class="application">StarDict</span> Main window</span></h2></div>
+<p class="para block block-first">When you start <span class="application">StarDict</span>, the following window appears.</p>
+<div class=" block figure block-indent">
+<a name="stardict-main-window-fig"></a><div class="block block-first title title-formal"><span class="title"><span class="label"><span style="font-style: italic; ">Рисунок 1</span> </span><span class="application">StarDict</span> Main Window</span></div>
+<div class="figure-inner"> 
+	 
+	<div class=" block screenshot block-first"> 
+	  <div class="mediaobject"><img src="figures/stardict_main_window.png"></div> 
+	</div> 
+      </div>
+</div>
+<p class="para block">The <span class="application">StarDict</span> <span class="firstterm">Main window</span> consists of the following elements:</p>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first">Top bar</dt>
+<dd>
+		<p class="para block block-first">The top bar consists of the <span class="firstterm">Search field</span> and a number of buttons. Here they are in the order from left to right.
+		</p>
+		<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="guilabel">Clear</span></dt>
+<dd>
+			<p class="para block block-first">Clears the Search field.
+			</p>
+			</dd>
+<dt class="term"><span class="firstterm">Search field</span></dt>
+<dd>
+			<p class="para block block-first">Use the Search field to enter the word that you want to look up.
+			You can also access recently-queried words through the dropdown box.
+			</p>
+			</dd>
+<dt class="term"><span class="firstterm"><span class="guilabel">Fuzzy Query</span></span></dt>
+<dd>
+			<p class="para block block-first">Fuzzy queries the word entered into the Search field.
+			</p>
+			</dd>
+<dt class="term"><span class="guilabel">Go Back</span></dt>
+<dd>
+			<p class="para block block-first">Go back to the word you queried before. Right-click to see a list of words you queried earlier.
+			</p>
+			</dd>
+<dt class="term"><span class="guilabel">Main menu</span></dt>
+<dd>
+			<p class="para block block-first">A button on the right end of the Top bar.
+			It pops up the <span class="application">StarDict</span> Main menu.
+			</p>
+			</dd>
+</dl></div>
+		</dd>
+<dt class="term">Left bar</dt>
+<dd>
+		<p class="para block block-first">The Left bar contains a number of buttons, here they are in the order from  top to bottom:
+		</p>
+		<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="firstterm"><span class="guilabel">Список слів</span></span></dt>
+<dd>
+			<p class="para block block-first">Opens a list words that have been found in search.
+			</p>
+			</dd>
+<dt class="term"><span class="firstterm"><span class="guilabel">Results list</span></span></dt>
+<dd>
+			<p class="para block block-first">Opens a list of sources, mainly dictionaries, where the current word has been found. The Definition area combines results from all the sources. Clicking a source in the list scrolls the Definition area window to the definition from that source.
+			</p>
+			</dd>
+<dt class="term"><span class="guilabel">Full-Text Translation</span></dt>
+<dd>
+			<p class="para block block-first">Switches to the Full-text translation mode that allows to translate blocks of text, see <a class="xref" href="stardict-getting-started.html#stardict-translation" title="Full-Text Translation">Розділ 2.7 ― Full-Text Translation</a>.
+			</p>
+			</dd>
+<dt class="term"><span class="guilabel">Dictionary groups</span></dt>
+<dd>
+			<p class="para block block-first">Shows a pop-up menu that allows to select a group of dictionaries where to search words. The menu also contains a checkbox to enable network dictionaries. See <a class="xref" href="stardict-prefs.html#stardict-prefs-network-net-dict" title="Net Dict">Розділ 4.2.1 ― Net Dict</a> for information about network dictionaries and how to configure them.
+			</p>
+			</dd>
+<dt class="term">
+<span class="guilabel">Previous word</span> and <span class="guilabel">Next word</span>
+</dt>
+<dd>
+			<p class="para block block-first">These buttons are at the bottom part of the Left bar. They work with the Word list and allow to switch to previous and next words in the Word list.
+			</p>
+			</dd>
+</dl></div>
+		
+		</dd>
+<dt class="term">Bottom bar</dt>
+<dd>
+		<p class="para block block-first">The left part of the bar in the order from left to right:
+		</p>
+		<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first">
+<span class="guilabel">Scan selection</span> checkbox</dt>
+<dd>
+			<p class="para block block-first">Enable and disables the Scan mode.
+			Checking the <span class="guibutton">Scan selection</span> check button will cause <span class="application">StarDict</span>
+			to automatically look up words that you highlight in any application.
+			See <a class="xref" href="stardict-getting-started.html#stardict-scan-selection" title="Слідкувати за виділеним">Розділ 2.5 ― Слідкувати за виділеним</a> for more details about the Scan mode.
+			</p>
+			</dd>
+<dt class="term"><span class="guilabel">Info</span></dt>
+<dd>
+			<p class="para block block-first">Shows an introduction to using <span class="application">StarDict</span> in the Definition area.
+			</p>
+			</dd>
+<dt class="term"><span class="guilabel">Quit</span></dt>
+<dd>
+			<p class="para block block-first">Quits <span class="application">StarDict</span>.
+			</p>
+			</dd>
+</dl></div>
+
+		<p class="para block">The right part of the bar in the order from left to right:
+		</p>
+		<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="firstterm"><span class="guilabel">Internet search</span></span></dt>
+<dd>
+			<p class="para block block-first">Click the button to initiate Internet search. By default, the first website is used, but you may select any configured website right-clicking the button. <span class="application">StarDict</span> queries the word in the Search field sending a GET request to the configured web page. Result are shown in a web browser. To configure the list of websites see <a class="xref" href="stardict-prefs.html#stardict-prefs-main-window-searchwebsite" title="Search website">Розділ 4.3.3 ― Search website</a>.
+			</p>
+			</dd>
+<dt class="term"><span class="guilabel">StarDict project website</span></dt>
+<dd>
+			<p class="para block block-first">Opens <span class="application">StarDict</span> project website in a web browser.
+			</p>
+			</dd>
+<dt class="term"><span class="guilabel">Manage dictionaries</span></dt>
+<dd>
+			<p class="para block block-first">Opens <span class="firstterm">Manage dictionaries</span> dialog that allows to configure dictionaries to use, organize them in groups and more.
+			</p>
+			</dd>
+<dt class="term"><span class="guilabel">Налаштування</span></dt>
+<dd>
+			<p class="para block block-first">Opens the <span class="firstterm">Preferences</span> dialog that allows to configuration a multitude of parameters pertaining to <span class="application">StarDict</span>. See <a class="xref" href="stardict-prefs.html" title="Налаштування">Розділ 4 ― Налаштування</a>.
+			</p>
+			</dd>
+</dl></div>
+		</dd>
+<dt class="term"><span class="firstterm">Список слів</span></dt>
+<dd>
+		<p class="para block block-first">The smallest half of the <span class="application">StarDict</span> Main window on the left.
+		It contains a list of words that have been found in search.
+		Click a word to show the related articles in the Definition area.
+		You may use a spliter in the middle of the <span class="application">StarDict</span> Main window to divide the space between the Word list and the Definition area.
+		</p>
+		</dd>
+<dt class="term"><span class="firstterm">Область перекладу</span></dt>
+<dd>
+		<p class="para block block-first">The largest half of the <span class="application">StarDict</span> Main window on the right.
+		<span class="application">StarDict</span> displays definition of a word in this area of the window.
+		You may use a spliter in the middle of the StarDict main window to divide the space between the Word list and the Definition area. 
+		The Definition area has its own bars: a top toolbar (see <a class="xref" href="stardict-getting-started.html#stardict-definition-aria-toolbar" title="Definition area toolbar">Розділ 2.3 ― <span class="firstterm">Definition area toolbar</span></a>)  and a bottom search bar (only visible when you search in the Definition area).
+		</p>
+		</dd>
+</dl></div>
+<p class="para block">The following hotkeys are available in the Main window.
+	</p>
+<div class="block list variablelist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Hotkeys</span></div>
+<dl class="variablelist">
+<dt class="term dt-first">
+<span class="mousebutton">middle</span> mouse button</dt>
+<dd>
+		<p class="para block block-first">
+		This hotkey applies to the Definition area only.
+		</p>
+		<p class="para block">Query the text selected in the Definition area into the Main window.
+		In Windows edition of <span class="application">StarDict</span>, if there is no selected text, query clipboard content into the Main window.
+		</p>
+		</dd>
+<dt class="term">
+<span class="mousebutton">right</span> mouse button</dt>
+<dd>
+		<p class="para block block-first">Show pop-up menu.
+		</p>
+		</dd>
+</dl>
+</div>
+</div>
+<div class="division sect2">
+<a name="stardict-definition-aria-toolbar"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">2.3. </span><span class="firstterm">Definition area toolbar</span></span></h2></div>
+<p class="para block block-first">The Definition area toolbar is at the top of the <span class="guilabel">Definition area</span>.
+		It contains a number of buttons. Here they are in the left-to-right order.
+		</p>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first"><span class="guilabel">Hide(Show) the Word list</span></dt>
+<dd>
+			<p class="para block block-first">Hide or show the Word list or the Results list, depending on what is active now.</p>
+			</dd>
+<dt class="term"><span class="guilabel">Copy</span></dt>
+<dd>
+			<p class="para block block-first">
+			Copy the Definition area text into clipboard, all the text.
+			</p>
+			</dd>
+<dt class="term"><span class="guilabel">Pronounce the word</span></dt>
+<dd>
+			<p class="para block block-first">This is a button with an additional dropdown menu.
+			Clicking the button you make <span class="application">StarDict</span> pronounce the current word using the first TTS engine that can do that. The dropdown menu allows you to select the TTS engine to use.
+			</p>
+			<div class="block list variablelist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>TTS engines</span></div>
+<dl class="variablelist">
+<dt class="term dt-first"><span class="guimenuitem">Real People TTS</span></dt>
+<dd>
+				<p class="para block block-first">
+				This engine use sound samples performed by real people.
+				</p>
+				</dd>
+<dt class="term"><span class="guimenuitem">Espeak TTS</span></dt>
+<dd>
+				<p class="para block block-first">
+				Espeak TTS plugin.
+				</p>
+				</dd>
+<dt class="term"><span class="guimenuitem">Festival TTS</span></dt>
+<dd>
+				<p class="para block block-first">
+				Festival TTS plugin.
+				</p>
+				</dd>
+<dt class="term"><span class="guimenuitem">Command TTS</span></dt>
+<dd>
+				<p class="para block block-first">
+				TTS command you may specify in the Preferences dialog.
+				See <a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-sound" title="Звук">Розділ 4.1.5 ― Звук</a>.
+				</p>
+				</dd>
+</dl>
+</div>
+			<p class="para block">
+			Depending on configuration settings, installed plugins and other factors, the list of TTS engines may be shorter.
+			</p>
+			</dd>
+<dt class="term"><span class="guilabel">Save to file</span></dt>
+<dd>
+			<p class="para block block-first">
+			Save Definition area text into a file. The new text is appended to the end of the file.
+			The file to use is specified in the <a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-export" title="Export">Розділ 4.1.4 ― Export</a>
+			section of the <span class="guilabel">Preferences</span> dialog. You may also specify to export
+			only the found word, not its definition. 
+			<span class="application">StarDict</span> exports not the word you searched for but the word that was found, the one which translation is shown in the Definition area.
+			When "export only word" is not specified, selection is taken into account.
+			When text is selected in the Definition area, the selected text is exported prepended with the found word. When there are no selected text, all text of the Definition area is exported.
+			</p>
+			<p class="para block">Hotkey: <span class="keycombo"><span class="keycap">Alt</span>+<span class="keycap">e</span></span>
+			</p>
+			</dd>
+<dt class="term"><span class="guilabel">Search in the Definition text</span></dt>
+<dd>
+			<p class="para block block-first">
+			Search for text in the Definition area. This button opens the Definitiona area Search bar at the bottom of the Definition area where you may type a word to search.
+			</p>
+			<p class="para block">Hotkey: <span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">f</span></span>
+			</p>
+			</dd>
+</dl></div>
+</div>
+<div class="division sect2">
+<a name="stardict-notification-area"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">2.4. </span>Іконка області сповіщень</span></h2></div>
+<p class="para block block-first">
+	<span class="application">StarDict</span> will also add an icon to the Notification area.  When you iconify the Main window, the 
+	window will be hiden.  After you click the icon, the window will be shown again.  If you right click this icon, it 
+	will popup a menu where you can choose to toggle <span class="guimenuitem">Scan selection</span>, or to <span class="guimenuitem">Quit</span>.
+	You can toggle <span class="guimenuitem">Scan selection</span> directly by ctrl-clicking the icon. Clicking the middle mouse button on 
+	the icon will query the selected word.
+	</p>
+<div class=" block figure block-indent">
+<a name="stardict-notification-area-fig"></a><div class="block block-first title title-formal"><span class="title"><span class="label"><span style="font-style: italic; ">Рисунок 2</span> </span>Іконка області сповіщень <span class="application">StarDict</span></span></div>
+<div class="figure-inner"> 
+	 
+	<div class=" block screenshot block-first"> 
+		<div class="mediaobject"><img src="figures/stardict_notification_area.png"></div> 
+	</div> 
+	</div>
+</div>
+</div>
+<div class="division sect2">
+<a name="stardict-scan-selection"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">2.5. </span>Слідкувати за виділеним</span></h2></div>
+<p class="para block block-first"><span class="application">StarDict</span> can automatically scan selections. This means that when you select a word or phrase
+	in <span class="application">StarDict</span> or in any other application, 
+	<span class="application">StarDict</span> will get the text that you selected and search for it, then display the Floating window containing the result of the search. </p>
+<p class="para block">
+	In Windows the Scan mode works differently. It has nothing to do with selection in fact.
+	<span class="application">StarDict</span> extracts the text under the pointer when you pause the mouse for a while.
+	Normally <span class="application">StarDict</span> looks up a word under the pointer, if the pointer is not over a word,
+	then words to the left and the right of the pointer are considered.
+	It is time to say what <span class="application">StarDict</span> considers as a word. <span class="application">StarDict</span> gives a number of tries.
+	First, it considers a word may include anything but spaces and punctuations;
+	second, a word consisting of only letters; a word of lower case letters; a word of upper case letters; a capitalized word of letters. Finally, <span class="application">StarDict</span> uses one of the tried word to find the longest prefix making a word.
+	You may help <span class="application">StarDict</span> to extract the right word or a part of a word selecting it.
+	Although <span class="application">StarDict</span> does not work with selections, selection may effect the text <span class="application">StarDict</span> gets.
+	</p>
+<p class="para block">
+	Scanning in Windows may not work with some applications.
+	For example, it's known that scanning does not work
+	with <span class="application">FireFox 3.x</span> and <span class="application">Windows Console</span> (cmd.exe process).
+	The scanning feature depends on the way application outputs text.
+	If scanning does not work, you may harness another <span class="application">StarDict</span> feature ‒ 
+	<span class="firstterm">Clipboard scanning</span>, see 
+	<a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-scan" title="Слідкувати за виділеним текстом">Розділ 4.1.1 ― Слідкувати за виділеним текстом</a>.
+	</p>
+<p class="para block">
+	In Windows <span class="application">StarDict</span> works specially with some applications. First, <span class="application">StarDict</span> itself.
+	To scan a word in <span class="application">StarDict</span> Main window you need to select it. 
+	The Scan mode in <span class="application">StarDict</span> Main window works exactly as it should in general case, 
+	the fact that it's Windows does not matter. 
+	You can not scan in other <span class="application">StarDict</span> windows however. 
+	</p>
+<p class="para block">
+	Second, there is special plugin to scan in PDF documents, see <a class="xref" href="stardict-getting-started.html#stardict-acrobat-plugin" title="WordPick Adobe Acrobat plugin">Розділ 2.6 ― WordPick Adobe Acrobat plugin</a>.
+	</p>
+<div class=" block figure block-indent">
+<a name="stardict-float-window-fig"></a><div class="block block-first title title-formal"><span class="title"><span class="label"><span style="font-style: italic; ">Рисунок 3</span> </span><span class="application">StarDict</span> Floating Window</span></div>
+<div class="figure-inner"> 
+ 	
+	<div class=" block screenshot block-first"> 
+	  <div class="mediaobject"><img src="figures/stardict_float_window.png"></div> 
+	</div> 
+      </div>
+</div>
+<div class="block list itemizedlist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Usage tips</span></div>
+<ul class="itemizedlist">
+<li class="li-first">
+	<span class="para">You may drag the Floating window to move it.</span>
+	</li>
+<li>
+	<span class="para">The Floating window will disappear when you move your pointer some distance away.</span>
+	</li>
+<li>
+	<span class="para">You may configure <span class="application">StarDict</span> so it will do scanning only when a special modifier key is held down. See <a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-scan" title="Слідкувати за виділеним текстом">Розділ 4.1.1 ― Слідкувати за виділеним текстом</a>.</span>
+	</li>
+<li>
+	<span class="para">You may switch the Scan mode on and off by pressing the
+	<span class="keycombo"><span class="keycap">Ctrl</span>+<span class="keycap">Alt</span>+<span class="keycap">x</span></span>
+	shortcut. See <a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-scan" title="Слідкувати за виділеним текстом">Розділ 4.1.1 ― Слідкувати за виділеним текстом</a>.</span>
+	</li>
+<li>
+	<span class="para"><span class="application">StarDict</span> remembers the last text looked up in the Floating window and will not lookup it again.
+	If you need to see the translation again, you should lookup another word first 
+	(it's not enough to simply change selection) and then lookup the original word.
+	Another possibility is to middle-click on the Notification area icon, 
+	<span class="application">StarDict</span> will lookup the selection unconditionally.</span>
+	</li>
+</ul>
+</div>
+<p class="para block">The <span class="application">StarDict</span> Floating window consists of the following elements:</p>
+<div class="block list variablelist"><dl class="variablelist">
+<dt class="term dt-first">Tool buttons bar</dt>
+<dd>
+		<p class="para block block-first">A bar at the top of the Floating window. The bar will be hidden automatically to save display space. When your mouse pointer enters the Floating window, 
+		the Tool buttons bar will appear immediately, and disappear again as the mouse pointer leaves. </p>
+		<p class="para block">You can click these buttons to <span class="guibutton">query</span> a word in the Main window,
+        <span class="guibutton">copy</span> the query result to clipboard, 
+		<span class="guibutton">pronounce</span> the word, <span class="guibutton">stop</span> selection scanning, etc. 
+		To the far right is the <span class="guibutton">Lock floating window</span> button.  If the 
+		Floating window is locked, it will always be shown there. </p>
+		</dd>
+<dt class="term">Область перекладу</dt>
+<dd>
+		<p class="para block block-first">Результати пошуку відображаються у цій області.</p>
+		</dd>
+</dl></div>
+</div>
+<div class="division sect2">
+<a name="stardict-acrobat-plugin"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">2.6. </span>WordPick Adobe Acrobat plugin</span></h2></div>
+<p class="para block block-first"><span class="application">StarDict</span> includes an Abode Acrobat plugin that can be used to extract and translate text from Portable Document Format (PDF) documents. The WordPick plugin is available in Windows edition of <span class="application">StarDict</span> only. The main text extration mechanism does not work with PDF documents in Windows.
+	</p>
+<div class="admonition block note block-indent"><div class="note-inner">
+	<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Limitations</span></div>
+	<p class="para block block-first">
+	WordPick plugin requires non-free edition of Acrobat like Acrobat Stardard, Pro or richer, 
+	it does not work with the free Acrobat Reader product. 
+	The plugin is know to work with versions 7-9 of Acrobat. 
+	PDF document security restrictions must allow extracting document content.
+	</p>
+	</div></div>
+<p class="para block">WordPick plugin embeds an icon into the stardard Acrobat toolbar near the Hand Tool.
+	In Acrobat Reader you will not see that icon ‒ plugin is not available.
+	If the current document does not allow for text extraction, the icon is disabled, 
+	the plugin is not operational.
+	</p>
+<div class=" block figure block-indent">
+<a name="stardict-acrobat-toolbar-fig"></a><div class="block block-first title title-formal"><span class="title"><span class="label"><span style="font-style: italic; ">Рисунок 4</span> </span>Adobe Acrobat Toolbar with WordPick plugin icon</span></div>
+<div class="figure-inner"> 
+	
+	<div class=" block screenshot block-first">
+		<div class="mediaobject"><img src="figures/acrobat_toolbar.png"></div>
+	</div>
+	</div>
+</div>
+<div class="admonition block tip block-indent"><div class="tip-inner">
+	<div class="block block-first title title-formal"><span class="title"><span class="label"></span>How to inspect document security permissions</span></div>
+	<p class="para block block-first">
+	In the main menu open <span class="guimenu">File</span>, <span class="guimenuitem">Document properties</span>.
+	<span class="guilabel">Document properties</span> dialog pops up. Proceed to <span class="guilabel">Security</span> tab. Look into <span class="guilabel">Document Restrictions Summary</span> group. <span class="guilabel">Content Copying or Extraction</span> must be allowed.
+	</p>
+	</div></div>
+<div class="block list orderedlist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>Translate text with WordPick plugin</span></div>
+<ol class="orderedlist">
+<li class="li-first">
+	<span class="para">Select WordPick and Select tools. Cursor changes to a vertical bar.
+	Now you can select text with mouse.
+	</span>
+	</li>
+<li>
+	<span class="para">Start <span class="application">StarDict</span> if you have not already done that, and enable Scan mode.
+	</span>
+	</li>
+<li>
+	<span class="para">Select a word in the PDF document, 
+	<span class="application">StarDict</span> shows the Floating window with translation if the word is found.
+	</span>
+	</li>
+</ol>
+</div>
+<p class="para block">
+	You may select consecutive words and phrases. 
+	If <span class="application">StarDict</span> is unable to find the phrase, it tries to cut words from the end.
+	You will be shown translation of the first word if nothing else has been found.
+	</p>
+<p class="para block">Note that the Scan modifier key (<a class="xref" href="stardict-prefs.html#stardict-prefs-dictionary-scan" title="Слідкувати за виділеним текстом">Розділ 4.1.1 ― Слідкувати за виділеним текстом</a>) has no effect in Acrobat.
+	WordPick search for text when you select something in the document regardless of the state of modifiers.
+	To turn off the text translation mode, deselect the WordPick tool on the toolbar, deselecting the Select tool is not necessary.
+	</p>
+</div>
+<div class="division sect2">
+<a name="stardict-translation"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">2.7. </span>Full-Text Translation</span></h2></div>
+<p class="para block block-first"><span class="application">StarDict</span> provides full-text translation service. It allows you to translate short texts with up to 2000 characters approximately. The exact limit depends on the translation engine and other factors. To switch to Full-Text Translation mode click the <span class="guilabel">Full-Text Translation</span> button on the Left bar in <span class="application">StarDict</span> Main window.
+	</p>
+<p class="para block">
+	<span class="application">StarDict</span> uses online translation services available for free on the Web to perform translation. <span class="application">StarDict</span> collects text, source and target languages, constructs an HTTP request and sends it to online translation service. The application receives response of the service and shows results in a window. You may see <span class="application">StarDict</span> interface to Full-Text Translation service below.
+	</p>
+<div class=" block figure block-indent">
+<a name="stardict-full-text-translation-fig"></a><div class="block block-first title title-formal"><span class="title"><span class="label"><span style="font-style: italic; ">Рисунок 5</span> </span>Full-Text Translation Mode</span></div>
+<div class="figure-inner"> 
+	
+	<div class=" block screenshot block-first"> 
+		<div class="mediaobject"><img src="figures/stardict_full_text_translation.png"></div>
+	</div>
+	</div>
+</div>
+<p class="para block">
+	The top line of the window from left to right contains: engine selection combobox, source language combobox, and target language combobox. Below you see a text area for the text to translate. The bottom part of the window contains a text area for translation results. The <span class="guilabel">Translate</span> button in the middle of the window initiates translation request. The bottom line of the window provides a link to the online translation engine. It opens in a web browser.
+	</p>
+<p class="para block">
+	To translate something, first select a translation engine. You have the following choice: Google, Yahoo, Excite Japan. Select source and target languages. Available source and target languages depend on selected engine. Available target languages depend on source language as well.
+	Type the text to translate into the source text area. Click the <span class="guilabel">Translate</span> button to start translation. You'll see results in the result text area. Sometimes it may show you <span class="guilabel">Not found!</span> text. It means that translation failed. There can be a number of reasons: source text is too long, the online service is down, the service has changed output format and <span class="application">StarDict</span> is unable to parse it. You may see other errors in the results area.
+	</p>
+</div>
+</div></div>
+<div class="navbar navbar-bottom"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="stardict-introduction.html" title="Вступ">Вступ</a></td>
+<td class="navbar-next"><a class="navbar-next" href="stardict-usage.html" title="Використовування">Використовування</a></td>
+</tr></table></div>
+</body>
+</html>

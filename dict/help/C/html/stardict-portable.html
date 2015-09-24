@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>StarDict Portable</title>
+<link rel="previous" href="stardict-details.html" title="Details">
+<link rel="next" href="stardict-troubleshooting.html" title="Troubleshooting">
+<link rel="top" href="index.html" title="StarDict Manual V3.0.6">
+<style type="text/css">
+
+html { height: 100%; }
+body {
+  margin: 0px; padding: 12px;
+  background-color: #f9f9f6;
+  min-height: 100%;
+  direction: ltr;
+}
+div, p, pre, blockquote { margin: 0; padding: 0; }
+p img { vertical-align: middle; }
+sub { font-size: 0.83em; }
+sub sub { font-size: 1em; }
+sup { font-size: 0.83em; }
+sup sup { font-size: 1em; }
+table { border-collapse: collapse; }
+table.table-pgwide { width: 100%; }
+td { vertical-align: top; }
+td { padding: 0.2em 0.83em 0.2em 0.83em; }
+th { padding: 0 0.83em 0 0.83em; }
+tr.tr-shade {
+  background-color: #f9f9f6;
+}
+td.td-colsep { border-right: solid 1px; }
+td.td-rowsep { border-bottom: solid 1px; }
+thead { border-top: solid 2px; border-bottom: solid 2px; }
+tfoot { border-top: solid 2px; border-bottom: solid 2px; }
+div.body {
+  padding: 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.body-sidebar {
+  margin-right: 13em;
+}
+div.division div.division { margin-top: 1.72em; }
+div.division div.division div.division { margin-top: 1.44em; }
+div.header {
+  margin: 0;
+  color: #3f3f3f;
+  border-bottom: solid 1px #e0e0df;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+  margin: 0; padding: 0;
+  color: #3f3f3f;
+}
+h1.title { font-size: 1.72em; }
+h2.title { font-size: 1.44em; }
+h3.title { font-size: 1.2em; }
+h4.title, h5.title, h6.title, h7.title { font-size: 1em; }
+.block { margin-top: 1em; }
+.block .block-first { margin-top: 0; }
+.block-indent {
+  margin-left left: 1.72em;
+  margin-: 1em;
+}
+.block-indent .block-indent { margin-left: 0em; margin-right: 0em; }
+td .block-indent  { margin-left: 0em; margin-right: 0em; }
+dd .block-indent  { margin-left: 0em; margin-right: 0em; }
+.block-verbatim { white-space: pre; }
+div.title {
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.title-formal { padding-left: 0.2em; padding-right: 0.2em; }
+div.title-formal .label { font-weight: normal; }
+a {
+  color: #1f609f;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+a:visited { color: #9f1f6f; }
+ul, ol, dl { margin: 0; padding: 0; }
+li {
+  margin-top: 1em;
+  margin-left: 2.4em;
+  padding: 0;
+}
+li.li-first { margin-top: 0; }
+dt { margin: 1em 0 0 0; }
+dt.dt-first { margin: 0; }
+dd {
+  margin-left: 1.72em;
+  margin-top: 0.5em;
+}
+dl.dl-compact dt { margin-top: 0; }
+dl.dl-compact dd { margin-top: 0; margin-bottom: 0; }
+
+
+ul.linktrail {
+  display: block;
+  margin: 0.2em 0 0 0;
+  text-align: right;
+}
+li.linktrail { display: inline; margin: 0; padding: 0; }
+
+li.linktrail::before {
+  content: '  /  ';
+  color: #3f3f3f;
+}
+
+li.linktrail-first::before, li.linktrail-only::before { content: ''; }
+
+
+div.navbar {
+  padding: 0.5em 1em 0.5em 1em;
+  max-width: 60em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.navbar-top { margin-bottom: 1em; }
+div.navbar-bottom { margin-top: 1em; clear: both; }
+div.navbar img { border: 0; vertical-align: -0.4em; }
+table.navbar { width: 100%; margin: 0; border: none; }
+table.navbar td { padding: 0; border: none; }
+td.navbar-next {
+  text-align: right;
+}
+a.navbar-prev::before {
+  
+  content: '◀  ';
+  color: #3f3f3f;
+}
+a.navbar-next::after {
+  
+  content: '  ▶';
+  color: #3f3f3f;
+}
+
+
+div.sidebar {
+  float: right;
+  padding: 0; margin: 0; width: 12em;
+}
+div.sidenav {
+  padding: 0.5em 1em 0 1em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.sidenav div.autotoc {
+  background-color: #ffffff;
+  border: none; padding: 0; margin: 0;
+}
+div.sidenav div.autotoc div.autotoc { margin-top: 0.5em; }
+div.sidenav div.autotoc li { margin-bottom: 0.5em; }
+div.sidenav div.autotoc div.autotoc div.autotoc {
+  margin-left: 1em;
+  margin-top: 0;
+}
+div.sidenav div.autotoc div.autotoc div.autotoc li { margin-bottom: 0; }
+
+
+div.autotoc {
+  
+  display: table;
+  margin-top: 1em;
+  margin-left: 1.72em;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: #f0f9ff;
+  border: solid 1px #c0c9ff;
+}
+div.autotoc ul { margin: 0; padding: 0; }
+div.autotoc li { list-style-type: none; margin: 0; }
+div.autotoc div.autotoc-title { margin-bottom: 0.5em; }
+div.autotoc div.autotoc { border: none; padding: 0; margin-top: 0; margin-bottom: 0.5em; }
+div.autotoc div.autotoc div.autotoc { margin-bottom: 0; }
+
+
+span.bibliolabel {
+  color: #3f3f3f;
+}
+
+
+div.admonition {
+  padding: 0.5em 6px 0.5em 6px;
+  border: solid 1px #e0e0df;
+  background-color: #fffff0;
+}
+div.caution-inner, div.important-inner, div.note-inner, div.tip-inner, div.warning-inner {
+  padding-left: 60px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 48px;
+}
+div.caution-inner { background-image: url("icons/admon-caution.png"); }
+div.important-inner { background-image: url("icons/admon-important.png"); }
+div.note-inner { background-image: url("icons/admon-note.png"); }
+div.note-bug div.note-inner { background-image: url("icons/admon-bug.png"); }
+div.tip-inner { background-image: url("icons/admon-tip.png"); }
+div.warning-inner { background-image: url("icons/admon-warning.png"); }
+div.blockquote {
+  
+  background-image: url('watermark-blockquote-201C.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 0.5em;
+  padding-left: 4em;
+}
+div.attribution {
+  margin-top: 0.5em;
+  color: #3f3f3f;
+}
+div.attribution::before {
+  
+  content: '― ';
+}
+div.epigraph {
+  text-align: right;
+  margin-left: 20%;
+  margin-right: 0;
+  color: #3f3f3f;
+}
+div.figure, div.informalfigure {
+  
+  display: table;
+  padding: 0.5em;
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.figure-inner, div.informalfigure-inner {
+  padding: 0.5em;
+  background-color: #ffffff;
+  border: solid 1px #e0e0df;
+}
+div.caption { margin-top: 0.5em; }
+div.programlisting {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border: solid 1px #e0e0df;
+}
+div.screen .prompt {
+  color: #3f3f3f;
+}
+div.screen .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+div.programlisting .userinput {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+pre.linenumbering {
+  color: #3f3f3f;
+  margin: 0;
+  padding-right: 1em;
+  float: left;
+  text-align: right;
+}
+
+
+
+dl.index dt { margin-top: 0; }
+dl.index dd { margin-top: 0; margin-bottom: 0; }
+dl.indexdiv dt { margin-top: 0; }
+dl.indexdiv dd { margin-top: 0; margin-bottom: 0; }
+dl.setindex dt { margin-top: 0; }
+dl.setindex dd { margin-top: 0; margin-bottom: 0; }
+div.list div.title-formal span.title {
+  border-bottom: solid 1px #e0e0df;
+}
+div.simplelist {
+  margin-left: 1.72em;
+}
+div.simplelist table { margin-left: 0; border: none; }
+div.simplelist td {
+  padding: 0.5em;
+  border-left: solid 1px #e0e0df;
+}
+div.simplelist td.td-first {
+  padding-left: 0;
+  border-left: 0;
+}
+div.synopsis {
+  padding: 0.5em;
+  
+  background-color: #f9f9f6;
+  border-top: solid 2px #c0c9ff;
+  border-bottom: solid 2px #c0c9ff;
+}
+div.synopsis div.synopsis {
+  padding: 0;
+  border: none;
+}
+div.synopsis div.block { margin-top: 0.2em; }
+div.synopsis div.block-first { margin-top: 0; }
+div.cmdsynopsis { font-family: monospace; }
+
+span.accel { text-decoration: underline; }
+span.acronym { font-family: sans-serif; }
+span.application { font-style: italic; }
+span.classname, span.exceptionname, span.interfacename { font-family: monospace; }
+span.code {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.code { border: none; padding: 0; }
+span.command {
+  font-family: monospace;
+  border: solid 1px #e0e0df;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+pre span.command { border: none; padding: 0; }
+span.computeroutput { font-family: monospace; }
+
+span.constant { font-family: monospace; }
+span.database { font-family: monospace; }
+span.email { font-family: monospace; }
+span.emphasis { font-style: italic; }
+span.emphasis-bold { font-style: normal; font-weight: bold; }
+span.envar { font-family: monospace; }
+
+span.filename { font-family: monospace; }
+span.firstterm { font-style: italic; }
+span.foreignphrase { font-style: italic; }
+span.function { font-family: monospace; }
+
+dt.glossterm span.glossterm { font-style: normal; }
+
+
+span.glossterm { font-style: italic; }
+
+span.guibutton, span.guilabel, span.guimenu, span.guimenuitem, span.guisubmenu, span.interface {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.keycap {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+span.lineannotation { font-style: italic; }
+span.literal { font-family: monospace; }
+span.markup  { font-family: monospace; }
+span.medialabel { font-style: italic; }
+span.methodname { font-family: monospace; }
+span.ooclass, span.ooexception, span.oointerface { font-family: monospace; }
+span.option { font-family: monospace; }
+span.parameter { font-family: monospace; }
+span.paramdef span.parameter { font-style: italic; }
+span.prompt { font-family: monospace; }
+span.property { font-family: monospace; }
+span.replaceable  { font-style: italic; }
+span.returnvalue { font-family: monospace; }
+span.sgmltag { font-family: monospace; }
+span.structfield, span.structname { font-family: monospace; }
+span.symbol { font-family: monospace; }
+span.systemitem { font-family: monospace; }
+span.token { font-family: monospace; }
+span.type { font-family: monospace; }
+span.uri { font-family: monospace; }
+span.userinput { font-family: monospace; }
+span.varname { font-family: monospace; }
+span.wordasword { font-style: italic; }
+
+
+
+div.footnotes { font-style: italic; font-size: 0.8em; }
+div.footnote { margin-top: 1.44em; }
+span.footnote-number { display: inline; padding-right: 0.83em; }
+span.footnote-number + p { display: inline; }
+a.footnote { text-decoration: none; font-size: 0.8em; }
+a.footnote-ref { text-decoration: none; }
+
+span.co {
+  margin-left: 0.2em; margin-right: 0.2em;
+  padding-left: 0.4em; padding-right: 0.4em;
+  border: solid 1px #000000;
+  -moz-border-radius: 8px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 8px;
+}
+span.co:hover {
+  border-color: #333333;
+  background-color: #333333;
+  color: #FFFFFF;
+}
+span.co a { text-decoration: none; }
+span.co a:hover { text-decoration: none; }
+
+dt.question { margin-left: 0em; }
+dt.question div.label { float: left; }
+dd + dt.question { margin-top: 1em; }
+dd.answer {
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+dd.answer div.label { float: left; }
+</style>
+</head>
+<body>
+<div class="navbar navbar-top"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="stardict-details.html" title="Details">Details</a></td>
+<td class="navbar-next"><a class="navbar-next" href="stardict-troubleshooting.html" title="Troubleshooting">Troubleshooting</a></td>
+</tr></table></div>
+<div class="sidebar"><div class="sidenav"><div class="autotoc"><ul>
+<li><a href="index-info.html" title="About This Document">About This Document</a></li>
+<li>
+<a class="xref" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a><div class="autotoc"><ul>
+<li><a class="xref" href="stardict-introduction.html" title="Introduction">Introduction</a></li>
+<li><a class="xref" href="stardict-getting-started.html" title="Getting Started">Getting Started</a></li>
+<li><a class="xref" href="stardict-usage.html" title="Usage">Usage</a></li>
+<li><a class="xref" href="stardict-prefs.html" title="Preferences">Preferences</a></li>
+<li><a class="xref" href="manage-dicts.html" title="Manage dictionaries">Manage dictionaries</a></li>
+<li><a class="xref" href="manage-plugins.html" title="Manage Plugins">Manage Plugins</a></li>
+<li><a class="xref" href="stardict-details.html" title="Details">Details</a></li>
+<li>StarDict Portable</li>
+<li><a class="xref" href="stardict-troubleshooting.html" title="Troubleshooting">Troubleshooting</a></li>
+<li><a class="xref" href="stardict-projects.html" title="Related Projects">Related Projects</a></li>
+<li><a class="xref" href="stardict-authors.html" title="Developers">Developers</a></li>
+</ul></div>
+</li>
+</ul></div></div></div>
+<div class="body body-sidebar"><div class="division sect1">
+<a name="stardict-portable"></a><div class="header"><h1 class="sect1 title"><span class="title">StarDict Portable</span></h1></div>
+<ul class="linktrail"><li class="linktrail linktrail-only"><a class="linktrail" href="index.html" title="StarDict Manual V3.0.6">StarDict Manual V3.0.6</a></li></ul>
+<p class="para block block-first"><span class="application">StarDict Portable</span> is special edition of <span class="application">StarDict</span> for Windows that works with any hardware you like (USB flash drive, portable hard drive, etc). Now you can carry <span class="application">StarDict</span> along with all settings with you. Use them on any Windows computer. All personal data are saved along with application.
+	</p>
+<p class="para block">
+	<span class="application">StarDict Portable</span> relies on the <a class="ulink" href="http://portableapps.com" title="http://portableapps.com">PortableApps.com Platform</a>. It provides convenient shell to start and configure portable applications. On the screenshot below you may see PortableApps.com menu with <span class="application">StarDict Portable</span> and <span class="application">StarDict Editor portable</span>. You may change interface language of the menu and <span class="application">StarDict Portable</span>. 
+	To do that click 
+	<span class="menuchoice"><span class="guibutton">Options</span> ▸ <span class="guimenu">Language</span></span>
+	and select the desired language.
+	</p>
+<div class=" block figure block-indent">
+<a name="portable-apps-menu-fig"></a><div class="block block-first title title-formal"><span class="title"><span class="label"><span style="font-style: italic; ">Figure 12</span> </span>PortableApps.com menu</span></div>
+<div class="figure-inner"> 
+	 
+	<div class=" block screenshot block-first"> 
+		<div class="mediaobject"><img src="figures/portable_apps_menu.png"></div> 
+	</div> 
+	</div>
+</div>
+<div class="autotoc"><ul>
+<li>
+<span class="label">8.1. </span><a class="xref" href="stardict-portable.html#stardict-portable-differences" title="Differences from non-portable version">Differences from non-portable version</a>
+</li>
+<li>
+<span class="label">8.2. </span><a class="xref" href="stardict-portable.html#stardict-portable-install" title="Installing StarDict Portable">Installing StarDict Portable</a>
+</li>
+<li>
+<span class="label">8.3. </span><a class="xref" href="stardict-portable.html#stardict-portable-no-menu" title="Launching StarDict Portable directly">Launching StarDict Portable directly</a>
+</li>
+<li>
+<span class="label">8.4. </span><a class="xref" href="stardict-portable.html#stardict-portable-GUI-lang" title="Interface language">Interface language</a>
+</li>
+</ul></div>
+<div class="division sect2">
+<a name="stardict-portable-differences"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">8.1. </span>Differences from non-portable version</span></h2></div>
+<p class="para block block-first">
+  Functionality of <span class="application">StarDict Portable</span> is almost identical to the non-portable version. Only features that ties application to the specific machine are disabled. The list below details the deferences.
+  </p>
+<div class="block list variablelist">
+<div class="block block-first title title-formal"><span class="title"><span class="label"></span>StarDict Portable features</span></div>
+<dl class="variablelist">
+<dt class="term dt-first">WordPick Adobe Acrobat plugin
+		</dt>
+<dd>
+		<p class="para block block-first">WordPick Adobe Acrobat plugin is disabled in portable version. Portable application policies forbids to modify the host machine.</p>
+		</dd>
+<dt class="term">Run <span class="application">StarDict</span> when Windows starts
+		</dt>
+<dd>
+		<p class="para block block-first">This option is disabled in portable version. It does not make sense to autostart application residing on removable storage.</p>
+		</dd>
+</dl>
+</div>
+</div>
+<div class="division sect2">
+<a name="stardict-portable-install"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">8.2. </span>Installing StarDict Portable</span></h2></div>
+<p class="para block block-first">
+	This section describes <span class="application">StarDict Portable</span> installation procedure.
+	</p>
+<div class="block list orderedlist"><ol class="orderedlist">
+<li class="li-first">
+	<span class="para">
+	Download and install <a class="ulink" href="http://portableapps.com" title="http://portableapps.com">PortableApps.com Suite</a> on a USB flash drive or wherever you want.
+	</span>
+	</li>
+<li>
+	<span class="para">
+	Download <span class="application">StarDict Portable</span> package from <a class="ulink" href="https://sourceforge.net/projects/stardict/files/" title="https://sourceforge.net/projects/stardict/files/">StarDict website</a>. The package file ends with <span class="filename" dir="ltr">.paf.exe</span>, for example, <span class="filename" dir="ltr">StarDictPortable-stardict.sourceforge.com_3.0.2.paf.exe</span>.
+	</span>
+	</li>
+<li>
+	<span class="para">
+	Launch PortableApps.com menu.
+	</span>
+	</li>
+<li>
+	<span class="para">
+	Click
+	<span class="menuchoice"><span class="guibutton">Options</span> ▸ <span class="guimenu">Install a New Apps</span></span>.
+	Select <span class="application">StarDict Portable</span> package you've just downloaded, click <span class="guibutton">OK</span> and proceed with installer.
+	</span>
+	</li>
+<li>
+	<span class="para">
+	When installation completes, you will have two new items in the menu: <span class="application">StarDict Portable</span> and <span class="application">StarDict Editor portable</span>. You are ready to use <span class="application">StarDict Portable</span>.
+	</span>
+	</li>
+</ol></div>
+</div>
+<div class="division sect2">
+<a name="stardict-portable-no-menu"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">8.3. </span>Launching StarDict Portable directly</span></h2></div>
+<p class="para block block-first">
+	You may use <span class="application">StarDict Portable</span> without PortableApps.com menu. In the <span class="filename" dir="ltr">$PortableAppsRoot\PortableApps\StarDictPortable-stardict.sourceforge.com</span> directory you may find two executables: <span class="filename" dir="ltr">StarDictPortable.exe</span> and <span class="filename" dir="ltr">StarDictEditorPortable.exe</span>, they start <span class="application">StarDict Portable</span> and <span class="application">StarDict Editor Portable</span> respectively. <span class="varname" dir="ltr">$PortableAppsRoot</span> here is the directory where PortableApps.com suite was installed, normally this is the root of a drive, like <span class="filename" dir="ltr">X:\</span>.
+	</p>
+<p class="para block">
+	You may pass parameters to <span class="application">StarDict Portable</span> as with normal <span class="application">StarDict</span>, see <a class="xref" href="stardict-details.html#stardict-details-command-line" title="Command line options">Section 7.1 ― Command line options</a>. This maybe useful to enable logging, for example.
+	</p>
+<div class="admonition block caution block-indent"><div class="caution-inner">
+	<p class="para block block-first">
+	Do not start files in the <span class="filename" dir="ltr">$PortableAppsRoot\PortableApps\StarDictPortable-stardict.sourceforge.com\App\StarDict</span> directory directly! In this case <span class="application">StarDict</span> runs in normal non-portable mode, it will search applications settings and other data file in usually places on the host machine instead of directories near the portable application. First, your settings will not be found, second, new settings will be saved on the host machine.
+	</p>
+	</div></div>
+</div>
+<div class="division sect2">
+<a name="stardict-portable-GUI-lang"></a><div class="header"><h2 class="sect2 title"><span class="title"><span class="label">8.4. </span>Interface language</span></h2></div>
+<p class="para block block-first">
+	This section describes the algorithm used to select interface language in <span class="application">StarDict Portable</span>.
+	</p>
+<div class="block list orderedlist"><ol class="orderedlist">
+<li class="li-first">
+	<a name="GUILangPortableAppsLang"></a>
+	 
+	<p class="para block">Inspect PortableApps.com suite interface language
+	(<span class="menuchoice"><span class="guibutton">Options</span> ▸ <span class="guimenu">Language</span></span>).
+	If the language is not selected,  goto <a class="xref" href="stardict-portable.html#GUILangSettingsFile" title="StarDict Portable">2</a>.
+	If the language is "en_US", goto <a class="xref" href="stardict-portable.html#GUILangLanguageVariable" title="StarDict Portable">3</a>.
+	Check if <span class="application">StarDict</span> provides translation to the specified language. Goto <a class="xref" href="stardict-portable.html#GUILangLanguageVariable" title="StarDict Portable">3</a> if yes, and goto <a class="xref" href="stardict-portable.html#GUILangSettingsFile" title="StarDict Portable">2</a> otherwise.
+	</p>
+	</li>
+<li>
+	<a name="GUILangSettingsFile"></a>
+	<p class="para block">
+	Read the <span class="filename" dir="ltr">$PortableAppsRoot\PortableApps\StarDictPortable-stardict.sourceforge.com\Data\settings\StarDictPortableSettigns.ini</span> file. Inspect value of the <span class="varname" dir="ltr">STARDICTLANG</span> option in the <span class="varname" dir="ltr">Language</span> section. If the option is not specified, goto <a class="xref" href="stardict-portable.html#GUILangLaunchStarDict" title="StarDict Portable">4</a>. If the value is "en_US", goto <a class="xref" href="stardict-portable.html#GUILangLanguageVariable" title="StarDict Portable">3</a>. Check if <span class="application">StarDict</span> provides translation to the specified language. Goto <a class="xref" href="stardict-portable.html#GUILangLanguageVariable" title="StarDict Portable">3</a> if yes, and goto <a class="xref" href="stardict-portable.html#GUILangLaunchStarDict" title="StarDict Portable">4</a> otherwise.
+	</p>
+	</li>
+<li>
+	<a name="GUILangLanguageVariable"></a>
+	<p class="para block">
+	Assign the language code to the <span class="varname" dir="ltr">STARDICTLANG</span> environment variable.
+	</p>
+	</li>
+<li>
+	<a name="GUILangLaunchStarDict"></a>
+	<p class="para block">
+	Launch <span class="application">StarDict</span> executable, namely <span class="filename" dir="ltr">stardict.exe</span>.
+	For subsequent steps see <a class="xref" href="stardict-details.html#stardict-details-GUI-lang" title="Interface language">Section 7.6 ― Interface language</a>.
+	</p>
+	</li>
+</ol></div>
+</div>
+</div></div>
+<div class="navbar navbar-bottom"><table class="navbar"><tr>
+<td class="navbar-prev"><a class="navbar-prev" href="stardict-details.html" title="Details">Details</a></td>
+<td class="navbar-next"><a class="navbar-next" href="stardict-troubleshooting.html" title="Troubleshooting">Troubleshooting</a></td>
+</tr></table></div>
+</body>
+</html>
