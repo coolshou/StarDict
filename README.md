@@ -16,3 +16,6 @@ StarDict is a Cross-Platform and international dictionary Software. It has power
 4. Mouse Inquiry:
 
     When "scan" option is selected, you can capture the words via mouse to translate. 
+
+
+http://stardict-4.sourceforge.net/
